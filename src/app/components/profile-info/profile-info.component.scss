@@ -47,3 +47,7 @@
     opacity: 1;
   }
 }
+
+::ng-deep canvas {
+  object-fit: contain;
+}
