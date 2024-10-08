@@ -26,7 +26,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
       if (event instanceof NavigationEnd) {
         const urlSegments = event.urlAfterRedirects.split('/');
         this.currentPath = urlSegments[1] ? urlSegments[1] : '';
-        console.log(this.currentPath);
       }
     });
   }
