@@ -1,0 +1,71 @@
+<div
+  #card
+  class="project"
+  [ngClass]="{ revealed: isRevealed }"
+  [ngStyle]="{ '--backgroundColor': backgroundColor }"
+>
+  <div class="image-container">
+    <img
+      class="image"
+      id="image-{{ project.image }}"
+      src="assets/illustrations/{{ project.image }}"
+    />
+  </div>
+  <div class="content">
+    <div class="header">
+      <h2>{{ project.title }}</h2>
+      <div class="chips">
+        <div class="duration chip">
+          <span class="material-icons">timelapse</span>
+          <span>{{ project.duration }}</span>
+        </div>
+        <div class="team chip">
+          @if (project.team > 1) {
+          <span class="material-icons"> groups </span>
+          } @else {
+          <span class="material-icons"> person </span>
+          }
+          <span>
+            {{ project.team === 1 ? 'Solo' : 'Team of ' + project.team }}
+          </span>
+        </div>
+        <div class="context chip">
+          @if (project.context === ProjectContext.Personal) {
+          <span class="material-icons"> home </span>
+          } @else if (project.context === ProjectContext.School) {
+          <span class="material-icons"> school </span>
+          } @else if (project.context === ProjectContext.Work) {
+          <span class="material-icons"> work </span>
+          }
+          <span>{{ project.context }}</span>
+        </div>
+        <div class="technologies chip">
+          <span class="material-icons">code</span>
+          <span>{{ project.technologies.join(', ') }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="description">
+      {{ project.description }}
+    </div>
+    <div class="footer">
+      @if (project.link) {
+      <div class="link">
+        @if (project.link.includes('github.com')) {
+        <img loading="lazy" class="image" src="assets/icons/github.png" />
+        <a [href]="project.link" target="_blank" rel="noopener noreferrer">github repo</a>
+        } @else {
+
+        <a [href]="project.link" target="_blank" rel="noopener noreferrer">{{
+          project.link.replace('https://', '')
+        }}</a>
+        }
+      </div>
+      } @if (project.contextLogo) {
+      <div class="context-logo">
+        <img class="image" src="assets/logos/{{ project.contextLogo }}" alt="context_logo" />
+      </div>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 20px;
+  gap: 30px;
+
+  .name {
+    font-size: 4.75rem;
+    font-weight: 900;
+  }
+
+  .info {
+    font-size: 1.5rem;
+  }
+}
+
+.lottie {
+  overflow: hidden;
+  height: 50vh;
+  animation: fadeIn 1s;
+}
+
+@media (max-width: 768px) {
+  .profile {
+    .name {
+      font-size: 3.75rem;
+    }
+
+    .info {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .lottie {
+    height: 60vw;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

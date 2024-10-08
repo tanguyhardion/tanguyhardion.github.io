@@ -1,0 +1,47 @@
+<div class="app-bar">
+  <div class="menu-toggle" (click)="toggleMenu()">
+    <span [class.open]="isMenuOpen"></span>
+    <span [class.open]="isMenuOpen"></span>
+    <span [class.open]="isMenuOpen"></span>
+  </div>
+  <nav [class.menu-open]="isMenuOpen">
+    @for (link of links; track $index) {
+    <a
+      [routerLink]="link.path"
+      [ngStyle]="{ '--link-color': link.color }"
+      [class.active]="link.path.replace('/', '') === currentPath"
+      class="nav-link"
+      (click)="isMenuOpen = false"
+    >
+      {{ link.name }}
+      <span class="underline"></span>
+    </a>
+    }
+  </nav>
+  <div class="socials">
+    <a
+      href="mailto:tanguy.hardion@etu.utc.fr"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Email me"
+    >
+      <img class="social email" src="assets/icons/email.png" />
+    </a>
+    <a
+      href="https://linkedin.com/in/tanguy-hardion"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Add me on LinkedIn"
+    >
+      <img class="social linkedin" src="assets/icons/linkedin.png" />
+    </a>
+    <a
+      href="https://github.com/tanguyhardion"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="Check out my GitHub"
+    >
+      <img class="social github" src="assets/icons/github.png" />
+    </a>
+  </div>
+</div>

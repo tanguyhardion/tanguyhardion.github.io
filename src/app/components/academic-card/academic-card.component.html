@@ -1,0 +1,48 @@
+<div
+  #card
+  class="academic"
+  [ngClass]="{ revealed: isRevealed }"
+  [ngStyle]="{ '--backgroundColor': backgroundColor }"
+>
+  <div class="image-container">
+    <a :href="academic.school.link" target="_blank" rel="noopener noreferrer">
+      <img
+        class="image"
+        id="image-{{ academic.school.logo }}"
+        [src]="'assets/logos/' + academic.school.logo"
+        alt="school_logo"
+      />
+    </a>
+  </div>
+  <div class="content">
+    <div class="header">
+      <h2>{{ academic.degree }}</h2>
+      <div class="chips">
+        <div class="dates chip">
+          <span class="material-icons">event</span>
+          <span>{{ formatDate(academic.dates.start) }} - {{ formatDate(academic.dates.end) }}</span>
+        </div>
+        <div class="gpa chip" v-if="academic.gpa">
+          <span class="material-icons">grade</span>
+          <span>{{ academic.gpa }}</span>
+        </div>
+        <a
+          [href]="'https://www.google.com/maps/place/' + academic.school.location"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="location chip">
+            <span class="material-icons">location_on</span>
+            <span>{{ academic.school.location }}</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="description">
+      {{ academic.field }}
+    </div>
+    <div class="footer">
+      <p class="name">{{ academic.school.name }}</p>
+    </div>
+  </div>
+</div>

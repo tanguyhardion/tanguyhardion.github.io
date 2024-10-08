@@ -1,0 +1,61 @@
+<div
+  #card
+  class="experience"
+  [ngClass]="{ revealed: isRevealed }"
+  [ngStyle]="{ '--backgroundColor': backgroundColor }"
+>
+  <div class="image-container">
+    <a [href]="experience.company.link" target="_blank" rel="noopener noreferrer">
+      <img
+        class="image"
+        [id]="'image-' + experience.company.logo"
+        [src]="'assets/logos/' + experience.company.logo"
+        alt="company_logo"
+      />
+    </a>
+  </div>
+  <div class="content">
+    <div class="header">
+      <h2>{{ experience.position }}</h2>
+      <div class="chips">
+        <div class="dates chip">
+          <span class="material-icons">event</span>
+          <span
+            >{{ formatDate(experience.dates.start) }} -
+            {{ formatDate(experience.dates.start) }}</span
+          >
+        </div>
+        <div class="job-type chip">
+          <span class="material-icons">description</span>
+          <span>{{ experience.jobType }}</span>
+        </div>
+        <a
+          [href]="'https://www.google.com/maps/place/' + experience.company.location"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="location chip">
+            <span class="material-icons">location_on</span>
+            <span>{{ experience.company.location }}</span>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="description">
+      {{ experience.description }}
+      @if (experience.projects.length) {
+
+      <p>
+        @if (experience.projects.length > 1) {
+        <span>{{ projectText }}</span>
+        } @else {
+        <span>{{ projectText }}</span>
+        } that I worked on: <b>{{ experience.projects.join(', ') }}</b>
+      </p>
+      }
+    </div>
+    <div class="footer">
+      <p class="name">{{ experience.company.name }}</p>
+    </div>
+  </div>
+</div>
