@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" data-critters-container>
   <head><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-60YRWFVFZD"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+      if (window.location.hostname === 'tanguyhardion.github.io') {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-60YRWFVFZD';
+        document.head.appendChild(script);
+
+        script.onload = function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-60YRWFVFZD');
+        };
       }
-      gtag('js', new Date());
-      gtag('config', 'G-60YRWFVFZD');
     </script>
     <meta charset="utf-8">
     <title>Tanguy Hardion</title>
