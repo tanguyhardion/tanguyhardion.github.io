@@ -68,7 +68,7 @@ export class MoreComponent implements OnInit {
   async getLastCommitDate(filePath: string): Promise<string | null> {
     const username = 'tanguyhardion';
     const repo = 'tanguyhardion.github.io';
-    const url = `https://api.github.com/repos/${username}/${repo}/commits?path=src/public${filePath}`;
+    const url = `https://api.github.com/repos/${username}/${repo}/commits?path=src/${filePath}`;
 
     try {
       const response = await fetch(url);
