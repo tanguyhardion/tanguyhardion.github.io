@@ -17,6 +17,7 @@ export class AppComponent {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         this.homePage = event.url === '/';
+        console.log('homePage', this.homePage);
         document.title = this.getTitle(event.url);
       }
     });

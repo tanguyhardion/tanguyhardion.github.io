@@ -5,7 +5,7 @@
   [ngStyle]="{ '--backgroundColor': backgroundColor }"
 >
   <div class="image-container">
-    <a :href="academic.school.link" target="_blank" rel="noopener noreferrer">
+    <a [href]="academic.school.link" target="_blank" rel="noopener noreferrer">
       <img
         class="image"
         id="image-{{ academic.school.logo }}"
@@ -39,7 +39,13 @@
       </div>
     </div>
     <div class="description">
-      {{ academic.field }}
+      <div class="field">
+        {{ academic.field }}
+      </div>
+      <div class="coursework">
+        <span><b>Relevant Coursework: </b></span>
+        <span>{{ academic.relevantCoursework.join(', ') }}</span>
+      </div>
     </div>
     <div class="footer">
       <p class="name">{{ academic.school.name }}</p>

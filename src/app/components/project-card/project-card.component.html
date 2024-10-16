@@ -63,7 +63,9 @@
       </div>
       } @if (project.contextLogo) {
       <div class="context-logo">
-        <img class="image" src="assets/logos/{{ project.contextLogo }}" alt="context_logo" />
+        <a [href]="project.contextLogoLink" target="_blank" rel="noopener noreferrer">
+          <img class="image" src="assets/logos/{{ project.contextLogo }}" alt="context_logo" />
+        </a>
       </div>
       }
     </div>

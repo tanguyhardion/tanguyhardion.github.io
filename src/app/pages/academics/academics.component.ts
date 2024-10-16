@@ -7,12 +7,9 @@ import { AcademicCardComponent } from '@components/academic-card/academic-card.c
 @Component({
   selector: 'app-academics',
   standalone: true,
-  imports: [
-    CommonModule,
-    AcademicCardComponent
-  ],
+  imports: [CommonModule, AcademicCardComponent],
   templateUrl: './academics.component.html',
-  styleUrl: './academics.component.scss',
+  styleUrl: './academics.component.scss'
 })
 export class AcademicsComponent {
   academicList: Academic[] = [
@@ -28,7 +25,13 @@ export class AcademicsComponent {
       dates: {
         start: new Date('2024-09-01'),
         end: new Date('2025-02-01')
-      }
+      },
+      relevantCoursework: [
+        'Advanced Machine Learning',
+        'Deep Learning',
+        'Advanced Statistics',
+        'Multi-Agent Systems'
+      ]
     },
     {
       school: {
@@ -43,7 +46,16 @@ export class AcademicsComponent {
       dates: {
         start: new Date('2022-09-01'),
         end: new Date('2025-08-01')
-      }
+      },
+      relevantCoursework: [
+        'Machine Learning',
+        'Introductory Deep Learning',
+        'Computer Vision',
+        'Big Data',
+        'Data Visualization',
+        'Data Analytics',
+        'Software Engineering'
+      ]
     },
     {
       school: {
@@ -58,8 +70,16 @@ export class AcademicsComponent {
       dates: {
         start: new Date('2020-09-01'),
         end: new Date('2022-07-01')
-      }
+      },
+      relevantCoursework: [
+        'Algorithms',
+        'Probability & Statistics',
+        'Programming',
+        'Web Development',
+        'Databases',
+        'Computer Networks',
+        'Operating Systems',
+      ]
     }
   ];
-  
 }

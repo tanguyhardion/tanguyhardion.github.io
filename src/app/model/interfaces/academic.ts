@@ -7,4 +7,5 @@ export interface Academic {
   field: string;
   gpa?: string;
   dates: DateRange;
+  relevantCoursework: string[];
 }

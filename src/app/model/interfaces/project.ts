@@ -8,6 +8,7 @@ export interface Project {
   technologies: string[];
   context: ProjectContext;
   contextLogo?: string;
+  contextLogoLink?: string;
   image: string;
   link?: string;
 }
