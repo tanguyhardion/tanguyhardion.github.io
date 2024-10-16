@@ -22,10 +22,12 @@
           <span class="material-icons">event</span>
           <span>{{ formatDate(academic.dates.start) }} - {{ formatDate(academic.dates.end) }}</span>
         </div>
-        <div class="gpa chip" v-if="academic.gpa">
+        @if (academic.gpa) {
+        <div class="gpa chip">
           <span class="material-icons">grade</span>
           <span>{{ academic.gpa }}</span>
         </div>
+        }
         <a
           [href]="'https://www.google.com/maps/place/' + academic.school.location"
           target="_blank"
