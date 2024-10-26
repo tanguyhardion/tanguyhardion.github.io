@@ -14,19 +14,19 @@ export class MoreComponent implements OnInit {
   files: GithubFile[] = [
     {
       name: 'EU format, in French',
-      path: 'assets/pdf/hardion_cv.pdf',
+      path: 'assets/pdf/tanguy_hardion_cv.pdf',
       lastCommitDate: '',
       image: 'france.png'
     },
     {
       name: 'EU format, in English',
-      path: 'assets/pdf/hardion_resume.pdf',
+      path: 'assets/pdf/tanguy_hardion_resume.pdf',
       lastCommitDate: '',
       image: 'europe.png'
     },
     {
       name: 'US format',
-      path: 'assets/pdf/hardion_resume_us.pdf',
+      path: 'assets/pdf/tanguy_hardion_us_resume.pdf',
       lastCommitDate: '',
       image: 'us.png'
     }
