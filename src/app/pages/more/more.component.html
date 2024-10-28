@@ -18,4 +18,13 @@
     </div>
     }
   </div>
+
+  <h1>Interests</h1>
+  <div class="interests">
+    @for (interest of interests; track $index) {
+    <div class="interest" [ngStyle]="{ '--interest-image': getInterestImage(interest.image) }">
+      {{ interest.name }}
+    </div>
+    }
+  </div>
 </div>

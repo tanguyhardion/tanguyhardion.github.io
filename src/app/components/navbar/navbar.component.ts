@@ -17,7 +17,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
     { name: 'Experience', path: '/experience', color: '#f16529' },
     { name: 'Projects', path: '/projects', color: '#5ec9f8' },
     { name: 'Skills', path: '/skills', color: '#9148ff' },
-    { name: 'Interests', path: '/interests', color: '#00b159' },
     { name: 'More', path: '/more', color: '#757678' }
   ];
   currentPath: string | undefined;

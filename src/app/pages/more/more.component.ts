@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 import { GithubFile } from '@model/types/github-file';
+import { Interest } from '@model/types/interest';
 
 @Component({
   selector: 'app-more',
@@ -31,6 +32,20 @@ export class MoreComponent implements OnInit {
       image: 'us.png'
     }
   ];
+  interests: Interest[] = [
+    {
+      name: 'Watchmaking',
+      image: 'watch.jpg'
+    },
+    {
+      name: 'Sports',
+      image: 'gym.jpg'
+    },
+    {
+      name: 'Music',
+      image: 'piano.jpg'
+    }
+  ];
 
   ngOnInit(): void {
     this.files.forEach(async (file) => {
@@ -55,6 +70,10 @@ export class MoreComponent implements OnInit {
 
   getLinkImage(image: string): string {
     return `url(assets/flags/${image})`;
+  }
+
+  getInterestImage(image: string): string {
+    return `url(assets/illustrations/${image})`;
   }
 
   async fetchAndStoreData(file: GithubFile, path: string) {
