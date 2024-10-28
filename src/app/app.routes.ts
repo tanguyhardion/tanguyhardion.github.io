@@ -3,8 +3,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { AcademicsComponent } from './pages/academics/academics.component';
 import { ExperienceComponent } from './pages/experience/experience.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
-import { MoreComponent } from './pages/more/more.component';
 import { SkillsComponent } from './pages/skills/skills.component';
+import { InterestsComponent } from '@pages/interests/interests.component';
+import { MoreComponent } from './pages/more/more.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' },
@@ -13,6 +14,7 @@ export const routes: Routes = [
   { path: 'experience', component: ExperienceComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'skills', component: SkillsComponent },
+  { path: 'interests', component: InterestsComponent },
   { path: 'more', component: MoreComponent },
   { path: '**', redirectTo: '' }
 ];
