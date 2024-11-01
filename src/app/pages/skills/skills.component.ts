@@ -24,6 +24,10 @@ export class SkillsComponent implements OnInit {
   ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
   ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white)
 
+  ## Data Engineering
+
+  ![Extract, Transform, Load (ETL)](https://img.shields.io/badge/ETL-%23F37626.svg?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABbElEQVQ4jZ2Sv0vDUBiGn
+
   ## Programming Languages
   
   ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)

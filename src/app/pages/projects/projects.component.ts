@@ -51,6 +51,7 @@ export class ProjectsComponent {
         'Flask',
         'PostgreSQL',
         'HuggingFace',
+        'ETL'
       ],
       context: ProjectContext.Work,
       contextLogo: 'cpage.png',
