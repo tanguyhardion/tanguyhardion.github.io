@@ -88,29 +88,108 @@
     }
   }
 
-  .socials {
+  .right {
     display: flex;
     gap: 16px;
 
-    .social {
-      transition: filter 0.4s;
-      width: 32px;
-      height: 32px;
+    .socials {
+      display: flex;
+      gap: 16px;
 
-      &.email:hover {
-        filter: brightness(0) invert(1);
+      .social {
+        transition: filter 0.4s;
+        width: 32px;
+        height: 32px;
+
+        &.email:hover {
+          filter: brightness(0) invert(1);
+        }
+
+        &.linkedin {
+          filter: saturate(0);
+
+          &:hover {
+            filter: saturate(1);
+          }
+        }
+
+        &.github:hover {
+          filter: brightness(0) invert(1);
+        }
       }
+    }
 
-      &.linkedin {
-        filter: saturate(0);
+    .custom-select {
+      position: relative;
+      cursor: pointer;
 
-        &:hover {
-          filter: saturate(1);
+      .selected-option {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--background-lighter);
+        border-radius: 10px;
+        padding: 8px 6px 8px 10px;
+        user-select: none;
+
+        .arrow {
+          margin-top: 2px;
+          margin-left: 6px;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid var(--foreground-darker);
+          transition: transform 0.3s ease;
+
+          &.up {
+            transform: rotate(180deg);
+          }
+        }
+
+        &.open {
+          border-radius: 10px 10px 0 0;
+        }
+
+        .flag {
+          width: 20px;
+          height: 16px;
         }
       }
 
-      &.github:hover {
-        filter: brightness(0) invert(1);
+      .options {
+        width: 100px;
+        position: absolute;
+        top: 100%;
+        left: -47px;
+        top: auto;
+        background: var(--background-lighter);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+
+        &.open {
+          border-radius: 10px 0 10px 10px;
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          padding: 8px;
+          cursor: pointer;
+          transition: 0.3s;
+          border-radius: 10px;
+
+          &:hover {
+            background: var(--background-lightest);
+          }
+
+          .flag {
+            width: 20px;
+            height: 15px;
+            margin-right: 8px;
+          }
+        }
       }
     }
   }

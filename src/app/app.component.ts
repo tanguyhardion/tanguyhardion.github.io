@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NavigationStart, Router, RouterOutlet } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { StorageHelper } from '@utils/storage-helper';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 @Component({
@@ -13,7 +15,20 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 export class AppComponent {
   homePage: boolean;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private translate: TranslateService) {
+    // translation configuration
+    const langs = ['fr', 'en'];
+    this.translate.addLangs(langs);
+    this.translate.setDefaultLang('en');
+    const storedLang = StorageHelper.get('lang');
+    if (storedLang && langs.includes(storedLang)) {
+      this.translate.use(storedLang);
+    } else {
+      const browserLang = this.translate.getBrowserLang() || 'en';
+      this.translate.use(langs.includes(browserLang) ? browserLang : 'en');
+    }
+
+    // page title configuration
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         this.homePage = event.url === '/';

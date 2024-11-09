@@ -8,7 +8,7 @@
     <img
       class="image"
       id="image-{{ project.image }}"
-      src="assets/illustrations/{{ project.image }}"
+      src="assets/images/illustrations/{{ project.image }}"
     />
   </div>
   <div class="content">
@@ -52,7 +52,7 @@
       @if (project.link) {
       <div class="link">
         @if (project.link.includes('github.com')) {
-        <img loading="lazy" class="image" src="assets/icons/github.png" />
+        <img loading="lazy" class="image" src="assets/images/icons/github.png" />
         <a [href]="project.link" target="_blank" rel="noopener noreferrer">github repo</a>
         } @else {
 
@@ -64,7 +64,7 @@
       } @if (project.contextLogo) {
       <div class="context-logo">
         <a [href]="project.contextLogoLink" target="_blank" rel="noopener noreferrer">
-          <img class="image" src="assets/logos/{{ project.contextLogo }}" alt="context_logo" />
+          <img class="image" src="assets/images/logos/{{ project.contextLogo }}" alt="context_logo" />
         </a>
       </div>
       }

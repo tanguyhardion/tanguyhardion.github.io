@@ -69,11 +69,11 @@ export class MoreComponent implements OnInit {
   }
 
   getLinkImage(image: string): string {
-    return `url(assets/flags/${image})`;
+    return `url(assets/images/flags/${image})`;
   }
 
   getInterestImage(image: string): string {
-    return `url(assets/illustrations/${image})`;
+    return `url(assets/images/illustrations/${image})`;
   }
 
   async fetchAndStoreData(file: GithubFile, path: string) {
