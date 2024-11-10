@@ -3,9 +3,9 @@ import type { School } from '../types/school';
 
 export interface Academic {
   school: School;
-  degree: string;
-  field: string;
-  gpa?: string;
+  degreeKey: string;
+  fieldKey: string;
+  gpaKey?: string;
   dates: DateRange;
-  relevantCoursework: string[];
+  relevantCourseworkKeys: string[];
 }

@@ -8,6 +8,7 @@
       "@components/*": ["app/components/*"],
       "@model/*": ["app/model/*"],
       "@pages/*": ["app/pages/*"],
+      "@pipes/*": ["app/pipes/*"],
       "@services/*": ["app/services/*"],
       "@utils/*": ["app/utils/*"],
       "@app/*": ["app/*"]

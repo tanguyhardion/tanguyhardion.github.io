@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { StorageHelper } from '@utils/storage-helper';
 
 @Component({
   selector: 'NavBar',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslatePipe],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
@@ -15,19 +15,19 @@ export class NavbarComponent implements OnInit, OnDestroy {
   isMenuOpen = false;
   isDropdownOpen = false;
   links = [
-    { name: 'Home', path: '', color: '#dc143c' },
-    { name: 'Academics', path: '/academics', color: '#ffdd48' },
-    { name: 'Experience', path: '/experience', color: '#f16529' },
-    { name: 'Projects', path: '/projects', color: '#5ec9f8' },
-    { name: 'Skills', path: '/skills', color: '#9148ff' },
-    { name: 'More', path: '/more', color: '#757678' }
+    { nameKey: 'appBar.navigation.home', path: '', color: '#dc143c' },
+    { nameKey: 'appBar.navigation.academics', path: '/academics', color: '#ffdd48' },
+    { nameKey: 'appBar.navigation.experience', path: '/experience', color: '#f16529' },
+    { nameKey: 'appBar.navigation.projects', path: '/projects', color: '#5ec9f8' },
+    { nameKey: 'appBar.navigation.skills', path: '/skills', color: '#9148ff' },
+    { nameKey: 'appBar.navigation.more', path: '/more', color: '#757678' }
   ];
   currentPath: string | undefined;
 
   selectedLang: { label: string; flag: string; value: string };
   languages = [
     { label: 'English', flag: 'assets/images/flags/us.png', value: 'en' },
-    { label: 'French', flag: 'assets/images/flags/france.png', value: 'fr' }
+    { label: 'Français', flag: 'assets/images/flags/france.png', value: 'fr' }
   ];
 
   constructor(private router: Router, private translateService: TranslateService) {
@@ -88,12 +88,12 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.changeLang(option.value);
   }
 
-  get filteredLanguages() {
-    return this.languages.filter((lang) => lang.value !== this.selectedLang.value);
-  }
-
   changeLang(language: any) {
     this.translateService.use(language);
     StorageHelper.set('lang', language);
+  }
+
+  get filteredLanguages() {
+    return this.languages.filter((lang) => lang.value !== this.selectedLang.value);
   }
 }

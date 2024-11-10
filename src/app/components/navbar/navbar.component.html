@@ -13,7 +13,7 @@
       class="nav-link"
       (click)="isMenuOpen = false"
     >
-      {{ link.name }}
+      {{ link.nameKey | translate }}
       <span class="underline"></span>
     </a>
     }
@@ -24,7 +24,7 @@
         href="mailto:tanguy.hardion@etu.utc.fr"
         target="_blank"
         rel="noopener noreferrer"
-        title="Email me"
+        [title]="'appBar.tooltips.email' | translate"
       >
         <img class="social email" src="assets/images/icons/email.png" />
       </a>
@@ -32,7 +32,7 @@
         href="https://linkedin.com/in/tanguy-hardion"
         target="_blank"
         rel="noopener noreferrer"
-        title="Add me on LinkedIn"
+        [title]="'appBar.tooltips.linkedin' | translate"
       >
         <img class="social linkedin" src="assets/images/icons/linkedin.png" />
       </a>
@@ -40,7 +40,7 @@
         href="https://github.com/tanguyhardion"
         target="_blank"
         rel="noopener noreferrer"
-        title="Check out my GitHub"
+        [title]="'appBar.tooltips.github' | translate"
       >
         <img class="social github" src="assets/images/icons/github.png" />
       </a>

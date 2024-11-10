@@ -16,8 +16,8 @@
     max-width: 630px;
     font-size: 1.5rem;
 
-    .utc {
-      color: #f3cb15;
+    ::ng-deep a {
+      color: #f3cb15 !important;
     }
   }
 }

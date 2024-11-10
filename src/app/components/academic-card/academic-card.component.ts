@@ -2,13 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 
 import { Academic } from '@model/interfaces/academic';
+import { TranslatePipe } from '@ngx-translate/core';
 import { VisibilityObserverService } from '@services/visibility-observer.service';
 import getImageColor from '@utils/image-color';
 
 @Component({
   selector: 'AcademicCard',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './academic-card.component.html',
   styleUrl: './academic-card.component.scss'
 })

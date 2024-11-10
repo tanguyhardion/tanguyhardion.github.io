@@ -1,14 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 import dayjs from 'dayjs';
 import { AnimationOptions } from 'ngx-lottie';
 import { LottieComponent } from 'ngx-lottie';
-import { RendererType } from 'lottie-web';
+import { MarkedPipe } from "@pipes/marked.pipe";
 
 @Component({
   selector: 'ProfileInfo',
   standalone: true,
-  imports: [CommonModule, LottieComponent],
+  imports: [CommonModule, LottieComponent, TranslatePipe, MarkedPipe],
   templateUrl: './profile-info.component.html',
   styleUrl: './profile-info.component.scss'
 })

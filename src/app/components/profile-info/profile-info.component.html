@@ -1,24 +1,8 @@
 <div class="profile">
   <h1 class="name">Tanguy Hardion</h1>
-  <p class="info">
-    I'm a
-    <b> {{ age }} </b>
-    year-old student specializing in
-    <b> AI </b>
-    and
-    <b> Data Science</b>
-    at
-    <a href="https://utc.fr/" class="utc" target="_blank">
-      <b>UTC</b>
-    </a>.
-  </p>
-  <p class="info">
-    Currently, I'm looking for an
-    <b> 6-month end-of-studies internship abroad </b>
-    starting in
-    <b>February 2025</b>.
-  </p>
+  <p class="info" [innerHTML]="'profile.intro' | translate : { age: age } | marked"></p>
+  <p class="info" [innerHTML]="'profile.internship_lookup' | translate | marked"></p>
 </div>
 <div class="lottie">
-  <ng-lottie [options]="options" />
+  <ng-lottie [options]="options"></ng-lottie>
 </div>

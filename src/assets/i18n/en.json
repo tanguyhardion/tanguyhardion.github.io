@@ -1,6 +1,65 @@
 {
-	"app": {
-		"hello": "Hell",
-		"title": "Translation demo"
-	}
+	"appBar": {
+		"navigation": {
+			"home": "Home",
+			"academics": "Academics",
+			"experience": "Experience",
+			"projects": "Projects",
+			"skills": "Skills",
+			"more": "More"
+		},
+		"tooltips": {
+			"email": "Email me",
+			"linkedin": "Add me on LinkedIn",
+			"github": "Check out my GitHub"
+		}
+	},
+  "profile": {
+    "intro": "I'm a **{{ age }}** year-old student specializing in **AI** and **Data Science** at [**UTC**](https://utc.fr/).",
+    "internship_lookup": "Currently, I'm looking for a **6-month end-of-studies internship abroad** starting in **February 2025**."
+  },
+	"academics": {
+		"relevantCoursework": "Relevant coursework",
+    "utc": {
+      "name": "Université de Technologie de Compiègne (UTC)",
+      "degree": "UT Group Mobility Semester",
+      "field": "Specialization in Artificial Intelligence and Data Science",
+      "coursework": {
+        "advanced_ml": "Advanced Machine Learning",
+        "deep_learning": "Deep Learning",
+        "advanced_statistics": "Advanced Statistics",
+        "multi_agent_systems": "Multi-Agent Systems"
+      }
+    },
+		"utt": {
+      "name": "Université de Technologie de Troyes (UTT)",
+      "degree": "Engineer's degree",
+      "field": "Computer Science and Information Systems, Data Science track",
+      "gpa": "GPA: 4.69/5",
+      "coursework": {
+        "ml": "Machine Learning",
+        "deep_learning": "Introductory Deep Learning",
+        "computer_vision": "Computer Vision",
+        "big_data": "Big Data",
+        "data_visualization": "Data Visualization",
+        "data_analytics": "Data Analytics",
+        "software_engineering": "Software Engineering"
+      }
+    },
+    "iut_dijon": {
+      "name": "IUT Dijon",
+      "degree": "DUT (⇔ to an associate degree)",
+      "field": "Computer Science",
+      "gpa": "Top 10 out of 100",
+      "coursework": {
+        "algorithms": "Algorithms",
+        "probability_statistics": "Probability & Statistics",
+        "programming": "Programming",
+        "web_development": "Web Development",
+        "databases": "Databases",
+        "computer_networks": "Computer Networks",
+        "operating_systems": "Operating Systems"
+      }
+    }
+  }
 }

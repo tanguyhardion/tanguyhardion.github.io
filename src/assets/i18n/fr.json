@@ -1,6 +1,67 @@
 {
-	"app": {
-		"hello": "Bonjour ",
-		"title": "démo de traduction"
-	}
+  "appBar": {
+    "navigation": {
+      "home": "Accueil",
+      "academics": "Formation",
+      "experience": "Expérience",
+      "projects": "Projets",
+      "skills": "Compétences",
+      "more": "Autres"
+    },
+    "tooltips": {
+      "email": "Envoyez-moi un email",
+      "linkedin": "Ajoutez-moi sur LinkedIn",
+      "github": "Consultez mon GitHub"
+    }
+  },
+  "profile": {
+    "intro": "Je suis un étudiant de **{{ age }}** ans se spécialisant en **IA** et **Data Science** à l'[**UTC**](https://utc.fr/).",
+    "internship_lookup": "Actuellement, je recherche un **stage de fin d'études de 6 mois à l'étranger** débutant en **février 2025**."
+  },
+  "academics": {
+		"relevantCoursework": "Cours pertinents",
+    "utc": {
+      "name": "Université de Technologie de Compiègne (UTC)",
+      "location": "Compiègne, France",
+      "degree": "Semestre de mobilité groupe UT",
+      "field": "Spécialisation en Intelligence Artificielle et Data Science",
+      "gpa": "Moyenne : 3.67/4.0",
+      "coursework": {
+        "advanced_ml": "Machine Learning Avancé",
+        "deep_learning": "Deep Learning",
+        "advanced_statistics": "Statistiques Avancées",
+        "multi_agent_systems": "Systèmes Multi-Agents"
+      }
+    },
+    "utt": {
+      "name": "Université de Technologie de Troyes (UTT)",
+      "degree": "Diplôme d'ingénieur",
+      "field": "Informatique et systèmes d'information, spécialisation Data Science",
+      "gpa": "GPA : 4,69/5",
+      "coursework": {
+        "ml": "Machine Learning",
+        "deep_learning": "Deep Learning",
+        "computer_vision": "Computer Vision",
+        "big_data": "Big Data",
+        "data_visualization": "Visualisation de Données",
+        "data_analytics": "Analyse de Données",
+        "software_engineering": "Génie Logiciel"
+      }
+    },
+    "iut_dijon": {
+      "name": "IUT Dijon",
+      "degree": "DUT",
+      "field": "Informatique",
+      "gpa": "Top 10 sur 100",
+      "coursework": {
+        "algorithms": "Algorithmes",
+        "probability_statistics": "Probabilités et Statistiques",
+        "programming": "Programmation",
+        "web_development": "Développement Web",
+        "databases": "Bases de données",
+        "computer_networks": "Réseaux Informatiques",
+        "operating_systems": "Systèmes d'Exploitation"
+      }
+    }
+  }
 }

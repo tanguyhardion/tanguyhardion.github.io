@@ -1,5 +1,5 @@
 export type School = {
-  name: string;
+  nameKey: string;
   logo: string;
   location: string;
   link: string;

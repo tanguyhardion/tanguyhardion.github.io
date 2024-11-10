@@ -1,38 +1,26 @@
-<div
-  #card
-  class="academic"
-  [ngClass]="{ revealed: isRevealed }"
-  [ngStyle]="{ '--backgroundColor': backgroundColor }"
->
+<div #card class="academic" [ngClass]="{ revealed: isRevealed }" [ngStyle]="{ '--backgroundColor': backgroundColor }">
   <div class="image-container">
     <a [href]="academic.school.link" target="_blank" rel="noopener noreferrer">
-      <img
-        class="image"
-        id="image-{{ academic.school.logo }}"
-        [src]="'assets/images/logos/' + academic.school.logo"
-        alt="school_logo"
-      />
+      <img class="image" id="image-{{ academic.school.logo }}" [src]="'assets/images/logos/' + academic.school.logo"
+        alt="school_logo" />
     </a>
   </div>
   <div class="content">
     <div class="header">
-      <h2>{{ academic.degree }}</h2>
+      <h2>{{ academic.degreeKey | translate }}</h2>
       <div class="chips">
         <div class="dates chip">
           <span class="material-icons">event</span>
           <span>{{ formatDate(academic.dates.start) }} - {{ formatDate(academic.dates.end) }}</span>
         </div>
-        @if (academic.gpa) {
+        @if (academic.gpaKey) {
         <div class="gpa chip">
           <span class="material-icons">grade</span>
-          <span>{{ academic.gpa }}</span>
+          <span>{{ academic.gpaKey | translate }}</span>
         </div>
         }
-        <a
-          [href]="'https://www.google.com/maps/place/' + academic.school.location"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a [href]="'https://www.google.com/maps/place/' + academic.school.location" target="_blank"
+          rel="noopener noreferrer">
           <div class="location chip">
             <span class="material-icons">location_on</span>
             <span>{{ academic.school.location }}</span>
@@ -42,15 +30,19 @@
     </div>
     <div class="description">
       <div class="field">
-        {{ academic.field }}
+        {{ academic.fieldKey | translate }}
       </div>
       <div class="coursework">
-        <span><b>Relevant Coursework: </b></span>
-        <span>{{ academic.relevantCoursework.join(', ') }}</span>
+        <span>
+          <b> {{ 'academics.relevantCoursework' | translate }}: </b>
+        </span>
+        <span>
+          @for (key of academic.relevantCourseworkKeys; track $index) {
+          {{ key | translate }}@if ($index < academic.relevantCourseworkKeys.length - 1) {,} } </span>
       </div>
     </div>
     <div class="footer">
-      <p class="name">{{ academic.school.name }}</p>
+      <p class="name">{{ academic.school.nameKey | translate }}</p>
     </div>
   </div>
 </div>
