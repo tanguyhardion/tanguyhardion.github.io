@@ -1,5 +1,5 @@
 export type GithubFile = {
-    name: string;
+    nameKey: string;
     path: string;
     lastCommitDate: string | null;
     image: string;

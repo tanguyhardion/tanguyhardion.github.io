@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TooltipDirective } from '@webed/angular-tooltip';
 import { StorageHelper } from '@utils/storage-helper';
 
 @Component({
   selector: 'NavBar',
   standalone: true,
-  imports: [CommonModule, RouterModule, TranslatePipe],
+  imports: [CommonModule, RouterModule, TranslatePipe, TooltipDirective],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
@@ -29,6 +30,15 @@ export class NavbarComponent implements OnInit, OnDestroy {
     { label: 'English', flag: 'assets/images/flags/us.png', value: 'en' },
     { label: 'Français', flag: 'assets/images/flags/france.png', value: 'fr' }
   ];
+
+  theme: 'light' | 'dark' = 'light';
+  tooltipOptions = {
+    placement: 'bottom',
+    showDelay: 500,
+    hideDelay: 0,
+    theme: this.theme,
+    maxWidth: '300px'
+  };
 
   constructor(private router: Router, private translateService: TranslateService) {
     this.selectedLang =

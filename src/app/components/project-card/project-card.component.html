@@ -13,11 +13,11 @@
   </div>
   <div class="content">
     <div class="header">
-      <h2>{{ project.title }}</h2>
+      <h2>{{ project.titleKey | translate }}</h2>
       <div class="chips">
         <div class="duration chip">
           <span class="material-icons">timelapse</span>
-          <span>{{ project.duration }}</span>
+          <span>{{ project.durationKey | translate }}</span>
         </div>
         <div class="team chip">
           @if (project.team > 1) {
@@ -37,7 +37,7 @@
           } @else if (project.context === ProjectContext.Work) {
           <span class="material-icons"> work </span>
           }
-          <span>{{ project.context }}</span>
+          <span>{{ project.context | translate }}</span>
         </div>
         <div class="technologies chip">
           <span class="material-icons">code</span>
@@ -46,16 +46,17 @@
       </div>
     </div>
     <div class="description">
-      {{ project.description }}
+      {{ project.descriptionKey | translate }}
     </div>
     <div class="footer">
       @if (project.link) {
       <div class="link">
         @if (project.link.includes('github.com')) {
         <img loading="lazy" class="image" src="assets/images/icons/github.png" />
-        <a [href]="project.link" target="_blank" rel="noopener noreferrer">github repo</a>
+        <a [href]="project.link" target="_blank" rel="noopener noreferrer">
+          {{ 'projects.github_repo' | translate}}
+        </a>
         } @else {
-
         <a [href]="project.link" target="_blank" rel="noopener noreferrer">{{
           project.link.replace('https://', '')
         }}</a>
@@ -64,7 +65,11 @@
       } @if (project.contextLogo) {
       <div class="context-logo">
         <a [href]="project.contextLogoLink" target="_blank" rel="noopener noreferrer">
-          <img class="image" src="assets/images/logos/{{ project.contextLogo }}" alt="context_logo" />
+          <img
+            class="image"
+            src="assets/images/logos/{{ project.contextLogo }}"
+            alt="context_logo"
+          />
         </a>
       </div>
       }

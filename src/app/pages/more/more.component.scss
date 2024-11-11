@@ -34,7 +34,8 @@
         cursor: pointer;
         text-decoration: none;
         font-size: 1.2rem;
-        width: 270px;
+        min-width: 270px;
+        width: fit-content;
 
         &::before {
           content: '';

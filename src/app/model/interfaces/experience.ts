@@ -4,9 +4,9 @@ import type { DateRange } from '../types/date-range';
 
 export interface Experience {
   company: Company;
-  position: string;
+  positionKey: string;
   jobType: JobType;
-  description: string;
+  descriptionKey: string;
   projects: string[];
   dates: DateRange;
 }

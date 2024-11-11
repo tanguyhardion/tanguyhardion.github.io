@@ -122,6 +122,7 @@
     .custom-select {
       position: relative;
       cursor: pointer;
+      align-self: center;
 
       .selected-option {
         display: flex;
@@ -158,18 +159,19 @@
       }
 
       .options {
-        width: 100px;
+        width: fit-content;
         position: absolute;
-        top: 100%;
-        left: -47px;
-        top: auto;
         background: var(--background-lighter);
-        border-radius: 10px;
         display: flex;
+        right: 0;
         flex-direction: column;
 
         &.open {
           border-radius: 10px 0 10px 10px;
+
+          div {
+            border-radius: 10px 0 10px 10px;
+          }
         }
 
         div {

@@ -1,4 +1,4 @@
 export enum JobType {
-  Internship = 'Internship',
-  FixedTerm = 'Fixed-term contract',
+  Internship = 'experience.job_type.internship',
+  FixedTerm = 'experience.job_type.fixed_term',
 }

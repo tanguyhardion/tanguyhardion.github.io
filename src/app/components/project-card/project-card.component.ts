@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, Input, ViewChild, ElementRef } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 import { Project } from '@model/interfaces/project';
 import { ProjectContext } from '@model/enums/project-context';
@@ -9,7 +10,7 @@ import getImageColor from '@utils/image-color';
 @Component({
   selector: 'ProjectCard',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './project-card.component.html',
   styleUrl: './project-card.component.scss'
 })

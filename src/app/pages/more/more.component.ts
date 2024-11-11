@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 import { GithubFile } from '@model/types/github-file';
 import { Interest } from '@model/types/interest';
@@ -7,26 +8,26 @@ import { Interest } from '@model/types/interest';
 @Component({
   selector: 'app-more',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './more.component.html',
   styleUrl: './more.component.scss'
 })
 export class MoreComponent implements OnInit {
   files: GithubFile[] = [
     {
-      name: 'EU format, in French',
+      nameKey: 'more.resumes.french',
       path: 'assets/pdf/tanguy_hardion_cv.pdf',
       lastCommitDate: '',
       image: 'france.png'
     },
     {
-      name: 'EU format, in English',
+      nameKey: 'more.resumes.english',
       path: 'assets/pdf/tanguy_hardion_resume.pdf',
       lastCommitDate: '',
       image: 'europe.png'
     },
     {
-      name: 'US format',
+      nameKey: 'more.resumes.us',
       path: 'assets/pdf/tanguy_hardion_us_resume.pdf',
       lastCommitDate: '',
       image: 'us.png'
@@ -34,20 +35,30 @@ export class MoreComponent implements OnInit {
   ];
   interests: Interest[] = [
     {
-      name: 'Watchmaking',
+      nameKey: 'more.interests.watchmaking',
       image: 'watch.jpg'
     },
     {
-      name: 'Sports',
+      nameKey: 'more.interests.sports',
       image: 'gym.jpg'
     },
     {
-      name: 'Music',
+      nameKey: 'more.interests.music',
       image: 'piano.jpg'
     }
   ];
 
+  constructor(private translateService: TranslateService) {}
+
   ngOnInit(): void {
+    this.updateFileCommitDates();
+
+    this.translateService.onLangChange.subscribe(() => {
+      this.updateFileCommitDates();
+    });
+  }
+
+  private updateFileCommitDates() {
     this.files.forEach(async (file) => {
       const storedData = localStorage.getItem(file.path);
 
@@ -56,7 +67,7 @@ export class MoreComponent implements OnInit {
 
         if (!this.isStale(parsedData.timestamp)) {
           // if data is fresh, use it
-          file.lastCommitDate = parsedData.lastCommitDate;
+          file.lastCommitDate = this.getDuration(new Date(parsedData.lastCommitDate));
         } else {
           // if data is stale, fetch the commit date and store it
           await this.fetchAndStoreData(file, file.path);
@@ -78,13 +89,17 @@ export class MoreComponent implements OnInit {
 
   async fetchAndStoreData(file: GithubFile, path: string) {
     const lastCommitDate = await this.getLastCommitDate(path);
+
     if (lastCommitDate) {
-      file.lastCommitDate = lastCommitDate;
-      localStorage.setItem(path, JSON.stringify({ lastCommitDate, timestamp: Date.now() }));
+      file.lastCommitDate = this.getDuration(lastCommitDate);
+      localStorage.setItem(
+        path,
+        JSON.stringify({ lastCommitDate: lastCommitDate.toISOString(), timestamp: Date.now() }) // modified: store as ISO string
+      );
     }
   }
 
-  async getLastCommitDate(filePath: string): Promise<string | null> {
+  async getLastCommitDate(filePath: string): Promise<Date | null> {
     const username = 'tanguyhardion';
     const repo = 'tanguyhardion.github.io';
     const url = `https://api.github.com/repos/${username}/${repo}/commits?path=src/${filePath}`;
@@ -93,8 +108,8 @@ export class MoreComponent implements OnInit {
       const response = await fetch(url);
       const commits = await response.json();
       if (commits.length > 0) {
-        const lastCommitDate = commits[0].commit.author.date;
-        return this.getDuration(new Date(lastCommitDate));
+        const lastCommitDate = new Date(commits[0].commit.author.date);
+        return lastCommitDate;
       }
       return null;
     } catch (error) {
@@ -108,19 +123,24 @@ export class MoreComponent implements OnInit {
     // if 0 then return 'today'
     const now = new Date();
     const duration = now.getTime() - date.getTime();
-    const seconds = duration / 1000;
-    const minutes = seconds / 60;
-    const hours = minutes / 60;
-    const days = hours / 24;
-    const months = days / 30;
-    const years = days / 365;
+    const days = duration / (1000 * 60 * 60 * 24);
 
-    if (days < 30) {
-      return days < 1 ? 'today' : days < 2 ? 'yesterday' : `${Math.floor(days)} days ago`;
-    } else if (months < 12) {
-      return `${Math.floor(months)} months ago`;
+    if (this.translateService.currentLang === 'fr') {
+      if (days < 1) {
+        return "aujourd'hui";
+      } else if (days < 2) {
+        return 'hier';
+      } else {
+        return `il y a ${Math.floor(days)} jours`;
+      }
+    }
+
+    if (days < 1) {
+      return 'today';
+    } else if (days < 2) {
+      return 'yesterday';
     } else {
-      return `${Math.floor(years)} years ago`;
+      return `${Math.floor(days)} days ago`;
     }
   }
 

@@ -16,7 +16,7 @@
   </div>
   <div class="content">
     <div class="header">
-      <h2>{{ experience.position }}</h2>
+      <h2>{{ experience.positionKey | translate }}</h2>
       <div class="chips">
         <div class="dates chip">
           <span class="material-icons">event</span>
@@ -27,7 +27,7 @@
         </div>
         <div class="job-type chip">
           <span class="material-icons">description</span>
-          <span>{{ experience.jobType }}</span>
+          <span>{{ experience.jobType | translate }}</span>
         </div>
         <a
           [href]="'https://www.google.com/maps/place/' + experience.company.location"
@@ -42,15 +42,16 @@
       </div>
     </div>
     <div class="description">
-      {{ experience.description }}
+      {{ experience.descriptionKey | translate }}
       @if (experience.projects.length) {
-
       <p>
+        <span>{{ projectText }}</span>
         @if (experience.projects.length > 1) {
-        <span>{{ projectText }}</span>
+          {{ 'experience.worked_on_plur' | translate }}
         } @else {
-        <span>{{ projectText }}</span>
-        } that I worked on: <b>{{ experience.projects.join(', ') }}</b>
+          {{ 'experience.worked_on_sing' | translate }}
+        }
+        <b>{{ experience.projects.join(', ') }}</b>
       </p>
       }
     </div>

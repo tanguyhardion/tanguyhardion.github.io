@@ -2,13 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 import { Experience } from '@model/interfaces/experience';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { VisibilityObserverService } from '@services/visibility-observer.service';
 import getImageColor from '@utils/image-color';
 
 @Component({
   selector: 'ExperienceCard',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './experience-card.component.html',
   styleUrl: './experience-card.component.scss'
 })
@@ -19,7 +20,10 @@ export class ExperienceCardComponent implements AfterViewInit {
   backgroundColor = '';
   isRevealed = false;
 
-  constructor(private visibilityObserverService: VisibilityObserverService) {}
+  constructor(
+    private visibilityObserverService: VisibilityObserverService,
+    private translateService: TranslateService
+  ) {}
 
   async ngAfterViewInit(): Promise<void> {
     this.backgroundColor = (await getImageColor(`image-${this.experience.company.logo}`)) || '#000';
@@ -38,6 +42,9 @@ export class ExperienceCardComponent implements AfterViewInit {
   }
 
   get projectText(): string {
+    if (this.translateService.currentLang === 'fr') {
+      return this.experience.projects.length > 1 ? 'Projets' : 'Projet';
+    }
     return this.experience.projects.length > 1 ? 'Projects' : 'Project';
   }
 }

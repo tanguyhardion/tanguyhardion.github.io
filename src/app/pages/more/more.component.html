@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <h1>Resumes</h1>
+  <h1>{{ 'more.resumes.header' | translate }}</h1>
   <div class="file-container">
     @for (file of files; track $index) {
     <div class="file">
@@ -9,21 +9,23 @@
         [ngStyle]="{ '--link-image': getLinkImage(file.image) }"
         class="link"
       >
-        {{ file.name }}
+        {{ file.nameKey | translate }}
         <span class="material-icons">open_in_new</span>
       </a>
       @if (file.lastCommitDate) {
-      <span class="date">Last updated {{ file.lastCommitDate }}</span>
+      <span class="date">{{
+        'more.resumes.lastUpdated' | translate : { date: file.lastCommitDate }
+      }}</span>
       }
     </div>
     }
   </div>
 
-  <h1>Interests</h1>
+  <h1>{{ 'more.interests.header' | translate }}</h1>
   <div class="interests">
     @for (interest of interests; track $index) {
     <div class="interest" [ngStyle]="{ '--interest-image': getInterestImage(interest.image) }">
-      {{ interest.name }}
+      {{ interest.nameKey | translate }}
     </div>
     }
   </div>

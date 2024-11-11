@@ -21,6 +21,7 @@
     "@angular/router": "^18.2.0",
     "@ngx-translate/core": "^16.0.3",
     "@ngx-translate/http-loader": "^16.0.0",
+    "@webed/angular-tooltip": "^18.0.0",
     "dayjs": "^1.11.13",
     "fast-average-color": "^9.4.0",
     "marked": "^14.1.2",

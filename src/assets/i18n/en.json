@@ -1,25 +1,25 @@
 {
-	"appBar": {
-		"navigation": {
-			"home": "Home",
-			"academics": "Academics",
-			"experience": "Experience",
-			"projects": "Projects",
-			"skills": "Skills",
-			"more": "More"
-		},
-		"tooltips": {
-			"email": "Email me",
-			"linkedin": "Add me on LinkedIn",
-			"github": "Check out my GitHub"
-		}
-	},
+  "appBar": {
+    "navigation": {
+      "home": "Home",
+      "academics": "Academics",
+      "experience": "Experience",
+      "projects": "Projects",
+      "skills": "Skills",
+      "more": "More"
+    },
+    "tooltips": {
+      "email": "Email me",
+      "linkedin": "Add me on LinkedIn",
+      "github": "Check out my GitHub"
+    }
+  },
   "profile": {
     "intro": "I'm a **{{ age }}** year-old student specializing in **AI** and **Data Science** at [**UTC**](https://utc.fr/).",
     "internship_lookup": "Currently, I'm looking for a **6-month end-of-studies internship abroad** starting in **February 2025**."
   },
-	"academics": {
-		"relevantCoursework": "Relevant coursework",
+  "academics": {
+    "relevantCoursework": "Relevant coursework",
     "utc": {
       "name": "Université de Technologie de Compiègne (UTC)",
       "degree": "UT Group Mobility Semester",
@@ -31,7 +31,7 @@
         "multi_agent_systems": "Multi-Agent Systems"
       }
     },
-		"utt": {
+    "utt": {
       "name": "Université de Technologie de Troyes (UTT)",
       "degree": "Engineer's degree",
       "field": "Computer Science and Information Systems, Data Science track",
@@ -60,6 +60,99 @@
         "computer_networks": "Computer Networks",
         "operating_systems": "Operating Systems"
       }
+    }
+  },
+  "experience": {
+    "cpage": {
+      "position": {
+        "junior_software_engineer": "Junior Software Engineer",
+        "software_engineer_intern": "Software Engineer Intern"
+      },
+      "description": {
+        "summer_job": "Summer job that followed my previous internship.",
+        "mid_degree_internship": "Mid-engineering degree internship at CPage, a company that develops software for public health institutions."
+      }
+    },
+    "aprr": {
+      "position": {
+        "software_developer_intern": "Software Developer Intern"
+      },
+      "description": {
+        "final_year_internship": "Final year DUT (associate degree) internship in the department that manages the installation and support of the systems used by the company."
+      }
+    },
+    "job_type": {
+      "fixed_term": "Fixed-term",
+      "internship": "Internship"
+    },
+    "worked_on_sing": "that I worked on:",
+    "worked_on_plur": "that I worked on:"
+  },
+  "projects": {
+    "ml_challenge": {
+      "title": "Machine Learning Challenge",
+      "description": "Analysis of two simulated datasets (classification and regression) and a real-world dataset. Goal: apply machine learning methods, evaluate model performance with error metrics and submit the best models to a leaderboard. The real-world dataset is sourced from platforms like Kaggle or UCI.",
+      "duration": "Ongoing"
+    },
+    "personal_website": {
+      "title": "Personal Website",
+      "description": "You're looking at it! I like to think of it as a digital resume, more personal and interactive than a traditional one or a LinkedIn profile (although you can find me there too). It's also more fun to make!",
+      "duration": "30 hours"
+    },
+    "cpage_map": {
+      "title": "CPage Map",
+      "description": "A web application displaying an interactive map of CPage's customers: public health institutions in France. It shows relevant data loaded with ETL processes and lets CPage collaborators log satisfaction levels after interactions (calls, emails, visits). Institutions are marked with a weather code indicating their satisfaction, offering a quick visual of which need more attention. It also provides data analysis tools, such as graphs and word clouds of the satisfaction logs using an NLP model from HuggingFace.",
+      "duration": "100 hours"
+    },
+    "cnn_cifar100": {
+      "title": "CNN on CIFAR-100",
+      "description": "Training of a convolutional neural network (CNN) from scratch to classify images of the CIFAR-100 dataset. Preprocessed and engineered the dataset by normalizing the images and converting them to TensorFlow datasets. Experimented with different architectures and hyperparameters to improve the model's accuracy. Finished by evaluating the model's performance using various metrics and visualizations. This project was part of a course on machine learning and deep learning using Python.",
+      "duration": "30 hours"
+    },
+    "llama2_finetuning": {
+      "title": "Llama 2 fine-tuning",
+      "description": "Fine-tuning of the 7B-parameter large language model (LLM) Llama 2. Prepared a dataset to train the model on extracting specific text from PDF files. Tuned the hyperparameters to make the model as accurate as possible. Experimented with different architectures and hyperparameters to improve the model's accuracy. Tested the model on various PDF files and evaluated its performance. This project, part of my internship at CPage, was a proof of concept to demonstrate the purpose of modern AI models in the company's software solutions.",
+      "duration": "50 hours"
+    },
+    "visualizer": {
+      "title": "Visualizer",
+      "description": "A web application featuring a dependencies graph to map software solutions and their respective versions, for better compatibility tracking. Each node represents a software version, and each edge a dependency between two versions. Also includes features to add/remove nodes, view logs, and check stats.",
+      "duration": "150 hours"
+    },
+    "context": {
+      "personal": "Personal",
+      "school": "School",
+      "work": "Work"
+    },
+    "github_repo": "github repo",
+    "disclaimer": "This is just a showcase. For more projects, check out my"
+  },
+  "skills": {
+    "data_science_ml": "Data Science & Machine Learning",
+    "data_engineering": "Data Engineering",
+    "programming_languages": "Programming Languages",
+    "web_development": "Web Development",
+    "front_end": "Front-end",
+    "back_end": "Back-end",
+    "databases": "Databases",
+    "frameworks_libraries": "Frameworks & Libraries",
+    "devops_tools": "DevOps & Tools",
+    "design_tools": "Design Tools",
+    "project_management": "Project Management"
+  },
+  "more": {
+    "resumes": {
+      "header": "Resumes",
+      "lastUpdated": "Last updated {{ date }}",
+      "french": "EU format, in French",
+      "english": "EU format, in English",
+      "us": "US format"
+    },
+    "interests": {
+      "header": "Interests",
+      "watchmaking": "Watchmaking",
+      "sports": "Sports",
+      "music": "Music"
     }
   }
 }

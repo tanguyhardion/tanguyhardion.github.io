@@ -1,9 +1,9 @@
 import type { ProjectContext } from "../enums/project-context";
 
 export interface Project {
-  title: string;
-  description: string;
-  duration: string;
+  titleKey: string;
+  descriptionKey: string;
+  durationKey: string;
   team: number;
   technologies: string[];
   context: ProjectContext;
