@@ -11,7 +11,8 @@
     "tooltips": {
       "email": "Email me",
       "linkedin": "Add me on LinkedIn",
-      "github": "Check out my GitHub"
+      "github": "Check out my GitHub",
+      "language": "Change language"
     }
   },
   "profile": {

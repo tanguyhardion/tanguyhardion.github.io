@@ -48,8 +48,14 @@
         <img class="social github" src="assets/images/icons/github.png" />
       </a>
     </div>
-    <div class="custom-select" title="Change language">
-      <div class="selected-option" [ngClass]="{ open: isDropdownOpen }" (click)="toggleDropdown()">
+    <div class="custom-select">
+      <div
+        class="selected-option"
+        [ngClass]="{ open: isDropdownOpen }"
+        (click)="toggleDropdown()"
+        [tooltip]="'appBar.tooltips.language' | translate"
+        [options]="tooltipOptions"
+      >
         <img [src]="selectedLang.flag" alt="flag" class="flag" />
         <span class="arrow" [ngClass]="{ up: isDropdownOpen, down: !isDropdownOpen }"></span>
       </div>
