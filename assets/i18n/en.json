@@ -149,6 +149,21 @@
       "english": "EU format, in English",
       "us": "US format"
     },
+    "languages": {
+      "header": "Languages",
+      "french": {
+        "name": "French",
+        "level": "Native"
+      },
+      "english": {
+        "name": "English",
+        "level": "Fluent (C1+, TOEFL 108/120)"
+      },
+      "spanish": {
+        "name": "Spanish",
+        "level": "Intermediate, B1"
+      }
+    },
     "interests": {
       "header": "Interests",
       "watchmaking": "Watchmaking",
