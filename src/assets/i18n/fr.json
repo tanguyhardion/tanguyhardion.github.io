@@ -151,6 +151,21 @@
       "english": "Format européen, en anglais",
       "us": "Format américain"
     },
+    "languges": {
+      "header": "Langues",
+      "french": {
+        "name": "Français",
+        "level": "Langue maternelle"
+      },
+      "english": {
+        "name": "Anglais",
+        "level": "Courant, C1+ (TOEFL 108/120)"
+      },
+      "spanish": {
+        "name": "Espagnol",
+        "level": "Intermédiaire, B1"
+      }
+    },
     "interests": {
       "header": "Centres d'intérêt",
       "watchmaking": "Horlogerie",

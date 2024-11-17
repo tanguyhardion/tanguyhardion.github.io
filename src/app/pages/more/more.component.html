@@ -1,4 +1,5 @@
 <div class="wrapper">
+  <!-- Resumes -->
   <h1>{{ 'more.resumes.header' | translate }}</h1>
   <div class="file-container">
     @for (file of files; track $index) {
@@ -6,7 +7,7 @@
       <a
         [href]="file.path"
         target="_blank"
-        [ngStyle]="{ '--link-image': getLinkImage(file.image) }"
+        [ngStyle]="{ '--link-image': getImagePath(file.image) }"
         class="link"
       >
         {{ file.nameKey | translate }}
@@ -21,10 +22,25 @@
     }
   </div>
 
+  <!-- Languages -->
+  <h1>{{ 'more.languages.header' | translate }}</h1>
+  <div class="languages">
+    @for (language of languages; track $index) {
+    <div class="language" [ngStyle]="{ '--language-image': getImagePath(language.image) }">
+      <span class="name">
+        {{ language.nameKey | translate }}
+      </span>
+      <span>&nbsp;-&nbsp;</span>
+      <span class="level">{{ language.levelKey | translate }}</span>
+    </div>
+    }
+  </div>
+
+  <!-- Interests -->
   <h1>{{ 'more.interests.header' | translate }}</h1>
   <div class="interests">
     @for (interest of interests; track $index) {
-    <div class="interest" [ngStyle]="{ '--interest-image': getInterestImage(interest.image) }">
+    <div class="interest" [ngStyle]="{ '--interest-image': getImagePath(interest.image) }">
       {{ interest.nameKey | translate }}
     </div>
     }

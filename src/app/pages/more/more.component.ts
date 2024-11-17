@@ -4,6 +4,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 import { GithubFile } from '@model/types/github-file';
 import { Interest } from '@model/types/interest';
+import { Language } from '@model/types/language';
 
 @Component({
   selector: 'app-more',
@@ -18,33 +19,50 @@ export class MoreComponent implements OnInit {
       nameKey: 'more.resumes.french',
       path: 'assets/pdf/tanguy_hardion_cv.pdf',
       lastCommitDate: '',
-      image: 'france.png'
+      image: 'flags/france.png'
     },
     {
       nameKey: 'more.resumes.english',
       path: 'assets/pdf/tanguy_hardion_resume.pdf',
       lastCommitDate: '',
-      image: 'europe.png'
+      image: 'flags/europe.png'
     },
     {
       nameKey: 'more.resumes.us',
       path: 'assets/pdf/tanguy_hardion_us_resume.pdf',
       lastCommitDate: '',
-      image: 'us.png'
+      image: 'flags/us.png'
+    }
+  ];
+  languages: Language[] = [
+    {
+      nameKey: 'more.languages.french.name',
+      levelKey: 'more.languages.french.level',
+      image: 'flags/france-gradient.png'
+    },
+    {
+      nameKey: 'more.languages.english.name',
+      levelKey: 'more.languages.english.level',
+      image: 'flags/us-gradient.png'
+    },
+    {
+      nameKey: 'more.languages.spanish.name',
+      levelKey: 'more.languages.spanish.level',
+      image: 'flags/spain-gradient.png'
     }
   ];
   interests: Interest[] = [
     {
       nameKey: 'more.interests.watchmaking',
-      image: 'watch.jpg'
+      image: 'illustrations/watch.jpg'
     },
     {
       nameKey: 'more.interests.sports',
-      image: 'gym.jpg'
+      image: 'illustrations/gym.jpg'
     },
     {
       nameKey: 'more.interests.music',
-      image: 'piano.jpg'
+      image: 'illustrations/piano.jpg'
     }
   ];
 
@@ -79,12 +97,8 @@ export class MoreComponent implements OnInit {
     });
   }
 
-  getLinkImage(image: string): string {
-    return `url(assets/images/flags/${image})`;
-  }
-
-  getInterestImage(image: string): string {
-    return `url(assets/images/illustrations/${image})`;
+  getImagePath(image: string): string {
+    return `url(assets/images/${image})`;
   }
 
   async fetchAndStoreData(file: GithubFile, path: string) {
