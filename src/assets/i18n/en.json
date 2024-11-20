@@ -120,11 +120,18 @@
       "description": "A web application featuring a dependencies graph to map software solutions and their respective versions, for better compatibility tracking. Each node represents a software version, and each edge a dependency between two versions. Also includes features to add/remove nodes, view logs, and check stats.",
       "duration": "150 hours"
     },
+    "census_income": {
+      "title": "Census Income Analysis",
+      "description": "Conducted an analysis of the UCI Census Income dataset, including exploratory data analysis (EDA) to comprehend the data, created visualizations, and authored a report on the findings. Developed a Shiny app to present the results.",
+      "duration": "40 hours"
+    },
     "context": {
       "personal": "Personal",
       "school": "School",
       "work": "Work"
     },
+    "team_members": "Team of {{ count }}",
+    "team_member": "Solo",
     "github_repo": "github repo",
     "disclaimer": "This is just a showcase. For more projects, check out my"
   },

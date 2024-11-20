@@ -26,6 +26,41 @@ export class ProjectsComponent {
       image: 'ml.jpg'
     },
     {
+      titleKey: 'projects.cnn_cifar100.title',
+      descriptionKey: 'projects.cnn_cifar100.description',
+      durationKey: 'projects.cnn_cifar100.duration',
+      team: 1,
+      context: ProjectContext.School,
+      contextLogo: 'utt.png',
+      contextLogoLink: 'https://www.utt.fr/',
+      technologies: ['TensorFlow', 'Keras', 'HuggingFace'],
+      image: 'cnn.jpg',
+      link: 'https://github.com/tanguyhardion/cifar100-cnn'
+    },
+    {
+      titleKey: 'projects.census_income.title',
+      descriptionKey: 'projects.census_income.description',
+      durationKey: 'projects.census_income.duration',
+      team: 3,
+      context: ProjectContext.School,
+      contextLogo: 'utt.png',
+      contextLogoLink: 'https://www.utt.fr/',
+      technologies: ['R (dplyr, ggplot2, etc.)', 'Shiny'],
+      image: 'shiny.png',
+      link: 'https://github.com/IF36-visualisation/projet-if36-p23-inspecteur-gadget'
+    },
+    {
+      titleKey: 'projects.llama2_finetuning.title',
+      descriptionKey: 'projects.llama2_finetuning.description',
+      durationKey: 'projects.llama2_finetuning.duration',
+      team: 1,
+      context: ProjectContext.Work,
+      contextLogo: 'cpage.png',
+      contextLogoLink: 'https://www.cpage.fr/',
+      technologies: ['PyTorch', 'HuggingFace', 'Meta AI'],
+      image: 'llama2.jpg'
+    },
+    {
       titleKey: 'projects.personal_website.title',
       descriptionKey: 'projects.personal_website.description',
       durationKey: 'projects.personal_website.duration',
@@ -45,29 +80,6 @@ export class ProjectsComponent {
       contextLogo: 'cpage.png',
       contextLogoLink: 'https://www.cpage.fr/',
       image: 'map.png'
-    },
-    {
-      titleKey: 'projects.cnn_cifar100.title',
-      descriptionKey: 'projects.cnn_cifar100.description',
-      durationKey: 'projects.cnn_cifar100.duration',
-      team: 1,
-      context: ProjectContext.School,
-      contextLogo: 'utt.png',
-      contextLogoLink: 'https://www.utt.fr/',
-      technologies: ['TensorFlow', 'Keras', 'HuggingFace'],
-      image: 'cnn.jpg',
-      link: 'https://github.com/tanguyhardion/cifar100-cnn'
-    },
-    {
-      titleKey: 'projects.llama2_finetuning.title',
-      descriptionKey: 'projects.llama2_finetuning.description',
-      durationKey: 'projects.llama2_finetuning.duration',
-      team: 1,
-      context: ProjectContext.Work,
-      contextLogo: 'cpage.png',
-      contextLogoLink: 'https://www.cpage.fr/',
-      technologies: ['PyTorch', 'HuggingFace', 'Meta AI'],
-      image: 'llama2.jpg'
     },
     {
       titleKey: 'projects.visualizer.title',

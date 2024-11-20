@@ -26,7 +26,11 @@
           <span class="material-icons"> person </span>
           }
           <span>
-            {{ project.team === 1 ? 'Solo' : 'Team of ' + project.team }}
+            {{
+              project.team > 1
+                ? ('projects.team_members' | translate : { count: project.team })
+                : ('projects.team_member' | translate : { count: project.team })
+            }}
           </span>
         </div>
         <div class="context chip">
@@ -54,7 +58,7 @@
         @if (project.link.includes('github.com')) {
         <img loading="lazy" class="image" src="assets/images/icons/github.png" />
         <a [href]="project.link" target="_blank" rel="noopener noreferrer">
-          {{ 'projects.github_repo' | translate}}
+          {{ 'projects.github_repo' | translate }}
         </a>
         } @else {
         <a [href]="project.link" target="_blank" rel="noopener noreferrer">{{
