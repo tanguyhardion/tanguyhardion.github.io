@@ -14,6 +14,26 @@ import { Language } from '@model/types/language';
   styleUrl: './more.component.scss'
 })
 export class MoreComponent implements OnInit {
+  private readonly translations = {
+    en: {
+      today: 'today',
+      yesterday: 'yesterday',
+      days: (days: number) => `${Math.floor(days)} days ago`,
+      month: '1 month ago',
+      months: (months: number) => `${Math.floor(months)} months ago`,
+      year: '1 year ago',
+      years: (years: number) => `${Math.floor(years)} years ago`
+    },
+    fr: {
+      today: "aujourd'hui",
+      yesterday: 'hier',
+      days: (days: number) => `${Math.floor(days)} jours`,
+      month: 'il y a 1 mois',
+      months: (months: number) => `il y a ${Math.floor(months)} mois`,
+      year: 'il y a 1 an',
+      years: (years: number) => `il y a ${Math.floor(years)} ans`
+    }
+  };
   files: GithubFile[] = [
     {
       nameKey: 'more.resumes.french',
@@ -132,29 +152,29 @@ export class MoreComponent implements OnInit {
     }
   }
 
-  getDuration(date: Date) {
-    // return day, month, or year depending on the duration
-    // if 0 then return 'today'
+  getDuration(date: Date): string {
     const now = new Date();
     const duration = now.getTime() - date.getTime();
     const days = duration / (1000 * 60 * 60 * 24);
+    return this.formatDuration(days, this.translateService.currentLang as 'en' | 'fr');
+  }
 
-    if (this.translateService.currentLang === 'fr') {
-      if (days < 1) {
-        return "aujourd'hui";
-      } else if (days < 2) {
-        return 'hier';
-      } else {
-        return `il y a ${Math.floor(days)} jours`;
-      }
-    }
-
+  private formatDuration(days: number, lang: 'en' | 'fr'): string {
+    const translation = this.translations[lang];
     if (days < 1) {
-      return 'today';
+      return translation.today;
     } else if (days < 2) {
-      return 'yesterday';
+      return translation.yesterday;
+    } else if (days < 30) {
+      return translation.days(days);
     } else {
-      return `${Math.floor(days)} days ago`;
+      const months = days / 30;
+      if (months < 12) {
+        return months < 2 ? translation.month : translation.months(months);
+      } else {
+        const years = months / 12;
+        return years < 2 ? translation.year : translation.years(years);
+      }
     }
   }
 
