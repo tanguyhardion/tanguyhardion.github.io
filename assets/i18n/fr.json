@@ -16,15 +16,14 @@
     }
   },
   "profile": {
-    "intro": "Je suis un étudiant de **{{ age }}** ans se spécialisant en **IA** et **Data Science** à l'[**UTC**](https://utc.fr/).",
-    "internship_lookup": "Actuellement, je recherche un **stage de fin d'études de 6 mois à l'étranger** débutant en **février 2025**."
+    "intro": "Étudiant ingénieur de **{{ age }}** ans se spécialisant en **IA** et **Data Science** à l'[**UTC**](https://utc.fr/)."
   },
   "academics": {
     "relevantCoursework": "Cours pertinents",
     "utc": {
       "name": "Université de Technologie de Compiègne (UTC)",
       "location": "Compiègne, France",
-      "degree": "Semestre de mobilité groupe UT",
+      "degree": "Programme de mobilité acaémique",
       "field": "Spécialisation en Intelligence Artificielle et Data Science",
       "gpa": "Moyenne : 3.67/4.0",
       "coursework": {

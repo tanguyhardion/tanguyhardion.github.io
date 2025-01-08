@@ -16,14 +16,13 @@
     }
   },
   "profile": {
-    "intro": "I'm a **{{ age }}** year-old student specializing in **AI** and **Data Science** at [**UTC**](https://utc.fr/).",
-    "internship_lookup": "Currently, I'm looking for a **6-month end-of-studies internship abroad** starting in **February 2025**."
+    "intro": "I'm a **{{ age }}** year-old student specializing in **AI** and **Data Science** at [**UTC**](https://utc.fr/)."
   },
   "academics": {
     "relevantCoursework": "Relevant coursework",
     "utc": {
       "name": "Université de Technologie de Compiègne (UTC)",
-      "degree": "UT Group Mobility Semester",
+      "degree": "Academic Mobility Program",
       "field": "Specialization in Artificial Intelligence and Data Science",
       "coursework": {
         "advanced_ml": "Advanced Machine Learning",
