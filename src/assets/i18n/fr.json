@@ -16,7 +16,8 @@
     }
   },
   "profile": {
-    "intro": "Étudiant ingénieur de **{{ age }}** ans se spécialisant en **IA** et **Data Science** à l'[**UTC**](https://utc.fr/)."
+    "introPrefix": "Étudiant ingénieur de **{{ age }}** ",
+    "introSuffix": "en spécialisation **IA** et **Data Science** à l'[**UTC**](https://utc.fr/)."
   },
   "academics": {
     "relevantCoursework": "Cours pertinents",
