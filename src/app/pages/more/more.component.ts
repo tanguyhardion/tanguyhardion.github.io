@@ -74,7 +74,7 @@ export class MoreComponent implements OnInit {
   interests: Interest[] = [
     {
       nameKey: 'more.interests.watchmaking',
-      image: 'illustrations/watch.jpg'
+      image: 'illustrations/watch.png'
     },
     {
       nameKey: 'more.interests.sports',
