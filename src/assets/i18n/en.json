@@ -17,7 +17,7 @@
   },
   "profile": {
     "introPrefix": "I'm a **{{ age }}** ",
-    "introSuffix": "year-old student specializing in **AI** and **Data Science** at [**UTC**](https://utc.fr/), currently interning at [**Deloitte Luxembourg.**](https://deloitte.lu/)."
+    "introSuffix": "year-old student specializing in **AI** and **Data Science** at [**UTC**](https://utc.fr/), currently interning at [**Deloitte Luxembourg**](https://deloitte.lu/)."
   },
   "academics": {
     "relevantCoursework": "Relevant coursework",
