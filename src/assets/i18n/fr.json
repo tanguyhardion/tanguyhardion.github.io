@@ -17,7 +17,7 @@
   },
   "profile": {
     "introPrefix": "Étudiant ingénieur de **{{ age }}** ",
-    "introSuffix": "en spécialisation **IA** et **Data Science** à l'[**UTC**](https://utc.fr/)."
+    "introSuffix": "en spécialisation **IA** et **Data Science** à l'[**UTC**](https://utc.fr/), actuellement en stage chez [**Deloitte Luxembourg.**](https://deloitte.lu/)"
   },
   "academics": {
     "relevantCoursework": "Cours pertinents",
