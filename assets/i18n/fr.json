@@ -16,8 +16,7 @@
     }
   },
   "profile": {
-    "introPrefix": "Étudiant ingénieur de **{{ age }}** ",
-    "introSuffix": "en spécialisation **IA** et **Data Science** à l'[**UTC**](https://utc.fr/), actuellement en stage chez [**Deloitte Luxembourg**](https://deloitte.lu/)"
+    "intro": "Étudiant ingénieur de <span class=\"age-placeholder\">0</span> en spécialisation **IA** et **Data Science** à l'[**UTC**](https://utc.fr/), actuellement en stage chez [**Deloitte**](https://www.deloitte.lu/)"
   },
   "academics": {
     "relevantCoursework": "Cours pertinents",
@@ -95,7 +94,7 @@
     "ml_challenge": {
       "title": "Défi ML",
       "description": "Analyse de deux jeux de données simulés (classification et régression) et d'un jeu de données réel. Objectif : développer des modèles de machine learning avec différents algorithmes, évaluer la performance du modèle avec des métriques d'erreur et soumettre les meilleurs modèles à un classement. Le jeu de données réel est extrait de plateformes comme Kaggle ou UCI.",
-      "duration": "En cours"
+      "duration": "80 heures"
     },
     "personal_website": {
       "title": "Site Web Personnel",
@@ -105,27 +104,27 @@
     "cpage_map": {
       "title": "CPage Map",
       "description": "Une application web affichant une carte interactive des clients de CPage : établissements de santé publique en France. Elle montre des données pertinentes chargées avec des processus ETL et permet aux collaborateurs de CPage de consigner les niveaux de satisfaction après des interactions (appels, emails, visites). Les établissements sont marqués avec un code météo indiquant leur satisfaction, offrant une vue rapide de ceux qui nécessitent plus d'attention. Elle fournit également des outils d'analyse de données, comme des graphiques et des nuages de mots des journaux de satisfaction en utilisant un modèle NLP de HuggingFace.",
-      "duration": "100 heures"
+      "duration": "200 heures"
     },
     "cnn_cifar100": {
       "title": "CNN sur CIFAR-100",
       "description": "Entraînement d'un réseau de neurones convolutif (CNN) à partir de zéro pour classifier les images du jeu de données CIFAR-100. Prétraitement et ingénierie des données en normalisant les images et en les convertissant en ensembles de données TensorFlow. Expérimentation avec différentes architectures et hyperparamètres pour améliorer la précision du modèle. Évaluation finale des performances du modèle avec diverses métriques et visualisations. Ce projet fait partie d'un cours sur le machine learning et deep learning en Python.",
-      "duration": "30 heures"
-    },
-    "census_income": {
-      "title": "Analyse Census Income",
-      "description": "Réalisation d'une analyse du jeu de données UCI Census Income, incluant une analyse exploratoire des données (EDA) pour comprendre les données, création de visualisations et rédaction d'un rapport sur les résultats. Développement d'une application Shiny pour présenter les résultats.",
-      "duration": "40 heures"
+      "duration": "50 heures"
     },
     "llama2_finetuning": {
       "title": "Fine-tuning de Llama 2",
       "description": "Fine-tuning du modèle de langage (LLM) Llama 2 de 7 Md de paramètres. Préparation d'un ensemble de données pour entraîner le modèle à extraire du texte spécifique à partir de fichiers PDF. Ajustement des hyperparamètres pour améliorer l'exactitude du modèle. Tests sur divers fichiers PDF et évaluation des performances. Ce projet, réalisé dans le cadre de mon stage chez CPage, est une preuve de concept pour démontrer l'utilité des modèles d'IA modernes dans les solutions logicielles de l'entreprise.",
-      "duration": "50 heures"
+      "duration": "70 heures"
     },
     "visualizer": {
       "title": "Visualizer",
       "description": "Une application web avec un graphe de dépendances pour cartographier les solutions logicielles et leurs dépéndances entre elles, afin d'améliorer le suivi des versions. Chaque nœud représente une version logicielle et chaque arête, une dépendance entre deux versions. Comprend également des fonctionnalités pour ajouter/supprimer des nœuds, afficher les journaux et vérifier les statistiques.",
       "duration": "150 heures"
+    },
+    "census_income": {
+      "title": "Analyse Census Income",
+      "description": "Réalisation d'une analyse du jeu de données UCI Census Income, incluant une analyse exploratoire des données (EDA) pour comprendre les données, création de visualisations et rédaction d'un rapport sur les résultats. Développement d'une application Shiny pour présenter les résultats.",
+      "duration": "80 heures"
     },
     "context": {
       "personal": "Perso",
