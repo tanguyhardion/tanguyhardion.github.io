@@ -16,8 +16,7 @@
     }
   },
   "profile": {
-    "introPrefix": "I'm a **{{ age }}** ",
-    "introSuffix": "year-old student specializing in **AI** and **Data Science** at [**UTC**](https://utc.fr/), currently interning at [**Deloitte Luxembourg**](https://deloitte.lu/)."
+    "intro": "I'm a <span class=\"age-placeholder\">0</span> year-old student specializing in **AI** and **Data Science** at [**UTC**](https://utc.fr/), currently interning at [**Deloitte**](https://www.deloitte.lu/ )."
   },
   "academics": {
     "relevantCoursework": "Relevant coursework",
@@ -93,7 +92,7 @@
     "ml_challenge": {
       "title": "Machine Learning Challenge",
       "description": "Analysis of two simulated datasets (classification and regression) and a real-world dataset. Goal: apply machine learning methods, evaluate model performance with error metrics and submit the best models to a leaderboard. The real-world dataset is sourced from platforms like Kaggle or UCI.",
-      "duration": "Ongoing"
+      "duration": "80 hours"
     },
     "personal_website": {
       "title": "Personal Website",
@@ -103,17 +102,17 @@
     "cpage_map": {
       "title": "CPage Map",
       "description": "A web application displaying an interactive map of CPage's customers: public health institutions in France. It shows relevant data loaded with ETL processes and lets CPage collaborators log satisfaction levels after interactions (calls, emails, visits). Institutions are marked with a weather code indicating their satisfaction, offering a quick visual of which need more attention. It also provides data analysis tools, such as graphs and word clouds of the satisfaction logs using an NLP model from HuggingFace.",
-      "duration": "100 hours"
+      "duration": "200 hours"
     },
     "cnn_cifar100": {
       "title": "CNN on CIFAR-100",
       "description": "Training of a convolutional neural network (CNN) from scratch to classify images of the CIFAR-100 dataset. Preprocessed and engineered the dataset by normalizing the images and converting them to TensorFlow datasets. Experimented with different architectures and hyperparameters to improve the model's accuracy. Finished by evaluating the model's performance using various metrics and visualizations. This project was part of a course on machine learning and deep learning using Python.",
-      "duration": "30 hours"
+      "duration": "50 hours"
     },
     "llama2_finetuning": {
       "title": "Llama 2 fine-tuning",
       "description": "Fine-tuning of the 7B-parameter large language model (LLM) Llama 2. Prepared a dataset to train the model on extracting specific text from PDF files. Tuned the hyperparameters to make the model as accurate as possible. Experimented with different architectures and hyperparameters to improve the model's accuracy. Tested the model on various PDF files and evaluated its performance. This project, part of my internship at CPage, was a proof of concept to demonstrate the purpose of modern AI models in the company's software solutions.",
-      "duration": "50 hours"
+      "duration": "70 hours"
     },
     "visualizer": {
       "title": "Visualizer",
@@ -123,7 +122,7 @@
     "census_income": {
       "title": "Census Income Analysis",
       "description": "Conducted an analysis of the UCI Census Income dataset, including exploratory data analysis (EDA) to comprehend the data, created visualizations, and authored a report on the findings. Developed a Shiny app to present the results.",
-      "duration": "40 hours"
+      "duration": "80 hours"
     },
     "context": {
       "personal": "Personal",

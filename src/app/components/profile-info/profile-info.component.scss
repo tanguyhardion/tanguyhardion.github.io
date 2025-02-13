@@ -13,12 +13,20 @@
   }
 
   .info {
-    max-width: 630px;
+    max-width: 700px;
     font-size: 1.5rem;
 
-    ::ng-deep a {
+    ::ng-deep a:first-of-type {
       color: #f3cb15 !important;
     }
+
+    ::ng-deep a:last-of-type {
+      color: #005587 !important;
+    }
+  }
+
+  ::ng-deep .age-placeholder {
+    font-weight: 700;
   }
 }
 
