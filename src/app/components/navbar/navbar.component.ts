@@ -4,6 +4,7 @@ import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { TooltipDirective } from '@webed/angular-tooltip';
 import { StorageHelper } from '@utils/storage-helper';
+import { NavColorService } from '@services/nav-color.service';
 
 @Component({
   selector: 'NavBar',
@@ -15,14 +16,7 @@ import { StorageHelper } from '@utils/storage-helper';
 export class NavbarComponent implements OnInit, OnDestroy {
   isMenuOpen = false;
   isDropdownOpen = false;
-  links = [
-    { nameKey: 'appBar.navigation.home', path: '', color: '#dc143c' },
-    { nameKey: 'appBar.navigation.academics', path: '/academics', color: '#ffdd48' },
-    { nameKey: 'appBar.navigation.experience', path: '/experience', color: '#f16529' },
-    { nameKey: 'appBar.navigation.projects', path: '/projects', color: '#5ec9f8' },
-    { nameKey: 'appBar.navigation.skills', path: '/skills', color: '#9148ff' },
-    { nameKey: 'appBar.navigation.more', path: '/more', color: '#757678' }
-  ];
+  links: { nameKey: string; path: string; color: string }[];
   currentPath: string | undefined;
 
   selectedLang: { label: string; flag: string; value: string };
@@ -40,7 +34,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
     maxWidth: '300px'
   };
 
-  constructor(private router: Router, private translateService: TranslateService) {
+  constructor(
+    private router: Router,
+    private translateService: TranslateService,
+    private navColorService: NavColorService
+  ) {
     this.selectedLang =
       this.languages.find((lang) => lang.value === this.translateService.currentLang) ||
       this.languages[0];
@@ -58,6 +56,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
         this.isDropdownOpen = false;
       }
     });
+
+    this.links = this.navColorService.getLinks();
   }
 
   ngOnInit(): void {

@@ -4,4 +4,8 @@
   <main>
     <router-outlet></router-outlet>
   </main>
+
+  @if (backlightOn) {
+    <div class="backlight" [ngStyle]="backlightStyle"></div>
+  }
 </div>
