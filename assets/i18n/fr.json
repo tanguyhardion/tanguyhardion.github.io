@@ -65,6 +65,14 @@
     }
   },
   "experience": {
+    "deloitte": {
+      "position": {
+        "ai_data_science_trainee": "Stagiaire Ingénieur IA et Data Science"
+      },
+      "description": {
+        "final_engineering_internship": "Stage de fin d'études chez Deloitte Luxembourg. Automatisation des workflows métier avec l'IA générative."
+      }
+    },
     "cpage": {
       "position": {
         "junior_software_engineer": "Ingénieur Logiciel Junior",
@@ -80,7 +88,7 @@
         "software_developer_intern": "Stagiaire Développeur Logiciel"
       },
       "description": {
-        "final_year_internship": "Stage de fin de DUT dans le département qui gère l'installation et le support des systèmes utilisés par l'entreprise."
+        "dut_internship": "Stage de fin de DUT dans le département qui gère l'installation et le support des systèmes utilisés par l'entreprise."
       }
     },
     "job_type": {
