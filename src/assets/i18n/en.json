@@ -63,6 +63,14 @@
     }
   },
   "experience": {
+    "deloitte": {
+      "position": {
+        "ai_data_science_trainee": "AI & Data Science Trainee"
+      },
+      "description": {
+        "final_engineering_internship": "Final year internship at Deloitte. Streamlining business workflows using Generative AI."
+      }
+    },
     "cpage": {
       "position": {
         "junior_software_engineer": "Junior Software Engineer",
@@ -78,7 +86,7 @@
         "software_developer_intern": "Software Developer Intern"
       },
       "description": {
-        "final_year_internship": "Final year DUT (associate degree) internship in the department that manages the installation and support of the systems used by the company."
+        "dut_internship": "Final year DUT (associate degree) internship in the department that manages the installation and support of the systems used by the company."
       }
     },
     "job_type": {

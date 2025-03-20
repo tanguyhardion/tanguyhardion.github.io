@@ -7,6 +7,9 @@ export interface Experience {
   positionKey: string;
   jobType: JobType;
   descriptionKey: string;
-  projects: string[];
+  relatedProjects: {
+    id: string;
+    name: string;
+  }[];
   dates: DateRange;
 }

@@ -22,7 +22,7 @@
           <span class="material-icons">event</span>
           <span
             >{{ formatDate(experience.dates.start) }} -
-            {{ formatDate(experience.dates.start) }}</span
+            {{ experience.dates.end ? formatDate(experience.dates.end) : 'Present' }}</span
           >
         </div>
         <div class="job-type chip">
@@ -43,15 +43,15 @@
     </div>
     <div class="description">
       {{ experience.descriptionKey | translate }}
-      @if (experience.projects.length) {
+      @if (experience.relatedProjects.length) {
       <p>
         <span>{{ projectText }}</span>
-        @if (experience.projects.length > 1) {
-          {{ 'experience.worked_on_plur' | translate }}
+        @if (experience.relatedProjects.length > 1) {
+        {{ 'experience.worked_on_plur' | translate }}
         } @else {
-          {{ 'experience.worked_on_sing' | translate }}
+        {{ 'experience.worked_on_sing' | translate }}
         }
-        <b>{{ experience.projects.join(', ') }}</b>
+        <b>{{ experience.relatedProjects.join(', ') }}</b>
       </p>
       }
     </div>

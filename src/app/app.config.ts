@@ -1,9 +1,9 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideRouter } from '@angular/router';
-
-import { HttpClient } from '@angular/common/http';
 import { provideHttpClient } from '@angular/common/http';
 import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
+import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { provideLottieOptions } from 'ngx-lottie';
@@ -18,6 +18,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
+    provideAnimations(),
     provideLottieOptions({
       player: () => player
     }),

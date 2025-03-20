@@ -43,8 +43,8 @@ export class ExperienceCardComponent implements AfterViewInit {
 
   get projectText(): string {
     if (this.translateService.currentLang === 'fr') {
-      return this.experience.projects.length > 1 ? 'Projets' : 'Projet';
+      return this.experience.relatedProjects.length > 1 ? 'Projets' : 'Projet';
     }
-    return this.experience.projects.length > 1 ? 'Projects' : 'Project';
+    return this.experience.relatedProjects.length > 1 ? 'Projects' : 'Project';
   }
 }
