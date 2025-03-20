@@ -21,8 +21,8 @@
         <div class="dates chip">
           <span class="material-icons">event</span>
           <span
-            >{{ formatDate(experience.dates.start) }} -
-            {{ experience.dates.end ? formatDate(experience.dates.end) : 'Present' }}</span
+            >{{ experience.dates.start | formatDate }} -
+            {{ experience.dates.end | formatDate }}</span
           >
         </div>
         <div class="job-type chip">

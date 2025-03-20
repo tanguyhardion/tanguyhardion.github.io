@@ -1,15 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 import { Academic } from '@model/interfaces/academic';
-import { TranslatePipe } from '@ngx-translate/core';
+import { FormatDatePipe } from '@pipes/format-date.pipe';
 import { VisibilityObserverService } from '@services/visibility-observer.service';
 import getImageColor from '@utils/image-color';
 
 @Component({
   selector: 'AcademicCard',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule, TranslatePipe, FormatDatePipe],
   templateUrl: './academic-card.component.html',
   styleUrl: './academic-card.component.scss'
 })
@@ -21,12 +22,6 @@ export class AcademicCardComponent implements AfterViewInit {
   backgroundColor = '';
 
   constructor(private visibilityObserverService: VisibilityObserverService) {}
-
-  formatDate(date: Date): string {
-    return `${date.toLocaleString('en', {
-      month: 'short'
-    })}. ${date.getFullYear()}`;
-  }
 
   async ngAfterViewInit(): Promise<void> {
     this.backgroundColor = (await getImageColor(`image-${this.academic.school.logo}`)) || '#000';

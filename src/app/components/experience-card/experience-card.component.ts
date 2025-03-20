@@ -1,15 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 import { Experience } from '@model/interfaces/experience';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { FormatDatePipe } from '@pipes/format-date.pipe';
 import { VisibilityObserverService } from '@services/visibility-observer.service';
 import getImageColor from '@utils/image-color';
 
 @Component({
   selector: 'ExperienceCard',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule, TranslatePipe, FormatDatePipe],
   templateUrl: './experience-card.component.html',
   styleUrl: './experience-card.component.scss'
 })
@@ -33,12 +34,6 @@ export class ExperienceCardComponent implements AfterViewInit {
         this.isRevealed = isRevealed;
       });
     }
-  }
-
-  formatDate(date: Date): string {
-    return `${date.toLocaleString('en', {
-      month: 'short'
-    })}. ${date.getFullYear()}`;
   }
 
   get projectText(): string {
