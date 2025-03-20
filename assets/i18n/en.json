@@ -33,7 +33,7 @@
     },
     "utt": {
       "name": "Université de Technologie de Troyes (UTT)",
-      "degree": "Engineer's degree",
+      "degree": "Engineer's Degree",
       "field": "Computer Science and Information Systems, Data Science track",
       "gpa": "GPA: 4.70/5",
       "coursework": {
@@ -48,7 +48,7 @@
     },
     "iut_dijon": {
       "name": "IUT Dijon",
-      "degree": "DUT (⇔ to an associate degree)",
+      "degree": "DUT (⇔ to an Associate Degree)",
       "field": "Computer Science",
       "gpa": "Top 10 out of 100",
       "coursework": {
