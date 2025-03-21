@@ -30,11 +30,5 @@ export class ProfileInfoComponent implements AfterViewInit {
         ageEl.textContent = age;
       }
     }, 50);
-
-    const links = this.infoEl.nativeElement.getElementsByTagName('a');
-    Array.from(links).forEach((link) => {
-      link.setAttribute('target', '_blank');
-      link.setAttribute('rel', 'noopener noreferrer');
-    });
   }
 }
