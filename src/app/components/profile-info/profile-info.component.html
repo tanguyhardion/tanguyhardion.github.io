@@ -1,6 +1,6 @@
 <div class="profile">
   <h1 class="name">Tanguy Hardion</h1>
-  <div class="info" [innerHTML]="'profile.intro' | translate | marked"></div>
+  <div class="info" #info [innerHTML]="'profile.intro' | translate | marked"></div>
 </div>
 <div class="lottie">
   <ng-lottie [options]="options"></ng-lottie>

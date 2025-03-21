@@ -11,7 +11,7 @@ import { MarkedPipe } from '@pipes/marked.pipe';
   standalone: true,
   imports: [CommonModule, LottieComponent, TranslatePipe, MarkedPipe],
   templateUrl: './profile-info.component.html',
-  styleUrls: ['./profile-info.component.scss'],
+  styleUrls: ['./profile-info.component.scss']
 })
 export class ProfileInfoComponent implements AfterViewInit {
   @ViewChild('info') infoEl!: ElementRef<HTMLDivElement>;
@@ -19,7 +19,7 @@ export class ProfileInfoComponent implements AfterViewInit {
   options: AnimationOptions = {
     path: 'assets/lottie/animation.json',
     renderer: 'canvas' as any
-  };
+  };z
 
   ngAfterViewInit(): void {
     setInterval(() => {
