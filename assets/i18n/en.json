@@ -16,7 +16,7 @@
     }
   },
   "profile": {
-    "intro": "I'm a <span class=\"age-placeholder\">0</span> year-old student specializing in **AI** and **Data Science** at [**UTC**](https://utc.fr/), currently interning at [**Deloitte**](https://www.deloitte.lu/ )."
+    "intro": "I'm a <span class=\"age-placeholder\">0</span> year-old student specializing in **AI** and **Data Science** at <a href='https://utc.fr/' target='_blank'>**UTC**</a>, currently interning at <a href='https://www.deloitte.lu/' target='_blank'>**Deloitte**</a>."
   },
   "academics": {
     "relevantCoursework": "Relevant coursework",

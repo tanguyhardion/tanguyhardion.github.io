@@ -16,7 +16,7 @@
     }
   },
   "profile": {
-    "intro": "Étudiant ingénieur de <span class=\"age-placeholder\">0</span> en spécialisation **IA** et **Data Science** à l'[**UTC**](https://utc.fr/), actuellement en stage chez [**Deloitte**](https://www.deloitte.lu/)"
+    "intro": "Étudiant ingénieur de <span class=\"age-placeholder\">0</span> en spécialisation **IA** et **Data Science** à l'<a href='https://utc.fr/' target='_blank'>**UTC**</a>, actuellement en stage chez <a href='https://www.deloitte.lu/' target='_blank'>**Deloitte**</a>."
   },
   "academics": {
     "relevantCoursework": "Cours pertinents",
