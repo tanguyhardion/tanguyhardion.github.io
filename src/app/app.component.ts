@@ -2,10 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { NavigationStart, Router, RouterOutlet } from '@angular/router';
+
 import { TranslateService } from '@ngx-translate/core';
-import { StorageHelper } from '@utils/storage-helper';
-import { NavbarComponent } from './components/navbar/navbar.component';
+
+import { NavbarComponent } from '@components/navbar/navbar.component';
 import { NavColorService } from '@services/nav-color.service';
+import hexToRgba from '@utils/hex-to-rgba';
+import { StorageHelper } from '@utils/storage-helper';
 
 @Component({
   selector: 'app-root',
@@ -82,10 +85,7 @@ export class AppComponent {
     return {
       'left.px': this.x,
       'top.px': this.y,
-      background: `radial-gradient(circle, ${this.hexToRgba(color, 0.5)} 0%, ${this.hexToRgba(
-        color,
-        0
-      )} 80%)`
+      background: `radial-gradient(circle, ${hexToRgba(color, 0.5)} 0%, ${hexToRgba(color, 0)} 80%)`
     };
   }
 
@@ -94,24 +94,6 @@ export class AppComponent {
       this.x += (this.targetX - this.x) * 0.1;
       this.y += (this.targetY - this.y) * 0.1;
     }, 16);
-  }
-
-  // Converts a hex color (e.g. "#dc143c") to rgba with the given alpha value.
-  private hexToRgba(hex: string, alpha: number): string {
-    hex = hex.replace('#', '');
-    let r = 0,
-      g = 0,
-      b = 0;
-    if (hex.length === 3) {
-      r = parseInt(hex[0] + hex[0], 16);
-      g = parseInt(hex[1] + hex[1], 16);
-      b = parseInt(hex[2] + hex[2], 16);
-    } else if (hex.length === 6) {
-      r = parseInt(hex.substring(0, 2), 16);
-      g = parseInt(hex.substring(2, 4), 16);
-      b = parseInt(hex.substring(4, 6), 16);
-    }
-    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   }
 
   private getTitle(route: string) {
