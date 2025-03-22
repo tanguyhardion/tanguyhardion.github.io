@@ -19,7 +19,7 @@ export class ProfileInfoComponent implements AfterViewInit {
   options: AnimationOptions = {
     path: 'assets/lottie/animation.json',
     renderer: 'canvas' as any
-  };z
+  };
 
   ngAfterViewInit(): void {
     setInterval(() => {
