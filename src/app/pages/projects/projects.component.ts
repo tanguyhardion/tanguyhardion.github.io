@@ -6,11 +6,10 @@ import { ProjectContext } from '@model/enums/project-context';
 import { Project } from '@model/interfaces/project';
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [CommonModule, ProjectCardComponent, TranslatePipe],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+    selector: 'app-projects',
+    imports: [CommonModule, ProjectCardComponent, TranslatePipe],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
   projectList: Project[] = [

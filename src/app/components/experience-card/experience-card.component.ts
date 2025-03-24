@@ -8,11 +8,10 @@ import { VisibilityObserverService } from '@services/visibility-observer.service
 import getImageColor from '@utils/image-color';
 
 @Component({
-  selector: 'ExperienceCard',
-  standalone: true,
-  imports: [CommonModule, TranslatePipe, FormatDatePipe],
-  templateUrl: './experience-card.component.html',
-  styleUrl: './experience-card.component.scss'
+    selector: 'ExperienceCard',
+    imports: [CommonModule, TranslatePipe, FormatDatePipe],
+    templateUrl: './experience-card.component.html',
+    styleUrl: './experience-card.component.scss'
 })
 export class ExperienceCardComponent implements AfterViewInit {
   @Input() experience: Experience;

@@ -7,11 +7,10 @@ import { StorageHelper } from '@utils/storage-helper';
 import { NavColorService } from '@services/nav-color.service';
 
 @Component({
-  selector: 'NavBar',
-  standalone: true,
-  imports: [CommonModule, RouterModule, TranslatePipe, TooltipDirective],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+    selector: 'NavBar',
+    imports: [CommonModule, RouterModule, TranslatePipe, TooltipDirective],
+    templateUrl: './navbar.component.html',
+    styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   isMenuOpen = false;

@@ -7,11 +7,10 @@ import { Interest } from '@model/types/interest';
 import { Language } from '@model/types/language';
 
 @Component({
-  selector: 'app-more',
-  standalone: true,
-  imports: [CommonModule, TranslatePipe],
-  templateUrl: './more.component.html',
-  styleUrl: './more.component.scss'
+    selector: 'app-more',
+    imports: [CommonModule, TranslatePipe],
+    templateUrl: './more.component.html',
+    styleUrl: './more.component.scss'
 })
 export class MoreComponent implements OnInit {
   private readonly translations = {
