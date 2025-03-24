@@ -8,10 +8,10 @@ import { VisibilityObserverService } from '@services/visibility-observer.service
 import getImageColor from '@utils/image-color';
 
 @Component({
-    selector: 'ProjectCard',
-    imports: [CommonModule, TranslatePipe],
-    templateUrl: './project-card.component.html',
-    styleUrl: './project-card.component.scss'
+  selector: 'ProjectCard',
+  imports: [CommonModule, TranslatePipe],
+  templateUrl: './project-card.component.html',
+  styleUrl: './project-card.component.scss'
 })
 export class ProjectCardComponent implements AfterViewInit {
   @Input() project: Project;

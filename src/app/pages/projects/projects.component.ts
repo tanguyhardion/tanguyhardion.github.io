@@ -1,15 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+
 import { TranslatePipe } from '@ngx-translate/core';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+
 import { ProjectCardComponent } from '@components/project-card/project-card.component';
 import { ProjectContext } from '@model/enums/project-context';
 import { Project } from '@model/interfaces/project';
 
 @Component({
-    selector: 'app-projects',
-    imports: [CommonModule, ProjectCardComponent, TranslatePipe],
-    templateUrl: './projects.component.html',
-    styleUrl: './projects.component.scss'
+  selector: 'app-projects',
+  imports: [CommonModule, ProjectCardComponent, TranslatePipe, AnimateOnScrollModule],
+  templateUrl: './projects.component.html',
+  styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
   projectList: Project[] = [

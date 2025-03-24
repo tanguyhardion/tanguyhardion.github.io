@@ -4,10 +4,10 @@ import { TranslateService } from '@ngx-translate/core';
 import { marked } from 'marked';
 
 @Component({
-    selector: 'app-skills',
-    imports: [CommonModule],
-    templateUrl: './skills.component.html',
-    styleUrl: './skills.component.scss'
+  selector: 'app-skills',
+  imports: [CommonModule],
+  templateUrl: './skills.component.html',
+  styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
   content: string;

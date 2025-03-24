@@ -8,10 +8,10 @@ import { VisibilityObserverService } from '@services/visibility-observer.service
 import getImageColor from '@utils/image-color';
 
 @Component({
-    selector: 'AcademicCard',
-    imports: [CommonModule, TranslatePipe, FormatDatePipe],
-    templateUrl: './academic-card.component.html',
-    styleUrl: './academic-card.component.scss'
+  selector: 'AcademicCard',
+  imports: [CommonModule, TranslatePipe, FormatDatePipe],
+  templateUrl: './academic-card.component.html',
+  styleUrl: './academic-card.component.scss'
 })
 export class AcademicCardComponent implements AfterViewInit {
   @Input() academic: Academic;

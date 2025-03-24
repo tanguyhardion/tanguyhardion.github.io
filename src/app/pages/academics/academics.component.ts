@@ -5,10 +5,10 @@ import { Academic } from '@model/interfaces/academic';
 import { AcademicCardComponent } from '@components/academic-card/academic-card.component';
 
 @Component({
-    selector: 'app-academics',
-    imports: [CommonModule, AcademicCardComponent],
-    templateUrl: './academics.component.html',
-    styleUrl: './academics.component.scss'
+  selector: 'app-academics',
+  imports: [CommonModule, AcademicCardComponent],
+  templateUrl: './academics.component.html',
+  styleUrl: './academics.component.scss'
 })
 export class AcademicsComponent {
   academicList: Academic[] = [
