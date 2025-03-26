@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { NavigationStart, Router, RouterOutlet } from '@angular/router';
 
@@ -11,12 +11,12 @@ import hexToRgba from '@utils/hex-to-rgba';
 import { StorageHelper } from '@utils/storage-helper';
 
 @Component({
-    selector: 'app-root',
-    imports: [CommonModule, RouterOutlet, NavbarComponent],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.scss'
+  selector: 'app-root',
+  imports: [CommonModule, RouterOutlet, NavbarComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   homePage: boolean;
   x = 0;
   y = 0;
@@ -30,14 +30,24 @@ export class AppComponent {
     private title: Title,
     private translateService: TranslateService,
     private navColorService: NavColorService
-  ) {
-    // mouse backlight
-    this.smoothMove();
+  ) {}
 
-    // translation configuration
+  ngOnInit(): void {
+    this.initializeBacklight();
+    this.configureTranslation();
+    this.configurePageTitle();
+    this.configureMetaTags();
+  }
+
+  private initializeBacklight(): void {
+    this.smoothMove();
+  }
+
+  private configureTranslation(): void {
     const langs = ['fr', 'en'];
     this.translateService.addLangs(langs);
     this.translateService.setDefaultLang('en');
+
     const storedLang = StorageHelper.get('lang');
     if (storedLang && langs.includes(storedLang)) {
       this.translateService.use(storedLang);
@@ -45,16 +55,18 @@ export class AppComponent {
       const browserLang = this.translateService.getBrowserLang() || 'en';
       this.translateService.use(langs.includes(browserLang) ? browserLang : 'en');
     }
+  }
 
-    // page title configuration
+  private configurePageTitle(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         this.homePage = event.url === '/';
         document.title = this.getTitle(event.url);
       }
     });
+  }
 
-    // meta configuration
+  private configureMetaTags(): void {
     this.title.setTitle('Tanguy Hardion');
     this.meta.addTags([
       { name: 'author', content: "Tanguy Hardion's website" },
