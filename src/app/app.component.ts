@@ -54,6 +54,7 @@ export class AppComponent implements OnInit {
     } else {
       const browserLang = this.translateService.getBrowserLang() || 'en';
       this.translateService.use(langs.includes(browserLang) ? browserLang : 'en');
+      StorageHelper.set('lang', browserLang);
     }
   }
 

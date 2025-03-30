@@ -38,10 +38,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
     private translateService: TranslateService,
     private navColorService: NavColorService
   ) {
-    this.selectedLang =
-      this.languages.find((lang) => lang.value === this.translateService.currentLang) ||
-      this.languages[0];
-
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         const urlSegments = event.urlAfterRedirects.split('/');
@@ -60,6 +56,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.selectedLang =
+      this.languages.find((lang) => lang.value === StorageHelper.get('lang')) || this.languages[0];
     window.addEventListener('resize', this.handleResize);
   }
 
