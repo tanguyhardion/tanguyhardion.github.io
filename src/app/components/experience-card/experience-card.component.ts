@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 import { Experience } from '@model/interfaces/experience';
 import { FormatDatePipe } from '@pipes/format-date.pipe';
@@ -9,7 +10,7 @@ import getImageColor from '@utils/image-color';
 
 @Component({
   selector: 'ExperienceCard',
-  imports: [CommonModule, TranslatePipe, FormatDatePipe],
+  imports: [CommonModule, TranslatePipe, FormatDatePipe, AnimateOnScrollModule],
   templateUrl: './experience-card.component.html',
   styleUrl: './experience-card.component.scss'
 })

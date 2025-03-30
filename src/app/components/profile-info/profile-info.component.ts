@@ -1,10 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
-import dayjs from 'dayjs';
-import { AnimationOptions } from 'ngx-lottie';
-import { LottieComponent } from 'ngx-lottie';
 import { MarkedPipe } from '@pipes/marked.pipe';
+import dayjs from 'dayjs';
+import { AnimationOptions, LottieComponent } from 'ngx-lottie';
 
 @Component({
   selector: 'ProfileInfo',

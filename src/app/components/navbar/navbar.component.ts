@@ -2,9 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { TooltipDirective } from '@webed/angular-tooltip';
-import { StorageHelper } from '@utils/storage-helper';
 import { NavColorService } from '@services/nav-color.service';
+import { StorageHelper } from '@utils/storage-helper';
+import { TooltipDirective } from '@webed/angular-tooltip';
 
 @Component({
   selector: 'NavBar',

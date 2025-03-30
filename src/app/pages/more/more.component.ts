@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 import { GithubFile } from '@model/types/github-file';
 import { Interest } from '@model/types/interest';
@@ -8,7 +9,7 @@ import { Language } from '@model/types/language';
 
 @Component({
   selector: 'app-more',
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule, TranslatePipe, AnimateOnScrollModule],
   templateUrl: './more.component.html',
   styleUrl: './more.component.scss'
 })

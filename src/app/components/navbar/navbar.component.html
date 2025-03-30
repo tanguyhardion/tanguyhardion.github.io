@@ -6,16 +6,16 @@
   </div>
   <nav [class.menu-open]="isMenuOpen">
     @for (link of links; track $index) {
-    <a
-      [routerLink]="link.path"
-      [ngStyle]="{ '--link-color': link.color }"
-      [class.active]="link.path.replace('/', '') === currentPath"
-      class="nav-link"
-      (click)="isMenuOpen = false"
-    >
-      {{ link.nameKey | translate }}
-      <span class="underline"></span>
-    </a>
+      <a
+        [routerLink]="link.path"
+        [ngStyle]="{ '--link-color': link.color }"
+        [class.active]="link.path.replace('/', '') === currentPath"
+        class="nav-link"
+        (click)="isMenuOpen = false"
+      >
+        {{ link.nameKey | translate }}
+        <span class="underline"></span>
+      </a>
     }
   </nav>
   <div class="right">
@@ -61,14 +61,14 @@
       </div>
 
       @if (isDropdownOpen) {
-      <div class="options" [ngClass]="{ open: isDropdownOpen }">
-        @for (option of filteredLanguages; track $index) {
-        <div (click)="selectLanguage(option)">
-          <img [src]="option.flag" alt="flag" class="flag" />
-          {{ option.label }}
+        <div class="options" [ngClass]="{ open: isDropdownOpen }">
+          @for (option of filteredLanguages; track $index) {
+            <div (click)="selectLanguage(option)">
+              <img [src]="option.flag" alt="flag" class="flag" />
+              {{ option.label }}
+            </div>
+          }
         </div>
-        }
-      </div>
       }
     </div>
   </div>

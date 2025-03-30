@@ -3,22 +3,22 @@
   <h1>{{ 'more.resumes.header' | translate }}</h1>
   <div class="file-container">
     @for (file of files; track $index) {
-    <div class="file">
-      <a
-        [href]="file.path"
-        target="_blank"
-        [ngStyle]="{ '--link-image': getImagePath(file.image) }"
-        class="link"
-      >
-        {{ file.nameKey | translate }}
-        <span class="material-icons">open_in_new</span>
-      </a>
-      @if (file.lastCommitDate) {
-      <span class="date">{{
-        'more.resumes.lastUpdated' | translate : { date: file.lastCommitDate }
-      }}</span>
-      }
-    </div>
+      <div class="file" pAnimateOnScroll enterClass="animated fadeInUp">
+        <a
+          [href]="file.path"
+          target="_blank"
+          [ngStyle]="{ '--link-image': getImagePath(file.image) }"
+          class="link"
+        >
+          {{ file.nameKey | translate }}
+          <span class="material-icons">open_in_new</span>
+        </a>
+        @if (file.lastCommitDate) {
+          <span class="date">{{
+            'more.resumes.lastUpdated' | translate: { date: file.lastCommitDate }
+          }}</span>
+        }
+      </div>
     }
   </div>
 
@@ -26,13 +26,18 @@
   <h1>{{ 'more.languages.header' | translate }}</h1>
   <div class="languages">
     @for (language of languages; track $index) {
-    <div class="language" [ngStyle]="{ '--language-image': getImagePath(language.image) }">
-      <span class="name">
-        {{ language.nameKey | translate }}
-      </span>
-      <span>&nbsp;-&nbsp;</span>
-      <span class="level">{{ language.levelKey | translate }}</span>
-    </div>
+      <div
+        class="language"
+        [ngStyle]="{ '--language-image': getImagePath(language.image) }"
+        pAnimateOnScroll
+        enterClass="animated fadeInUp"
+      >
+        <span class="name">
+          {{ language.nameKey | translate }}
+        </span>
+        <span>&nbsp;-&nbsp;</span>
+        <span class="level">{{ language.levelKey | translate }}</span>
+      </div>
     }
   </div>
 
@@ -40,9 +45,14 @@
   <h1>{{ 'more.interests.header' | translate }}</h1>
   <div class="interests">
     @for (interest of interests; track $index) {
-    <div class="interest" [ngStyle]="{ '--interest-image': getImagePath(interest.image) }">
-      {{ interest.nameKey | translate }}
-    </div>
+      <div
+        class="interest"
+        [ngStyle]="{ '--interest-image': getImagePath(interest.image) }"
+        pAnimateOnScroll
+        enterClass="animated fadeInUp"
+      >
+        {{ interest.nameKey | translate }}
+      </div>
     }
   </div>
 </div>

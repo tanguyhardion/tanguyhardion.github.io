@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
-import { Academic } from '@model/interfaces/academic';
 import { AcademicCardComponent } from '@components/academic-card/academic-card.component';
+import { Academic } from '@model/interfaces/academic';
 
 @Component({
   selector: 'app-academics',

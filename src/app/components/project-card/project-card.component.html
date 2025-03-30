@@ -3,6 +3,8 @@
   class="project"
   [ngClass]="{ revealed: isRevealed }"
   [ngStyle]="{ '--backgroundColor': backgroundColor }"
+  pAnimateOnScroll
+  enterClass="animated fadeInUp"
 >
   <div class="image-container">
     <img
@@ -21,25 +23,25 @@
         </div>
         <div class="team chip">
           @if (project.team > 1) {
-          <span class="material-icons"> groups </span>
+            <span class="material-icons"> groups </span>
           } @else {
-          <span class="material-icons"> person </span>
+            <span class="material-icons"> person </span>
           }
           <span>
             {{
               project.team > 1
-                ? ('projects.team_members' | translate : { count: project.team })
-                : ('projects.team_member' | translate : { count: project.team })
+                ? ('projects.team_members' | translate: { count: project.team })
+                : ('projects.team_member' | translate: { count: project.team })
             }}
           </span>
         </div>
         <div class="context chip">
           @if (project.context === ProjectContext.Personal) {
-          <span class="material-icons"> home </span>
+            <span class="material-icons"> home </span>
           } @else if (project.context === ProjectContext.School) {
-          <span class="material-icons"> school </span>
+            <span class="material-icons"> school </span>
           } @else if (project.context === ProjectContext.Work) {
-          <span class="material-icons"> work </span>
+            <span class="material-icons"> work </span>
           }
           <span>{{ project.context | translate }}</span>
         </div>
@@ -54,28 +56,29 @@
     </div>
     <div class="footer">
       @if (project.link) {
-      <div class="link">
-        @if (project.link.includes('github.com')) {
-        <img loading="lazy" class="image" src="assets/images/icons/github.png" />
-        <a [href]="project.link" target="_blank" rel="noopener noreferrer">
-          {{ 'projects.github_repo' | translate }}
-        </a>
-        } @else {
-        <a [href]="project.link" target="_blank" rel="noopener noreferrer">{{
-          project.link.replace('https://', '')
-        }}</a>
-        }
-      </div>
-      } @if (project.contextLogo) {
-      <div class="context-logo">
-        <a [href]="project.contextLogoLink" target="_blank" rel="noopener noreferrer">
-          <img
-            class="image"
-            src="assets/images/logos/{{ project.contextLogo }}"
-            alt="context_logo"
-          />
-        </a>
-      </div>
+        <div class="link">
+          @if (project.link.includes('github.com')) {
+            <img loading="lazy" class="image" src="assets/images/icons/github.png" />
+            <a [href]="project.link" target="_blank" rel="noopener noreferrer">
+              {{ 'projects.github_repo' | translate }}
+            </a>
+          } @else {
+            <a [href]="project.link" target="_blank" rel="noopener noreferrer">{{
+              project.link.replace('https://', '')
+            }}</a>
+          }
+        </div>
+      }
+      @if (project.contextLogo) {
+        <div class="context-logo">
+          <a [href]="project.contextLogoLink" target="_blank" rel="noopener noreferrer">
+            <img
+              class="image"
+              src="assets/images/logos/{{ project.contextLogo }}"
+              alt="context_logo"
+            />
+          </a>
+        </div>
       }
     </div>
   </div>

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 import { Academic } from '@model/interfaces/academic';
 import { FormatDatePipe } from '@pipes/format-date.pipe';
@@ -9,7 +10,7 @@ import getImageColor from '@utils/image-color';
 
 @Component({
   selector: 'AcademicCard',
-  imports: [CommonModule, TranslatePipe, FormatDatePipe],
+  imports: [CommonModule, TranslatePipe, FormatDatePipe, AnimateOnScrollModule],
   templateUrl: './academic-card.component.html',
   styleUrl: './academic-card.component.scss'
 })

@@ -1,6 +1,6 @@
 export type GithubFile = {
-    nameKey: string;
-    path: string;
-    lastCommitDate: string | null;
-    image: string;
+  nameKey: string;
+  path: string;
+  lastCommitDate: string | null;
+  image: string;
 };
