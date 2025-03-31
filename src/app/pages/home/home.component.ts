@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 import { ProfileInfoComponent } from '@components/profile-info/profile-info.component';
 
 @Component({
-  selector: 'app-home',
+  selector: 'home',
   imports: [CommonModule, ProfileInfoComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

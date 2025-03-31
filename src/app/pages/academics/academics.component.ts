@@ -5,7 +5,7 @@ import { AcademicCardComponent } from '@components/academic-card/academic-card.c
 import { Academic } from '@model/interfaces/academic';
 
 @Component({
-  selector: 'app-academics',
+  selector: 'academics',
   imports: [CommonModule, AcademicCardComponent],
   templateUrl: './academics.component.html',
   styleUrl: './academics.component.scss'

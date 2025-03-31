@@ -9,7 +9,7 @@ import { ProjectContext } from '@model/enums/project-context';
 import { Project } from '@model/interfaces/project';
 
 @Component({
-  selector: 'app-projects',
+  selector: 'projects',
   imports: [CommonModule, ProjectCardComponent, TranslatePipe, AnimateOnScrollModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'

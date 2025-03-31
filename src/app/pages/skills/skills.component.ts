@@ -49,7 +49,7 @@ export class SkillsComponent {
   ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
   ![Next JS](https://img.shields.io/badge/Next-101010?style=for-the-badge&logo=next.js&logoColor=white)
   ![Vue.js](https://img.shields.io/badge/vue.js-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
-  ![Nuxt.js](https://img.shields.io/badge/Nuxt.js-%2300dc82.svg?style=for-the-badge&logo=nuxt.js&logoColor=white)
+  ![Nuxt.js](https://img.shields.io/badge/Nuxt.js-%2302ad66.svg?style=for-the-badge&logo=nuxt.js&logoColor=white)
   ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
   ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
   ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
@@ -99,13 +99,11 @@ export class SkillsComponent {
   ![Notion](https://img.shields.io/badge/Notion-%23101010.svg?style=for-the-badge&logo=notion&logoColor=white)
   `;
 
-  constructor(private translateService: TranslateService) {}
+  constructor(private translateService: TranslateService) {
+    this.render();
 
-  async ngOnInit(): Promise<void> {
-    await this.render();
-
-    this.translateService.onLangChange.subscribe(async () => {
-      await this.render();
+    this.translateService.onLangChange.subscribe(() => {
+      this.render();
     });
   }
 

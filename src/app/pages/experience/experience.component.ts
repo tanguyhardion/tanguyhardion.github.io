@@ -6,7 +6,7 @@ import { JobType } from '@model/enums/job-type';
 import { Experience } from '@model/interfaces/experience';
 
 @Component({
-  selector: 'app-experience',
+  selector: 'experience',
   imports: [CommonModule, ExperienceCardComponent],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss'

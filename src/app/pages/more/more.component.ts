@@ -8,7 +8,7 @@ import { Interest } from '@model/types/interest';
 import { Language } from '@model/types/language';
 
 @Component({
-  selector: 'app-more',
+  selector: 'more',
   imports: [CommonModule, TranslatePipe, AnimateOnScrollModule],
   templateUrl: './more.component.html',
   styleUrl: './more.component.scss'
