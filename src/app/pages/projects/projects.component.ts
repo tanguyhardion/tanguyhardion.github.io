@@ -48,7 +48,7 @@ export class ProjectsComponent {
       contextLogo: 'utt.png',
       contextLogoLink: 'https://www.utt.fr/',
       technologies: ['R (dplyr, ggplot2, etc.)', 'Shiny'],
-      image: 'shiny.png',
+      image: 'census.png',
       link: 'https://github.com/IF36-visualisation/projet-if36-p23-inspecteur-gadget'
     },
     {
