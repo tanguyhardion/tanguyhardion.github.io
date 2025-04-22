@@ -56,7 +56,7 @@
           @for (key of academic.relevantCourseworkKeys; track $index) {
             {{ key | translate }}
             @if ($index < academic.relevantCourseworkKeys.length - 1) {
-              ,
+              <span>, </span>
             }
           }
         </span>
