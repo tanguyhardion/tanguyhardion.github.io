@@ -23,6 +23,7 @@ export class AppComponent implements OnInit {
   targetX = 0;
   targetY = 0;
   backlightOn = false;
+  isMobile = false;
 
   constructor(
     private router: Router,
@@ -33,6 +34,7 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.isMobile = this.detectMobile();
     this.initializeBacklight();
     this.configureTranslation();
     this.configurePageTitle();
@@ -41,6 +43,10 @@ export class AppComponent implements OnInit {
 
   private initializeBacklight(): void {
     this.smoothMove();
+  }
+
+  private detectMobile(): boolean {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   }
 
   private configureTranslation(): void {
@@ -82,6 +88,10 @@ export class AppComponent implements OnInit {
 
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
+    if (this.isMobile) {
+      return;
+    }
+    
     if (!this.backlightOn) {
       this.x = event.clientX;
       this.y = event.clientY;
@@ -92,6 +102,12 @@ export class AppComponent implements OnInit {
   }
 
   get backlightStyle() {
+    if (this.isMobile) {
+      return {
+        display: 'none'
+      };
+    }
+    
     const currentLink = this.navColorService.getCurrentLink();
     const color = currentLink != undefined ? currentLink.color : '#ffffff';
     return {
