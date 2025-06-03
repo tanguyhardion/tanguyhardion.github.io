@@ -42,4 +42,8 @@ export class ExperienceCardComponent implements AfterViewInit {
     }
     return this.experience.relatedProjects.length > 1 ? 'Projects' : 'Project';
   }
+
+  encodeURIComponent(str: string): string {
+    return encodeURIComponent(str);
+  }
 }

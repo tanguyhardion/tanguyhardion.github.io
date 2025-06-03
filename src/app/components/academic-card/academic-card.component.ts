@@ -32,4 +32,8 @@ export class AcademicCardComponent implements AfterViewInit {
       });
     }
   }
+
+  encodeURIComponent(str: string): string {
+    return encodeURIComponent(str);
+  }
 }

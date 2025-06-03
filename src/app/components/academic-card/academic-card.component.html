@@ -33,7 +33,12 @@
           </div>
         }
         <a
-          [href]="'https://www.google.com/maps/place/' + academic.school.location"
+          [href]="
+            'https://www.google.com/maps/search/' +
+            encodeURIComponent(
+              (academic.school.nameKey | translate) + ' ' + academic.school.location
+            )
+          "
           target="_blank"
           rel="noopener noreferrer"
         >

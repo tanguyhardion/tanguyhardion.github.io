@@ -32,7 +32,10 @@
           <span>{{ experience.jobType | translate }}</span>
         </div>
         <a
-          [href]="'https://www.google.com/maps/place/' + experience.company.location"
+          [href]="
+            'https://www.google.com/maps/search/' +
+            encodeURIComponent(experience.company.name + ' ' + experience.company.location)
+          "
           target="_blank"
           rel="noopener noreferrer"
         >
