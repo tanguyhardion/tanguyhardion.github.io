@@ -1,6 +1,9 @@
 {
   "appBar": {
-    "navigation": {
+    "navigation": "Navigation",
+    "connect": "Contact",
+    "language": "Langue",
+    "links": {
       "home": "Accueil",
       "academics": "Formation",
       "experience": "Expérience",
