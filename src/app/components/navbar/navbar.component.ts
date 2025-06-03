@@ -63,6 +63,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     window.removeEventListener('resize', this.handleResize);
+    // Ensure body scroll is restored when component is destroyed
+    document.body.style.overflow = '';
   }
 
   getTitle(route: string | undefined): string {
@@ -77,11 +79,21 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    this.handleBodyScroll();
   }
 
-  handleResize() {
-    if (window.innerWidth > 768 && this.isMenuOpen) {
+  private handleBodyScroll() {
+    if (this.isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+
+  handleResize = () => {
+    if (window.innerWidth > 800 && this.isMenuOpen) {
       this.isMenuOpen = false;
+      this.handleBodyScroll();
     }
   }
 
@@ -93,6 +105,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.selectedLang = option;
     this.isDropdownOpen = false;
     this.changeLang(option.value);
+    
+    // Close mobile menu if language is changed from mobile menu
+    if (window.innerWidth <= 800 && this.isMenuOpen) {
+      this.toggleMenu();
+    }
   }
 
   changeLang(language: any) {

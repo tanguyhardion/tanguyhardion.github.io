@@ -1,22 +1,105 @@
+<!-- Mobile overlay -->
+@if (isMenuOpen) {
+  <div class="mobile-overlay" (click)="toggleMenu()"></div>
+}
+
 <div class="app-bar">
   <div class="menu-toggle" (click)="toggleMenu()">
     <span [class.open]="isMenuOpen"></span>
     <span [class.open]="isMenuOpen"></span>
     <span [class.open]="isMenuOpen"></span>
   </div>
-  <nav [class.menu-open]="isMenuOpen">
+  
+  <!-- Desktop navigation -->
+  <nav class="desktop-nav">
     @for (link of links; track $index) {
       <a
         [routerLink]="link.path"
         [ngStyle]="{ '--link-color': link.color }"
         [class.active]="link.path.replace('/', '') === currentPath"
         class="nav-link"
-        (click)="isMenuOpen = false"
       >
         {{ link.nameKey | translate }}
         <span class="underline"></span>
       </a>
     }
+  </nav>
+
+  <!-- Mobile navigation drawer -->
+  <nav class="mobile-nav" [class.menu-open]="isMenuOpen">
+    <div class="mobile-nav-header">
+      <h3>{{ 'appBar.navigation' | translate }}</h3>
+      <button class="close-btn" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    
+    <div class="mobile-nav-links">
+      @for (link of links; track $index) {
+        <a
+          [routerLink]="link.path"
+          [ngStyle]="{ '--link-color': link.color }"
+          [class.active]="link.path.replace('/', '') === currentPath"
+          class="mobile-nav-link"
+          (click)="toggleMenu()"
+        >
+          <span class="link-text">{{ link.nameKey | translate }}</span>
+          <span class="link-indicator"></span>
+        </a>
+      }
+    </div>
+
+    <div class="mobile-nav-footer">
+      <div class="mobile-socials">
+        <h4>{{ 'appBar.connect' | translate }}</h4>
+        <div class="social-links">
+          <a
+            href="mailto:tanguy.hardion@etu.utc.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+          >
+            <img class="social email" src="assets/images/icons/email.png" />
+            <span>Email</span>
+          </a>
+          <a
+            href="https://linkedin.com/in/tanguy-hardion"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+          >
+            <img class="social linkedin" src="assets/images/icons/linkedin.png" />
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href="https://github.com/tanguyhardion"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+          >
+            <img class="social github" src="assets/images/icons/github.png" />
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="mobile-language-select">
+        <h4>{{ 'appBar.language' | translate }}</h4>
+        <div class="language-options">
+          @for (lang of languages; track $index) {
+            <button 
+              class="language-option"
+              [class.active]="selectedLang.value === lang.value"
+              (click)="selectLanguage(lang)"
+            >
+              <img [src]="lang.flag" alt="flag" class="flag" />
+              <span>{{ lang.label }}</span>
+            </button>
+          }
+        </div>
+      </div>
+    </div>
   </nav>
   <div class="right">
     <div class="socials">

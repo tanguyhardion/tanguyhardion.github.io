@@ -6,12 +6,12 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class NavColorService {
   private links = [
-    { nameKey: 'appBar.navigation.home', path: '/', color: '#dc143c' },
-    { nameKey: 'appBar.navigation.academics', path: '/academics', color: '#ffdd48' },
-    { nameKey: 'appBar.navigation.experience', path: '/experience', color: '#f16529' },
-    { nameKey: 'appBar.navigation.projects', path: '/projects', color: '#5ec9f8' },
-    { nameKey: 'appBar.navigation.skills', path: '/skills', color: '#9148ff' },
-    { nameKey: 'appBar.navigation.more', path: '/more', color: '#757678' }
+    { nameKey: 'appBar.links.home', path: '/', color: '#dc143c' },
+    { nameKey: 'appBar.links.academics', path: '/academics', color: '#ffdd48' },
+    { nameKey: 'appBar.links.experience', path: '/experience', color: '#f16529' },
+    { nameKey: 'appBar.links.projects', path: '/projects', color: '#5ec9f8' },
+    { nameKey: 'appBar.links.skills', path: '/skills', color: '#9148ff' },
+    { nameKey: 'appBar.links.more', path: '/more', color: '#757678' }
   ];
   private currentLink: { nameKey: string; path: string; color: string } | undefined;
 
