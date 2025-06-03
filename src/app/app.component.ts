@@ -46,7 +46,9 @@ export class AppComponent implements OnInit {
   }
 
   private detectMobile(): boolean {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
   }
 
   private configureTranslation(): void {
@@ -91,7 +93,7 @@ export class AppComponent implements OnInit {
     if (this.isMobile) {
       return;
     }
-    
+
     if (!this.backlightOn) {
       this.x = event.clientX;
       this.y = event.clientY;
@@ -107,7 +109,7 @@ export class AppComponent implements OnInit {
         display: 'none'
       };
     }
-    
+
     const currentLink = this.navColorService.getCurrentLink();
     const color = currentLink != undefined ? currentLink.color : '#ffffff';
     return {

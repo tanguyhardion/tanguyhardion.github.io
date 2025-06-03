@@ -9,7 +9,7 @@
     <span [class.open]="isMenuOpen"></span>
     <span [class.open]="isMenuOpen"></span>
   </div>
-  
+
   <!-- Desktop navigation -->
   <nav class="desktop-nav">
     @for (link of links; track $index) {
@@ -30,7 +30,7 @@
     <div class="mobile-nav-header">
       <h3>{{ 'appBar.navigation' | translate }}</h3>
     </div>
-    
+
     <div class="mobile-nav-links">
       @for (link of links; track $index) {
         <a
@@ -84,7 +84,7 @@
         <h4>{{ 'appBar.language' | translate }}</h4>
         <div class="language-options">
           @for (lang of languages; track $index) {
-            <button 
+            <button
               class="language-option"
               [class.active]="selectedLang.value === lang.value"
               (click)="selectLanguage(lang)"

@@ -7,7 +7,8 @@
     "build": "ng build",
     "deploy": "ng deploy --repo=https://github.com/tanguyhardion/tanguyhardion.github.io.git --name=\"tanguyhardion\"",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "format": "prettier --write \"src/**/*.{ts,html,css,scss,json}\""
   },
   "private": true,
   "dependencies": {

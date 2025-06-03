@@ -95,7 +95,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
       this.isMenuOpen = false;
       this.handleBodyScroll();
     }
-  }
+  };
 
   toggleDropdown() {
     this.isDropdownOpen = !this.isDropdownOpen;
@@ -105,7 +105,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.selectedLang = option;
     this.isDropdownOpen = false;
     this.changeLang(option.value);
-    
+
     // Close mobile menu if language is changed from mobile menu
     if (window.innerWidth <= 800 && this.isMenuOpen) {
       this.toggleMenu();

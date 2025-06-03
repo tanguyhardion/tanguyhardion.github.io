@@ -34,44 +34,45 @@
     cursor: pointer;
     width: 24px;
     height: 24px;
-    z-index: 1001;      span {
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: all 0.3s ease;
-        border-radius: 2px;
-        background: var(--foreground-default);
-        width: 100%;
-        height: 3px;
+    z-index: 1001;
+    span {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s ease;
+      border-radius: 2px;
+      background: var(--foreground-default);
+      width: 100%;
+      height: 3px;
 
-        &:nth-child(1) {
-          transform: translate(-50%, -8px);
+      &:nth-child(1) {
+        transform: translate(-50%, -8px);
 
-          &.open {
-            transform: translate(-50%, -50%) rotate(-45deg);
-            background: var(--foreground-default);
-          }
-        }
-
-        &:nth-child(2) {
-          transform: translate(-50%, 0);
-
-          &.open {
-            opacity: 0;
-          }
-        }
-
-        &:nth-child(3) {
-          transform: translate(-50%, 8px);
-
-          &.open {
-            transform: translate(-50%, -50%) rotate(45deg);
-            background: var(--foreground-default);
-          }
+        &.open {
+          transform: translate(-50%, -50%) rotate(-45deg);
+          background: var(--foreground-default);
         }
       }
+
+      &:nth-child(2) {
+        transform: translate(-50%, 0);
+
+        &.open {
+          opacity: 0;
+        }
+      }
+
+      &:nth-child(3) {
+        transform: translate(-50%, 8px);
+
+        &.open {
+          transform: translate(-50%, -50%) rotate(45deg);
+          background: var(--foreground-default);
+        }
+      }
+    }
   }
 
   // Desktop navigation
