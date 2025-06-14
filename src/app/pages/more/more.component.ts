@@ -58,17 +58,17 @@ export class MoreComponent implements OnInit {
     {
       nameKey: 'more.languages.french.name',
       levelKey: 'more.languages.french.level',
-      image: 'flags/france-gradient.png'
+      image: 'flags/france.png'
     },
     {
       nameKey: 'more.languages.english.name',
       levelKey: 'more.languages.english.level',
-      image: 'flags/us-gradient.png'
+      image: 'flags/us.png'
     },
     {
       nameKey: 'more.languages.spanish.name',
       levelKey: 'more.languages.spanish.level',
-      image: 'flags/spain-gradient.png'
+      image: 'flags/spain.png'
     }
   ];
   interests: Interest[] = [
