@@ -1,18 +1,33 @@
 import { Routes } from '@angular/router';
-import { AcademicsComponent } from './pages/academics/academics.component';
-import { ExperienceComponent } from './pages/experience/experience.component';
-import { HomeComponent } from './pages/home/home.component';
-import { MoreComponent } from './pages/more/more.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
-import { SkillsComponent } from './pages/skills/skills.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '', pathMatch: 'full' },
-  { path: '', component: HomeComponent },
-  { path: 'academics', component: AcademicsComponent },
-  { path: 'experience', component: ExperienceComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'skills', component: SkillsComponent },
-  { path: 'more', component: MoreComponent },
+  {
+    path: '',
+    loadComponent: () => import('./pages/home/home.component').then((m) => m.HomeComponent)
+  },
+  {
+    path: 'academics',
+    loadComponent: () =>
+      import('./pages/academics/academics.component').then((m) => m.AcademicsComponent)
+  },
+  {
+    path: 'experience',
+    loadComponent: () =>
+      import('./pages/experience/experience.component').then((m) => m.ExperienceComponent)
+  },
+  {
+    path: 'projects',
+    loadComponent: () =>
+      import('./pages/projects/projects.component').then((m) => m.ProjectsComponent)
+  },
+  {
+    path: 'skills',
+    loadComponent: () => import('./pages/skills/skills.component').then((m) => m.SkillsComponent)
+  },
+  {
+    path: 'more',
+    loadComponent: () => import('./pages/more/more.component').then((m) => m.MoreComponent)
+  },
   { path: '**', redirectTo: '' }
 ];
