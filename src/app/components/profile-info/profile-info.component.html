@@ -2,6 +2,30 @@
   <h1 class="name">Tanguy Hardion</h1>
   <div class="info" #info [innerHTML]="'profile.intro' | translate | marked"></div>
 </div>
-<div class="lottie">
-  <ng-lottie [options]="options"></ng-lottie>
+<div class="animation-container">
+  <div class="planet-system">
+    <div class="planet">
+      <div class="planet-glow"></div>
+      <div class="planet-surface">
+        <div class="continent"></div>
+        <div class="continent continent-2"></div>
+      </div>
+    </div>
+    <div class="orbit orbit-1">
+      <div class="satellite satellite-1"></div>
+    </div>
+    <div class="orbit orbit-2">
+      <div class="satellite satellite-2"></div>
+    </div>
+    <div class="orbit orbit-3">
+      <div class="satellite satellite-3"></div>
+    </div>
+    <div class="stars">
+      <div class="star star-1"></div>
+      <div class="star star-2"></div>
+      <div class="star star-3"></div>
+      <div class="star star-4"></div>
+      <div class="star star-5"></div>
+    </div>
+  </div>
 </div>

@@ -58,13 +58,232 @@
   }
 }
 
-.lottie {
+.animation-container {
   overflow: hidden;
   height: 50vh;
   animation: fadeIn 1s ease-out;
   opacity: 0;
   animation-fill-mode: forwards;
   animation-delay: 0.8s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.planet-system {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+}
+
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #4a90e2, #2c5aa0, #1a365d);
+  box-shadow: 
+    0 0 30px rgba(74, 144, 226, 0.3),
+    inset -10px -10px 20px rgba(0, 0, 0, 0.3);
+  animation: planetRotate 20s linear infinite;
+  overflow: hidden;
+}
+
+.planet-glow {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(74, 144, 226, 0.2) 0%, transparent 70%);
+  animation: pulseGlow 3s ease-in-out infinite alternate;
+}
+
+.planet-surface {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.continent {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  
+  &.continent {
+    width: 30px;
+    height: 20px;
+    top: 40%;
+    left: 20%;
+    animation: continentShift 25s linear infinite;
+  }
+  
+  &.continent-2 {
+    width: 25px;
+    height: 15px;
+    top: 60%;
+    right: 25%;
+    animation: continentShift 25s linear infinite reverse;
+  }
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  
+  &.orbit-1 {
+    width: 180px;
+    height: 180px;
+    animation: orbitRotate 8s linear infinite;
+  }
+  
+  &.orbit-2 {
+    width: 240px;
+    height: 240px;
+    animation: orbitRotate 12s linear infinite reverse;
+  }
+  
+  &.orbit-3 {
+    width: 300px;
+    height: 300px;
+    animation: orbitRotate 16s linear infinite;
+  }
+}
+
+.satellite {
+  position: absolute;
+  border-radius: 50%;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  &.satellite-1 {
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #f3cb15, #d4af00);
+    box-shadow: 0 0 10px rgba(243, 203, 21, 0.5);
+  }
+  
+  &.satellite-2 {
+    width: 6px;
+    height: 6px;
+    background: radial-gradient(circle, #e74c3c, #c0392b);
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.5);
+  }
+  
+  &.satellite-3 {
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #2ecc71, #27ae60);
+    box-shadow: 0 0 12px rgba(46, 204, 113, 0.5);
+  }
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+    animation: twinkle 2s ease-in-out infinite alternate;
+    
+    &.star-1 {
+      top: 20%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+    
+    &.star-2 {
+      top: 30%;
+      right: 15%;
+      animation-delay: 0.5s;
+    }
+    
+    &.star-3 {
+      bottom: 25%;
+      left: 20%;
+      animation-delay: 1s;
+    }
+    
+    &.star-4 {
+      bottom: 40%;
+      right: 25%;
+      animation-delay: 1.5s;
+    }
+    
+    &.star-5 {
+      top: 60%;
+      left: 80%;
+      animation-delay: 0.8s;
+    }
+  }
+}
+
+@keyframes planetRotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes orbitRotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes pulseGlow {
+  from {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes continentShift {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(40px);
+  }
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.5);
+  }
 }
 
 @media (max-width: 768px) {
@@ -77,11 +296,312 @@
       font-size: 1.4rem;
     }
   }
+  
+  .animation-container {
+    height: 45vh;
+    padding: 0 20px;
+  }
+  
+  .planet-system {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .planet {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .orbit {
+    &.orbit-1 {
+      width: 170px;
+      height: 170px;
+    }
+    
+    &.orbit-2 {
+      width: 220px;
+      height: 220px;
+    }
+    
+    &.orbit-3 {
+      width: 280px;
+      height: 280px;
+    }
+  }
+  
+  .satellite {
+    &.satellite-1 {
+      width: 7px;
+      height: 7px;
+    }
+    
+    &.satellite-2 {
+      width: 5px;
+      height: 5px;
+    }
+    
+    &.satellite-3 {
+      width: 8px;
+      height: 8px;
+    }
+  }
 }
 
 @media (max-width: 600px) {
-  .lottie {
+  .animation-container {
     height: 50vw;
+    min-height: 250px;
+    max-height: 350px;
+  }
+  
+  .planet-system {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .planet {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .orbit {
+    &.orbit-1 {
+      width: 140px;
+      height: 140px;
+    }
+    
+    &.orbit-2 {
+      width: 180px;
+      height: 180px;
+    }
+    
+    &.orbit-3 {
+      width: 240px;
+      height: 240px;
+    }
+  }
+  
+  .satellite {
+    &.satellite-1 {
+      width: 6px;
+      height: 6px;
+    }
+    
+    &.satellite-2 {
+      width: 4px;
+      height: 4px;
+    }
+    
+    &.satellite-3 {
+      width: 7px;
+      height: 7px;
+    }
+  }
+  
+  .stars .star {
+    width: 1.5px;
+    height: 1.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile {
+    .name {
+      font-size: 3.5rem;
+    }
+
+    .info {
+      font-size: 1.3rem;
+      padding: 0 10px;
+    }
+  }
+  
+  .animation-container {
+    height: 55vw;
+    min-height: 220px;
+    max-height: 300px;
+    padding: 0 10px;
+  }
+  
+  .planet-system {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .planet {
+    width: 75px;
+    height: 75px;
+  }
+  
+  .continent {
+    &.continent {
+      width: 20px;
+      height: 15px;
+    }
+    
+    &.continent-2 {
+      width: 18px;
+      height: 12px;
+    }
+  }
+  
+  .orbit {
+    &.orbit-1 {
+      width: 115px;
+      height: 115px;
+    }
+    
+    &.orbit-2 {
+      width: 150px;
+      height: 150px;
+    }
+    
+    &.orbit-3 {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+  .satellite {
+    &.satellite-1 {
+      width: 5px;
+      height: 5px;
+    }
+    
+    &.satellite-2 {
+      width: 3px;
+      height: 3px;
+    }
+    
+    &.satellite-3 {
+      width: 6px;
+      height: 6px;
+    }
+  }
+  
+  .stars .star {
+    width: 1px;
+    height: 1px;
+  }
+}
+
+@media (max-width: 375px) {
+  .profile {
+    .name {
+      font-size: 3rem;
+    }
+
+    .info {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .animation-container {
+    height: 60vw;
+    min-height: 200px;
+    max-height: 270px;
+  }
+  
+  .planet-system {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .planet {
+    width: 65px;
+    height: 65px;
+  }
+  
+  .orbit {
+    &.orbit-1 {
+      width: 100px;
+      height: 100px;
+    }
+    
+    &.orbit-2 {
+      width: 130px;
+      height: 130px;
+    }
+    
+    &.orbit-3 {
+      width: 180px;
+      height: 180px;
+    }
+  }
+  
+  .satellite {
+    &.satellite-1 {
+      width: 4px;
+      height: 4px;
+    }
+    
+    &.satellite-2 {
+      width: 3px;
+      height: 3px;
+    }
+    
+    &.satellite-3 {
+      width: 5px;
+      height: 5px;
+    }
+  }
+}
+
+// Performance optimizations for mobile
+@media (max-width: 480px) {
+  // Reduce animation complexity on mobile for better performance
+  .orbit {
+    &.orbit-2 {
+      animation-duration: 15s; // Slower animation
+    }
+    
+    &.orbit-3 {
+      animation-duration: 20s; // Slower animation
+    }
+  }
+  
+  .planet {
+    animation-duration: 25s; // Slower planet rotation
+  }
+  
+  .continent {
+    &.continent {
+      animation-duration: 30s;
+    }
+    
+    &.continent-2 {
+      animation-duration: 30s;
+    }
+  }
+  
+  // Reduce glow effects on mobile for performance
+  .planet-glow {
+    animation: none;
+    opacity: 0.6;
+  }
+  
+  .satellite {
+    box-shadow: none; // Remove shadows for better performance
+  }
+  
+  .stars .star {
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.6);
+    animation-duration: 3s; // Slower twinkling
+  }
+}
+
+// Very small screens - minimal animation
+@media (max-width: 320px) {
+  .orbit {
+    &.orbit-3 {
+      display: none; // Hide outermost orbit on very small screens
+    }
+  }
+  
+  .stars {
+    .star-4, .star-5 {
+      display: none; // Hide some stars to reduce complexity
+    }
   }
 }
 
@@ -94,6 +614,49 @@
   }
 }
 
-::ng-deep canvas {
-  object-fit: contain;
+// Respect user's reduced motion preference
+@media (prefers-reduced-motion: reduce) {
+  .orbit,
+  .planet,
+  .continent,
+  .planet-glow,
+  .stars .star {
+    animation-duration: 60s; // Much slower animations
+    animation-iteration-count: 1; // Run only once
+  }
+  
+  .satellite {
+    box-shadow: none;
+  }
+  
+  .planet-glow {
+    animation: none;
+    opacity: 0.5;
+  }
+}
+
+// High contrast mode adjustments
+@media (prefers-contrast: high) {
+  .planet {
+    background: radial-gradient(circle at 30% 30%, #ffffff, #888888, #333333);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  
+  .orbit {
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .satellite {
+    &.satellite-1 {
+      background: #ffff00;
+    }
+    
+    &.satellite-2 {
+      background: #ff0000;
+    }
+    
+    &.satellite-3 {
+      background: #00ff00;
+    }
+  }
 }
