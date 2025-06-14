@@ -10,30 +10,61 @@
   .name {
     font-size: 4.75rem;
     font-weight: 900;
+    background: linear-gradient(135deg, #fff 0%, #ccc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: textGlow 3s ease-in-out infinite alternate;
   }
 
   .info {
     max-width: 700px;
     font-size: 1.5rem;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
 
     ::ng-deep a:first-of-type {
       color: #f3cb15 !important;
+      transition: all 0.3s ease;
+
+      &:hover {
+        text-shadow: 0 0 10px rgba(243, 203, 21, 0.5);
+      }
     }
 
     ::ng-deep a:last-of-type {
       color: #005587 !important;
+      transition: all 0.3s ease;
+
+      &:hover {
+        text-shadow: 0 0 10px rgba(0, 85, 135, 0.5);
+      }
     }
   }
 
   ::ng-deep .age-placeholder {
     font-weight: 700;
+    color: #fff;
+  }
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  }
+  to {
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
   }
 }
 
 .lottie {
   overflow: hidden;
   height: 50vh;
-  animation: fadeIn 1s;
+  animation: fadeIn 1s ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-delay: 0.8s;
 }
 
 @media (max-width: 768px) {

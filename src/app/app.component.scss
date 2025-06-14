@@ -2,11 +2,42 @@ div {
   &.home-page {
     overflow: hidden;
     max-height: 100vh;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.01) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.01) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.01) 0%, transparent 50%);
+      animation: backgroundMove 20s ease-in-out infinite;
+      z-index: -1;
+      pointer-events: none;
+    }
+  }
+}
+
+@keyframes backgroundMove {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(30px, -30px) rotate(0.5deg);
+  }
+  66% {
+    transform: translate(-20px, 20px) rotate(-0.5deg);
   }
 }
 
 main {
   margin: 40px 20px 20px 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.2s forwards;
 }
 
 .backlight {

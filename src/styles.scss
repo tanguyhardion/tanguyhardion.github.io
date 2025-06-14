@@ -18,6 +18,7 @@
 
 html {
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -43,7 +44,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
@@ -51,18 +52,41 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: linear-gradient(180deg, #333 0%, #555 50%, #333 100%);
   border-radius: 8px;
+  transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: linear-gradient(180deg, #555 0%, #777 50%, #555 100%);
 }
 
 a {
   color: var(--foreground-default);
   text-decoration: underline;
   text-underline-offset: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+a:hover {
+  text-decoration-color: transparent;
+  transform: translateY(-1px);
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
 }
 
 b,
@@ -81,6 +105,57 @@ strong {
   }
 }
 
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInScale {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .animated {
   animation-duration: 1.2s;
   animation-fill-mode: both;
@@ -88,4 +163,109 @@ strong {
 
 .fadeInUp {
   animation-name: fadeInUp;
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.slideInScale {
+  animation-name: slideInScale;
+}
+
+.float {
+  animation: floatUp 3s ease-in-out infinite;
+}
+
+/* Staggered animations */
+.animated.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.animated.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.animated.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.animated.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.animated.delay-5 {
+  animation-delay: 0.5s;
+}
+
+/* Global element enhancements */
+button {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+input, textarea, select {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  
+  &:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Page transition helper */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: pageEnter 0.6s ease-out forwards;
+}
+
+@keyframes pageEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+::-moz-selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* Improved focus indicators */
+*:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.3);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Subtle text improvements */
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.02em;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }

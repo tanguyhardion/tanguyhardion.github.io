@@ -86,7 +86,25 @@
       font-weight: 600;
       text-decoration: none;
       color: var(--foreground-default);
-      transition: color 0.3s ease;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 8px 12px;
+      border-radius: 8px;
+      outline: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::after {
+        display: none;
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.05);
+        text-decoration: none;
+      }
 
       .underline {
         display: block;
@@ -95,6 +113,7 @@
         background: var(--foreground-default);
         width: 0;
         height: 2px;
+        border-radius: 1px;
       }
 
       &.active,
@@ -178,6 +197,7 @@
         &:hover {
           background: var(--background-lighter);
           border-left-color: var(--link-color);
+          transform: translateX(10px);
 
           .link-text {
             color: var(--link-color);
@@ -325,10 +345,30 @@
       display: flex;
       gap: 16px;
 
+      a {
+        text-decoration: none;
+        
+        &::after {
+          display: none;
+        }
+        
+        &:hover {
+          text-decoration: none;
+          transform: none;
+        }
+      }
+
       .social {
-        transition: filter 0.4s;
+        transition: all 0.4s ease;
         width: 32px;
         height: 32px;
+        border-radius: 8px;
+        padding: 4px;
+
+        &:hover {
+          transform: translateY(-3px) scale(1.1);
+          background: rgba(255, 255, 255, 0.1);
+        }
 
         &.email:hover {
           filter: brightness(0) invert(1);
