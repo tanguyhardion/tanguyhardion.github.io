@@ -148,7 +148,8 @@ strong {
 }
 
 @keyframes floatUp {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -210,17 +211,19 @@ strong {
 button {
   transition: all 0.3s ease;
   border-radius: 8px;
-  
+
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   transition: all 0.3s ease;
   border-radius: 8px;
-  
+
   &:focus {
     transform: scale(1.02);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
@@ -260,12 +263,19 @@ input, textarea, select {
 }
 
 /* Subtle text improvements */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-rendering: optimizeLegibility;
   letter-spacing: -0.02em;
 }
 
 /* Smooth transitions for all elements */
 * {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
