@@ -1,21 +1,21 @@
 <div class="wrapper">
   <!-- Resumes -->
   <h1>{{ 'more.resumes.header' | translate }}</h1>
-  <div class="file-container">
-    @for (file of files; track $index) {
-      <div class="file" pAnimateOnScroll enterClass="animated fadeInUp">
+  <div class="resume-container">
+    @for (resume of files; track $index) {
+      <div class="resume" pAnimateOnScroll enterClass="animated fadeInUp">
         <a
-          [href]="file.path"
+          [href]="resume.path"
           target="_blank"
-          [ngStyle]="{ '--link-image': getImagePath(file.image) }"
+          [ngStyle]="{ '--link-image': getImagePath(resume.image) }"
           class="link"
         >
-          {{ file.nameKey | translate }}
+          {{ resume.nameKey | translate }}
           <span class="material-icons">open_in_new</span>
         </a>
-        @if (file.lastCommitDate) {
+        @if (resume.lastCommitDate) {
           <span class="date">{{
-            'more.resumes.lastUpdated' | translate: { date: file.lastCommitDate }
+            'more.resumes.lastUpdated' | translate: { date: resume.lastCommitDate }
           }}</span>
         }
       </div>
