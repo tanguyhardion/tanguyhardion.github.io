@@ -1,33 +1,6 @@
+@import '../../shared/animations.scss';
+
 .academics {
-  width: 80vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  gap: 32px;
-
-  > * {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: slideInScale 0.8s ease-out forwards;
-  }
-
-  > *:nth-child(1) {
-    animation-delay: 0.1s;
-  }
-  > *:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  > *:nth-child(3) {
-    animation-delay: 0.3s;
-  }
-  > *:nth-child(4) {
-    animation-delay: 0.4s;
-  }
-  > *:nth-child(5) {
-    animation-delay: 0.5s;
-  }
-  > *:nth-child(n + 6) {
-    animation-delay: 0.6s;
-  }
+  @extend .page-container;
+  @extend .staggered-animation;
 }
