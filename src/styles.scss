@@ -165,14 +165,19 @@ strong {
 .float { animation: floatUp 3s ease-in-out infinite; }
 
 /* Staggered animations */
-.animated.delay-1 { animation-delay: 0.1s; }
-.animated.delay-2 { animation-delay: 0.2s; }
-.animated.delay-3 { animation-delay: 0.3s; }
-.animated.delay-4 { animation-delay: 0.4s; }
-.animated.delay-5 { animation-delay: 0.5s; }
+.animated {
+  &.delay-1 { animation-delay: 0.1s; }
+  &.delay-2 { animation-delay: 0.2s; }
+  &.delay-3 { animation-delay: 0.3s; }
+  &.delay-4 { animation-delay: 0.4s; }
+  &.delay-5 { animation-delay: 0.5s; }
+}
 
 /* Global element enhancements */
-button, input, textarea, select { border-radius: 8px; }
+button, input, textarea, select { 
+  border-radius: 8px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
 button:hover {
   transform: translateY(-2px);
@@ -197,35 +202,19 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* Selection styling */
-::selection {
+::selection, ::-moz-selection {
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
 
-::-moz-selection {
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-}
-
-/* Improved focus indicators */
+/* Improved focus indicators and text improvements */
 *:focus {
   outline: 2px solid rgba(255, 255, 255, 0.3);
   outline-offset: 2px;
   border-radius: 4px;
 }
 
-/* Subtle text improvements */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
   letter-spacing: -0.02em;
-}
-
-/* Smooth transitions for interactive elements */
-a, button, input, textarea, select {
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }

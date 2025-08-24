@@ -13,15 +13,9 @@
     }
   }
 
-  h1:nth-of-type(1) {
-    animation-delay: 0.1s;
-  }
-  h1:nth-of-type(2) {
-    animation-delay: 0.3s;
-  }
-  h1:nth-of-type(3) {
-    animation-delay: 0.5s;
-  }
+  h1:nth-of-type(1) { animation-delay: 0.1s; }
+  h1:nth-of-type(2) { animation-delay: 0.3s; }
+  h1:nth-of-type(3) { animation-delay: 0.5s; }
 
   .resume-container {
     display: flex;
@@ -30,18 +24,15 @@
     gap: 36px;
 
     .resume {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      @extend .flex-center;
+      @extend .flex-col;
       gap: 16px;
 
       .link {
         position: relative;
         padding: 24px 16px;
-        border-radius: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @extend .border-radius-lg;
+        @extend .flex-center;
         gap: 8px;
         cursor: pointer;
         text-decoration: none;
@@ -50,7 +41,7 @@
         color: #fff;
         min-width: 270px;
         width: fit-content;
-        transition: all 0.4s ease;
+        @extend .card-hover;
         overflow: hidden;
         background: rgba(255, 255, 255, 0.05);
         backdrop-filter: blur(10px);
@@ -58,11 +49,6 @@
         .material-icons {
           font-size: 1.2rem;
           opacity: 0.8;
-        }
-
-        &:hover {
-          transform: translateY(-5px) scale(1.05);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         &::before {
@@ -77,7 +63,7 @@
           background-position: center;
           opacity: 0.1;
           z-index: -1;
-          border-radius: 24px;
+          @extend .border-radius-lg;
           transition: opacity 0.4s ease;
         }
 
@@ -95,9 +81,7 @@
   }
 
   .interests {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend .flex-center;
     gap: 64px;
 
     .interest {
@@ -107,19 +91,12 @@
       color: #fff;
       width: 220px;
       height: 220px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.4s ease;
+      @extend .flex-center;
+      @extend .card-hover;
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
-      border-radius: 24px;
+      @extend .border-radius-lg;
       overflow: hidden;
-
-      &:hover {
-        transform: translateY(-8px) scale(1.05);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-      }
 
       &::before {
         content: '';
@@ -133,7 +110,7 @@
         background-position: center;
         opacity: 0.1;
         z-index: -1;
-        border-radius: 24px;
+        @extend .border-radius-lg;
         transition: opacity 0.4s ease;
       }
 
@@ -144,22 +121,19 @@
   }
 
   .languages {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend .flex-center;
     gap: 32px;
     flex-wrap: wrap;
 
     .language {
       position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      @extend .flex-center;
+      @extend .flex-col;
       padding: 32px 24px;
-      border-radius: 24px;
+      @extend .border-radius-lg;
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
-      transition: all 0.4s ease;
+      @extend .card-hover;
       min-width: 200px;
       overflow: hidden;
 
@@ -179,8 +153,6 @@
       }
 
       &:hover {
-        transform: translateY(-8px) scale(1.05);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         border-color: rgba(255, 255, 255, 0.2);
 
         &::before {

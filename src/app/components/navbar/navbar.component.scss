@@ -43,28 +43,16 @@
 
       &:nth-child(1) {
         transform: translate(-50%, -8px);
-
-        &.open {
-          transform: translate(-50%, -50%) rotate(-45deg);
-          background: var(--foreground-default);
-        }
+        &.open { transform: translate(-50%, -50%) rotate(-45deg); }
       }
 
       &:nth-child(2) {
-        transform: translate(-50%, 0);
-
-        &.open {
-          opacity: 0;
-        }
+        &.open { opacity: 0; }
       }
 
       &:nth-child(3) {
         transform: translate(-50%, 8px);
-
-        &.open {
-          transform: translate(-50%, -50%) rotate(45deg);
-          background: var(--foreground-default);
-        }
+        &.open { transform: translate(-50%, -50%) rotate(45deg); }
       }
     }
   }
@@ -83,16 +71,11 @@
       transition: all 0.3s ease;
       position: relative;
       padding: 8px 12px;
-      border-radius: 8px;
+      @extend .border-radius-sm;
       outline: none;
 
-      &:focus {
-        outline: none;
-      }
-
-      &::after {
-        display: none;
-      }
+      &:focus { outline: none; }
+      &::after { display: none; }
 
       &:hover {
         transform: translateY(-2px);
