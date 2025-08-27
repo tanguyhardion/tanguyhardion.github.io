@@ -64,6 +64,7 @@ body {
 a {
   color: var(--foreground-default);
   position: relative;
+  text-underline-offset: 4px;
 }
 
 b,

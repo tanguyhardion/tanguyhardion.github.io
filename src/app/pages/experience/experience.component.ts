@@ -25,7 +25,8 @@ export class ExperienceComponent {
       descriptionKey: 'experience.deloitte.description.final_engineering_internship',
       relatedProjects: [],
       dates: {
-        start: new Date('2025-02-01')
+        start: new Date('2025-02-01'),
+        end: new Date('2025-07-31')
       }
     },
     {
