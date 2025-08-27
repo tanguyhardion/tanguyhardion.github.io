@@ -1,4 +1,4 @@
-import{a as p}from"./chunk-D3LMKWAR.js";import{Fa as g,Oa as a,Ta as r,cc as n,db as h,f as s,jc as b,mb as d}from"./chunk-LFAHSWMM.js";var m=class l{constructor(o){this.translateService=o;this.render(),this.translateService.onLangChange.subscribe(()=>{this.render()})}content;skills=`
+import{a as p}from"./chunk-QNZTRIIV.js";import{Fa as g,Oa as a,Ta as r,db as h,dc as n,f as s,kc as b,mb as d}from"./chunk-S3JNK5LH.js";var m=class l{constructor(o){this.translateService=o;this.render(),this.translateService.onLangChange.subscribe(()=>{this.render()})}content;skills=`
   ## {{ 'skills.data_science_ml' }}
 
   ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)

@@ -1,0 +1,1 @@
+import{Wa as t}from"./chunk-S3JNK5LH.js";var n=class r{transform(e){return e?`${e.toLocaleString("en",{month:"short"})}. ${e.getFullYear()}`:"Present"}static \u0275fac=function(i){return new(i||r)};static \u0275pipe=t({name:"formatDate",type:r,pure:!0})};export{n as a};
