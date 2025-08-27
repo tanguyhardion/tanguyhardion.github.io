@@ -21,7 +21,14 @@
     z-index: -1;
     transition: opacity 1.5s ease;
     @extend .border-radius-lg;
-    background: linear-gradient(45deg, black, var(--backgroundColor));
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.2) 0%, transparent 50%),
+      linear-gradient(135deg, 
+        rgba(0, 0, 0, 0.9) 0%, 
+        rgba(20, 20, 40, 0.7) 25%,
+        var(--backgroundColor) 70%,
+        rgba(30, 30, 60, 0.8) 100%);
     width: 100%;
     height: 100%;
     content: '';
@@ -34,7 +41,13 @@
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background: 
+      linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(120, 119, 198, 0.2) 25%,
+        rgba(255, 119, 198, 0.15) 50%,
+        rgba(255, 255, 255, 0.1) 75%,
+        transparent 100%);
     border-radius: 26px;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -129,6 +142,7 @@
     .description {
       font-size: 1rem;
       text-align: justify;
+      margin-top: 16px;
     }
 
     .footer {

@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
   targetY = 0;
   backlightOn = false;
   isMobile = false;
+  showScrollArrow = false;
 
   constructor(
     private router: Router,
@@ -39,6 +40,17 @@ export class AppComponent implements OnInit {
     this.configureTranslation();
     this.configurePageTitle();
     this.configureMetaTags();
+    this.checkScrollArrow();
+  }
+
+  private checkScrollArrow(): void {
+    const hasScrollableContent = document.body.scrollHeight > window.innerHeight;
+    const isAtBottom = window.scrollY + window.innerHeight >= document.body.scrollHeight - 50; // 50px threshold
+    this.showScrollArrow = hasScrollableContent && !isAtBottom;
+  }
+
+  scrollToBottom(): void {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
   }
 
   private initializeBacklight(): void {
@@ -88,19 +100,14 @@ export class AppComponent implements OnInit {
     ]);
   }
 
-  @HostListener('document:mousemove', ['$event'])
-  onMouseMove(event: MouseEvent) {
-    if (this.isMobile) {
-      return;
-    }
+  @HostListener('window:resize', [])
+  onResize() {
+    this.checkScrollArrow();
+  }
 
-    if (!this.backlightOn) {
-      this.x = event.clientX;
-      this.y = event.clientY;
-      this.backlightOn = true;
-    }
-    this.targetX = event.clientX;
-    this.targetY = event.clientY;
+  @HostListener('window:scroll', [])
+  onScroll() {
+    this.checkScrollArrow();
   }
 
   get backlightStyle() {

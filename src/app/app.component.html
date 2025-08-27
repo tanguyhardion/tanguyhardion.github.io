@@ -5,6 +5,12 @@
     <router-outlet></router-outlet>
   </main>
 
+  @if (!homePage && showScrollArrow) {
+    <div class="scroll-arrow" (click)="scrollToBottom()">
+      <span class="material-icons">arrow_downward</span>
+    </div>
+  }
+
   @if (backlightOn) {
     <div class="backlight" [ngStyle]="backlightStyle"></div>
   }
