@@ -148,13 +148,16 @@
     "disclaimer": "Liste non exhaustive. Pour plus de projets, consultez mon"
   },
   "skills": {
+    "gen_agentic_ai": "IA Générative & Agentique",
     "data_science_ml": "Data Science & Machine Learning",
     "data_engineering": "Data Engineering",
+    "data_analytics": "Data Analytics & BI",
     "programming_languages": "Langages de Programmation",
     "web_development": "Développement Web",
     "front_end": "Front-end",
     "back_end": "Back-end",
     "databases": "Bases de Données",
+    "cloud": "Cloud",
     "frameworks_libraries": "Frameworks & Bibliothèques",
     "devops_tools": "DevOps & Outils",
     "design_tools": "Outils de Design",
