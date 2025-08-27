@@ -146,13 +146,16 @@
     "disclaimer": "This is just a showcase. For more projects, check out my"
   },
   "skills": {
+    "gen_agentic_ai": "Generative & Agentic AI",
     "data_science_ml": "Data Science & Machine Learning",
     "data_engineering": "Data Engineering",
+    "data_analytics": "Data Analytics & BI",
     "programming_languages": "Programming Languages",
     "web_development": "Web Development",
     "front_end": "Front-end",
     "back_end": "Back-end",
     "databases": "Databases",
+    "cloud": "Cloud",
     "frameworks_libraries": "Frameworks & Libraries",
     "devops_tools": "DevOps & Tools",
     "design_tools": "Design Tools",
