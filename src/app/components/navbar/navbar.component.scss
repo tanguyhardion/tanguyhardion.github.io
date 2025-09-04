@@ -22,39 +22,43 @@
   position: relative;
   z-index: 1000;
 
-  .menu-toggle {
+    .menu-toggle {
     display: none;
     position: relative;
-    flex-direction: column;
-    justify-content: space-around;
     cursor: pointer;
     width: 24px;
     height: 24px;
     z-index: 1001;
+    
     span {
       display: block;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transition: all 0.3s ease;
-      border-radius: 2px;
-      background: var(--foreground-default);
+      left: 0;
       width: 100%;
       height: 3px;
+      background: var(--foreground-default);
+      border-radius: 2px;
+      transition: all 0.3s ease;
 
       &:nth-child(1) {
-        transform: translate(-50%, -8px);
-        &.open { transform: translate(-50%, -50%) rotate(-45deg); }
+        top: 4px;
+        &.open { 
+          top: 10.5px;
+          transform: rotate(-45deg); 
+        }
       }
 
       &:nth-child(2) {
+        top: 10.5px;
         &.open { opacity: 0; }
       }
 
       &:nth-child(3) {
-        transform: translate(-50%, 8px);
-        &.open { transform: translate(-50%, -50%) rotate(45deg); }
+        top: 17px;
+        &.open { 
+          top: 10.5px;
+          transform: rotate(45deg); 
+        }
       }
     }
   }
