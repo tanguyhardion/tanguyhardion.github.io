@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
+import { BaseCardComponent } from '@components/base-card/base-card.component';
 import { Academic } from '@model/interfaces/academic';
 import { FormatDatePipe } from '@pipes/format-date.pipe';
 import { VisibilityObserverService } from '@services/visibility-observer.service';
-import getImageColor from '@utils/image-color';
 
 @Component({
   selector: 'AcademicCard',
@@ -14,26 +14,14 @@ import getImageColor from '@utils/image-color';
   templateUrl: './academic-card.component.html',
   styleUrl: './academic-card.component.scss'
 })
-export class AcademicCardComponent implements AfterViewInit {
+export class AcademicCardComponent extends BaseCardComponent {
   @Input() academic: Academic;
-  @ViewChild('card', { static: false }) cardElement: ElementRef;
 
-  isRevealed = false;
-  backgroundColor = '';
-
-  constructor(private visibilityObserverService: VisibilityObserverService) {}
-
-  async ngAfterViewInit(): Promise<void> {
-    this.backgroundColor = (await getImageColor(`image-${this.academic.school.logo}`)) || '#000';
-
-    if (this.cardElement) {
-      this.visibilityObserverService.observeElementOnce(this.cardElement, (isRevealed) => {
-        this.isRevealed = isRevealed;
-      });
-    }
+  constructor(protected override visibilityObserverService: VisibilityObserverService) {
+    super(visibilityObserverService);
   }
 
-  encodeURIComponent(str: string): string {
-    return encodeURIComponent(str);
+  protected getImageId(): string {
+    return `image-${this.academic.school.logo}`;
   }
 }

@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
+import { BaseCardComponent } from '@components/base-card/base-card.component';
 import { Experience } from '@model/interfaces/experience';
 import { FormatDatePipe } from '@pipes/format-date.pipe';
 import { VisibilityObserverService } from '@services/visibility-observer.service';
-import getImageColor from '@utils/image-color';
 
 @Component({
   selector: 'ExperienceCard',
@@ -14,26 +14,18 @@ import getImageColor from '@utils/image-color';
   templateUrl: './experience-card.component.html',
   styleUrl: './experience-card.component.scss'
 })
-export class ExperienceCardComponent implements AfterViewInit {
+export class ExperienceCardComponent extends BaseCardComponent {
   @Input() experience: Experience;
-  @ViewChild('card', { static: false }) cardElement: ElementRef;
-
-  backgroundColor = '';
-  isRevealed = false;
 
   constructor(
-    private visibilityObserverService: VisibilityObserverService,
+    protected override visibilityObserverService: VisibilityObserverService,
     private translateService: TranslateService
-  ) {}
+  ) {
+    super(visibilityObserverService);
+  }
 
-  async ngAfterViewInit(): Promise<void> {
-    this.backgroundColor = (await getImageColor(`image-${this.experience.company.logo}`)) || '#000';
-
-    if (this.cardElement) {
-      this.visibilityObserverService.observeElementOnce(this.cardElement, (isRevealed) => {
-        this.isRevealed = isRevealed;
-      });
-    }
+  protected getImageId(): string {
+    return `image-${this.experience.company.logo}`;
   }
 
   get projectText(): string {
@@ -41,9 +33,5 @@ export class ExperienceCardComponent implements AfterViewInit {
       return this.experience.relatedProjects.length > 1 ? 'Projets' : 'Projet';
     }
     return this.experience.relatedProjects.length > 1 ? 'Projects' : 'Project';
-  }
-
-  encodeURIComponent(str: string): string {
-    return encodeURIComponent(str);
   }
 }
