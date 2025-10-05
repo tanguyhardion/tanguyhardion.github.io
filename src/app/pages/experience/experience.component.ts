@@ -21,7 +21,7 @@ export class ExperienceComponent {
         link: 'https://www.deloitte.lu/'
       },
       positionKey: 'experience.deloitte.position.junior_data_engineer',
-      jobType: JobType.FixedTerm,
+      jobType: JobType.Permanent,
       descriptionKey: 'experience.deloitte.description.junior_data_engineer',
       relatedProjects: [],
       dates: {
