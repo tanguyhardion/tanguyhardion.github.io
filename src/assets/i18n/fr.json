@@ -19,7 +19,7 @@
     }
   },
   "profile": {
-    "intro": "Étudiant ingénieur de <span class=\"age-placeholder\">0</span> en spécialisation **IA** et **Data Science** à l'<a href='https://utc.fr/' target='_blank'>**UTC**</a>, actuellement en stage chez <a href='https://www.deloitte.lu/' target='_blank'>**Deloitte**</a>."
+    "intro": "Junior Data Engineer en **IA & Data** chez <a href='https://www.deloitte.lu/' target='_blank'>**Deloitte**</a>."
   },
   "academics": {
     "relevantCoursework": "Cours pertinents",
@@ -70,10 +70,12 @@
   "experience": {
     "deloitte": {
       "position": {
+        "junior_data_engineer": "Ingénieur Data Junior",
         "ai_data_science_trainee": "Stagiaire Ingénieur IA et Data Science"
       },
       "description": {
-        "final_engineering_internship": "Stage de fin d'études chez Deloitte Luxembourg. Projet: permettre d'interagir avec une base de données en langage naturel grâce à l'IA agentique."
+        "junior_data_engineer": "Ingénieur Data Junior dans l'équipe IA & Data chez Deloitte Luxembourg. Travaille sur des projets d'ingénierie des données, d'analyse des données, de gouvernance des données, d'IA générative et de solutions d'IA agentique.",
+        "ai_data_science_trainee": "Stage de fin d'études chez Deloitte. Projet: permettre d'interagir avec une base de données en langage naturel grâce à l'IA agentique."
       }
     },
     "cpage": {

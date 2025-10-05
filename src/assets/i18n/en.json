@@ -19,7 +19,7 @@
     }
   },
   "profile": {
-    "intro": "I'm a <span class=\"age-placeholder\">0</span> year-old student specializing in **AI** and **Data Science** at <a href='https://utc.fr/' target='_blank'>**UTC**</a>, currently interning at <a href='https://www.deloitte.lu/' target='_blank'>**Deloitte**</a>."
+    "intro": "Junior Data Engineer in **AI & Data** at <a href='https://www.deloitte.lu/' target='_blank'>**Deloitte**</a>."
   },
   "academics": {
     "relevantCoursework": "Relevant coursework",
@@ -68,10 +68,12 @@
   "experience": {
     "deloitte": {
       "position": {
+        "junior_data_engineer": "Junior Data Engineer",
         "ai_data_science_trainee": "AI & Data Science Trainee"
       },
       "description": {
-        "final_engineering_internship": "Final year internship at Deloitte. Enabling database interaction in natural language by leveraging Agentic AI."
+        "junior_data_engineer": "Junior Data Engineer in the AI & Data team at Deloitte Luxembourg. Working on data engineering projects, data analysis, data governance, Generative AI and Agentic AI solutions.",
+        "ai_data_science_trainee": "Final year internship at Deloitte. Enabling database interaction in natural language by leveraging Agentic AI."
       }
     },
     "cpage": {

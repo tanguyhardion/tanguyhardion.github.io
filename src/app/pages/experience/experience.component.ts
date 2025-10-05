@@ -20,9 +20,24 @@ export class ExperienceComponent {
         location: 'Luxembourg',
         link: 'https://www.deloitte.lu/'
       },
+      positionKey: 'experience.deloitte.position.junior_data_engineer',
+      jobType: JobType.FixedTerm,
+      descriptionKey: 'experience.deloitte.description.junior_data_engineer',
+      relatedProjects: [],
+      dates: {
+        start: new Date('2025-10-01'),
+      }
+    },
+    {
+      company: {
+        name: 'Deloitte',
+        logo: 'deloitte.png',
+        location: 'Luxembourg',
+        link: 'https://www.deloitte.lu/'
+      },
       positionKey: 'experience.deloitte.position.ai_data_science_trainee',
       jobType: JobType.Internship,
-      descriptionKey: 'experience.deloitte.description.final_engineering_internship',
+      descriptionKey: 'experience.deloitte.description.ai_data_science_trainee',
       relatedProjects: [],
       dates: {
         start: new Date('2025-02-01'),
