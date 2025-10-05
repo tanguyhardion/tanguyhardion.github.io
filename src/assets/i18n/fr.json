@@ -97,7 +97,11 @@
       }
     },
     "job_type": {
+      "permanent": "CDI",
       "fixed_term": "CDD",
+      "part_time": "Temps partiel",
+      "freelance": "Freelance",
+      "self_employed": "Indépendant",
       "internship": "Stage"
     },
     "worked_on_sing": "sur lequel j'ai travaillé :",
