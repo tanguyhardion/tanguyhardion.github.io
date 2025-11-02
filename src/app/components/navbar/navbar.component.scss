@@ -330,6 +330,11 @@
 
       a {
         text-decoration: none;
+        outline: none;
+
+        &:focus {
+          outline: none;
+        }
 
         &::after {
           display: none;
