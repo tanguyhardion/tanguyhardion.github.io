@@ -70,11 +70,11 @@
   "experience": {
     "deloitte": {
       "position": {
-        "junior_data_engineer": "Ingénieur Data Junior",
+        "junior_ai_data_analyst": "Analyste Junior IA & Data",
         "ai_data_science_trainee": "Stagiaire Ingénieur IA et Data Science"
       },
       "description": {
-        "junior_data_engineer": "Ingénieur Data Junior dans l'équipe IA & Data chez Deloitte Luxembourg. Travaille sur des projets d'ingénierie des données, d'analyse des données, de gouvernance des données, d'IA générative et de solutions d'IA agentique.",
+        "junior_ai_data_analyst": "Analyste Junior IA & Data chez Deloitte Luxembourg. Travaille sur des projets d'ingénierie des données, d'analyse des données, de gouvernance des données, d'IA générative et de solutions d'IA agentique.",
         "ai_data_science_trainee": "Stage de fin d'études chez Deloitte. Projet: permettre d'interagir avec une base de données en langage naturel grâce à l'IA agentique."
       }
     },
