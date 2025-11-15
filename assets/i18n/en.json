@@ -68,11 +68,11 @@
   "experience": {
     "deloitte": {
       "position": {
-        "junior_data_engineer": "Junior Data Engineer",
+        "junior_ai_data_analyst": "Junior AI & Data Analyst",
         "ai_data_science_trainee": "AI & Data Science Trainee"
       },
       "description": {
-        "junior_data_engineer": "Junior Data Engineer in the AI & Data team at Deloitte Luxembourg. Working on data engineering projects, data analysis, data governance, Generative AI and Agentic AI solutions.",
+        "junior_ai_data_analyst": "Junior AI & Data Analyst at Deloitte Luxembourg. Working on data engineering projects, data management, data analysis, data governance, Generative AI and Agentic AI solutions.",
         "ai_data_science_trainee": "End of studies internship at Deloitte. Enabling database interaction in natural language by leveraging Agentic AI."
       }
     },
