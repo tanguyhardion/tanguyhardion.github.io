@@ -4,5 +4,5 @@ export enum JobType {
   PartTime = 'experience.job_type.part_time',
   Freelance = 'experience.job_type.freelance',
   SelfEmployed = 'experience.job_type.self_employed',
-  Internship = 'experience.job_type.internship',
+  Internship = 'experience.job_type.internship'
 }

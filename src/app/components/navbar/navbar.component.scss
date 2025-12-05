@@ -22,14 +22,14 @@
   position: relative;
   z-index: 1000;
 
-    .menu-toggle {
+  .menu-toggle {
     display: none;
     position: relative;
     cursor: pointer;
     width: 24px;
     height: 24px;
     z-index: 1001;
-    
+
     span {
       display: block;
       position: absolute;
@@ -42,22 +42,24 @@
 
       &:nth-child(1) {
         top: 4px;
-        &.open { 
+        &.open {
           top: 10.5px;
-          transform: rotate(-45deg); 
+          transform: rotate(-45deg);
         }
       }
 
       &:nth-child(2) {
         top: 10.5px;
-        &.open { opacity: 0; }
+        &.open {
+          opacity: 0;
+        }
       }
 
       &:nth-child(3) {
         top: 17px;
-        &.open { 
+        &.open {
           top: 10.5px;
-          transform: rotate(45deg); 
+          transform: rotate(45deg);
         }
       }
     }
@@ -80,8 +82,12 @@
       @extend .border-radius-sm;
       outline: none;
 
-      &:focus { outline: none; }
-      &::after { display: none; }
+      &:focus {
+        outline: none;
+      }
+      &::after {
+        display: none;
+      }
 
       &:hover {
         transform: translateY(-2px);

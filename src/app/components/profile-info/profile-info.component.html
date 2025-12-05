@@ -1,52 +1,18 @@
+<div class="shooting-stars">
+  <div
+    *ngFor="let star of stars; let i = index"
+    class="shooting-star-wrapper"
+    [ngStyle]="star.style"
+  >
+    <div
+      class="shooting-star"
+      [class.animate]="star.animating"
+      (animationend)="onAnimationEnd(i)"
+    ></div>
+  </div>
+</div>
 <div class="profile">
   <h1 class="name">Tanguy Hardion</h1>
   <div class="info" #info [innerHTML]="'profile.intro' | translate | marked"></div>
 </div>
-<div class="animation-container">
-  <div class="planet-system">
-    <div class="planet">
-      <div class="planet-glow"></div>
-      <div class="planet-surface">
-        <div class="continent"></div>
-        <div class="continent continent-2"></div>
-        <div class="continent continent-3"></div>
-        <div class="clouds">
-          <div class="cloud cloud-1"></div>
-          <div class="cloud cloud-2"></div>
-        </div>
-      </div>
-    </div>
-    <div class="orbit orbit-1">
-      <div class="satellite satellite-1"></div>
-    </div>
-    <div class="orbit orbit-2">
-      <div class="satellite satellite-2"></div>
-    </div>
-    <div class="orbit orbit-3">
-      <div class="satellite satellite-3"></div>
-    </div>
-    <div class="stars">
-      <div class="star star-large star-1"></div>
-      <div class="star star-medium star-2"></div>
-      <div class="star star-large star-3"></div>
-      <div class="star star-small star-4"></div>
-      <div class="star star-medium star-5"></div>
-      <div class="star star-small star-6"></div>
-      <div class="star star-tiny star-7"></div>
-      <div class="star star-medium star-8"></div>
-      <div class="star star-tiny star-9"></div>
-      <div class="star star-small star-10"></div>
-      <div class="star star-tiny star-11"></div>
-      <div class="star star-small star-12"></div>
-      <div class="star star-medium star-13"></div>
-      <div class="star star-tiny star-14"></div>
-      <div class="star star-small star-15"></div>
-    </div>
-    <div class="shooting-stars">
-      <div class="shooting-star shooting-star-1"></div>
-      <div class="shooting-star shooting-star-2"></div>
-      <div class="shooting-star shooting-star-3"></div>
-      <div class="shooting-star shooting-star-4"></div>
-    </div>
-  </div>
-</div>
+<app-planet-system></app-planet-system>

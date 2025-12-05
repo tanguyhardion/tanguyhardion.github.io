@@ -81,17 +81,17 @@
     transition: opacity 1.5s ease;
     @extend .border-radius-lg;
     background:
-      radial-gradient(ellipse at 15% 25%, color-mix(in srgb, var(--backgroundColor) 35%, transparent) 0%, transparent 45%),
-      radial-gradient(ellipse at 85% 75%, color-mix(in srgb, var(--backgroundColor) 30%, #667eea 20%) 0%, transparent 50%),
-      radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--backgroundColor) 15%, transparent) 0%, transparent 60%),
-      linear-gradient(
-        125deg,
-        #0a0a0f 0%,
-        color-mix(in srgb, var(--backgroundColor) 20%, #1a1a2e) 30%,
-        color-mix(in srgb, var(--backgroundColor) 40%, #16213e) 55%,
-        color-mix(in srgb, var(--backgroundColor) 35%, #0f3460) 80%,
-        #0a0a0f 100%
-      );
+      radial-gradient(
+        circle at top left,
+        color-mix(in srgb, var(--backgroundColor) 30%, transparent) 0%,
+        transparent 70%
+      ),
+      radial-gradient(
+        circle at bottom right,
+        color-mix(in srgb, var(--backgroundColor) 10%, transparent) 0%,
+        transparent 70%
+      ),
+      linear-gradient(145deg, #1a1a2e 0%, #0a0a0f 100%);
     width: 100%;
     height: 100%;
     content: '';

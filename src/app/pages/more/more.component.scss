@@ -15,9 +15,15 @@
     }
   }
 
-  h1:nth-of-type(1) { animation-delay: 0.1s; }
-  h1:nth-of-type(2) { animation-delay: 0.3s; }
-  h1:nth-of-type(3) { animation-delay: 0.5s; }
+  h1:nth-of-type(1) {
+    animation-delay: 0.1s;
+  }
+  h1:nth-of-type(2) {
+    animation-delay: 0.3s;
+  }
+  h1:nth-of-type(3) {
+    animation-delay: 0.5s;
+  }
 
   .resume-container {
     display: flex;
@@ -194,11 +200,11 @@
 
   .languages {
     gap: 24px !important;
-    
+
     .language {
       min-width: 180px;
       padding: 24px 20px;
-      
+
       .name {
         font-size: 1.4rem;
       }
@@ -218,11 +224,11 @@
       .language {
         min-width: 160px;
         padding: 20px 16px;
-        
+
         .name {
           font-size: 1.3rem;
         }
-        
+
         .level {
           font-size: 0.9rem;
         }

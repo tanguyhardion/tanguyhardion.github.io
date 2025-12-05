@@ -25,7 +25,7 @@ export class ExperienceComponent {
       descriptionKey: 'experience.deloitte.description.junior_ai_data_analyst',
       relatedProjects: [],
       dates: {
-        start: new Date('2025-10-01'),
+        start: new Date('2025-10-01')
       }
     },
     {
