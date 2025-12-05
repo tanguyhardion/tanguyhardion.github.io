@@ -1,4 +1,4 @@
-import{a as p}from"./chunk-QNZTRIIV.js";import{Fa as g,Oa as a,Ta as r,db as h,dc as n,f as s,kc as b,mb as d}from"./chunk-S3JNK5LH.js";var m=class l{constructor(o){this.translateService=o;this.render(),this.translateService.onLangChange.subscribe(()=>{this.render()})}content;skills=`
+import{a as p}from"./chunk-S53FB6I4.js";import{Fa as g,Oa as a,Ta as r,db as h,ec as n,f as s,lc as b,mb as d}from"./chunk-L4WQ5DLX.js";var m=class l{constructor(o){this.translateService=o;this.render(),this.translateService.onLangChange.subscribe(()=>{this.render()})}content;skills=`
   ## {{ 'skills.gen_agentic_ai' }}
 
   ![LangChain](https://img.shields.io/badge/LangChain-%231d3c3e.svg?style=for-the-badge&logo=LangChain&logoColor=white)
