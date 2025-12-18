@@ -6,13 +6,14 @@ import { NavigationStart, Router, RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 import { NavbarComponent } from '@components/navbar/navbar.component';
+import { XmasBackgroundComponent } from '@components/xmas-background/xmas-background.component';
 import { NavColorService } from '@services/nav-color.service';
 import hexToRgba from '@utils/hex-to-rgba';
 import { StorageHelper } from '@utils/storage-helper';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterOutlet, NavbarComponent],
+  imports: [CommonModule, RouterOutlet, NavbarComponent, XmasBackgroundComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -25,6 +26,7 @@ export class AppComponent implements OnInit {
   backlightOn = false;
   isMobile = false;
   showScrollArrow = false;
+  isChristmasTime = false;
 
   constructor(
     private router: Router,
@@ -35,6 +37,7 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.checkChristmasTime();
     this.isMobile = this.detectMobile();
     this.initializeBacklight();
     this.configureTranslation();
@@ -55,6 +58,17 @@ export class AppComponent implements OnInit {
 
   private initializeBacklight(): void {
     this.smoothMove();
+  }
+
+  private checkChristmasTime(): void {
+    const today = new Date();
+    const month = today.getMonth(); // 0-11
+    const day = today.getDate();
+
+    // December (11) or January (0) up to the 15th
+    if (month === 11 || (month === 0 && day <= 15)) {
+      this.isChristmasTime = true;
+    }
   }
 
   private detectMobile(): boolean {

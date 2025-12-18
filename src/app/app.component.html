@@ -14,4 +14,8 @@
   @if (backlightOn) {
     <div class="backlight" [ngStyle]="backlightStyle"></div>
   }
+
+  @if (isChristmasTime) {
+    <app-xmas-background></app-xmas-background>
+  }
 </div>
