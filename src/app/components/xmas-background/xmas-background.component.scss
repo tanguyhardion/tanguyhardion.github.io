@@ -11,78 +11,46 @@
 
 .snowflake {
   position: absolute;
-  top: -30px;
+  top: -50px;
   color: white;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
   user-select: none;
-
-  @for $i from 1 through 50 {
-    &:nth-child(#{$i}) {
-      left: #{random(100)}vw;
-      animation: fall-#{random(3)} #{random(5) + 5}s linear infinite;
-      animation-delay: -#{random(10)}s;
-      opacity: #{random(10) / 10};
-      
-      // Randomize size (10px to 35px)
-      font-size: #{random(25) + 10}px;
-      
-      // Randomize color (White, LightBlue, LightCyan)
-      $color-picker: random(3);
-      @if $color-picker == 1 {
-        color: #ffffff;
-      } @else if $color-picker == 2 {
-        color: #add8e6;
-      } @else {
-        color: #e0ffff;
-      }
-
-      // Randomize shape
-      $shape-picker: random(3);
-      &::after {
-        @if $shape-picker == 1 {
-          content: '\2744'; // ❄
-        } @else if $shape-picker == 2 {
-          content: '\2745'; // ❅
-        } @else {
-          content: '\2746'; // ❆
-        }
-      }
-    }
-  }
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fall-1 {
   0% {
-    transform: translateY(-10px) translateX(0);
+    transform: translateY(0) translateX(0);
   }
   50% {
     transform: translateY(50vh) translateX(20px);
   }
   100% {
-    transform: translateY(100vh) translateX(-20px);
+    transform: translateY(110vh) translateX(-20px);
   }
 }
 
 @keyframes fall-2 {
   0% {
-    transform: translateY(-10px) translateX(0);
+    transform: translateY(0) translateX(0);
   }
   50% {
     transform: translateY(50vh) translateX(-20px);
   }
   100% {
-    transform: translateY(100vh) translateX(20px);
+    transform: translateY(110vh) translateX(20px);
   }
 }
 
 @keyframes fall-3 {
   0% {
-    transform: translateY(-10px) translateX(0);
+    transform: translateY(0) translateX(0);
   }
   50% {
     transform: translateY(50vh) translateX(10px);
   }
   100% {
-    transform: translateY(100vh) translateX(-10px);
+    transform: translateY(110vh) translateX(-10px);
   }
 }

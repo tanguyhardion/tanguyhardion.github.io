@@ -1,3 +1,14 @@
 <div class="snow-container">
-  <div *ngFor="let i of snowflakes" class="snowflake"></div>
+  <div *ngFor="let flake of snowflakes; let i = index; trackBy: trackByFn" 
+       class="snowflake"
+       [style.left]="flake.left"
+       [style.animation-duration]="flake.animationDuration"
+       [style.animation-delay]="flake.animationDelay"
+       [style.opacity]="flake.opacity"
+       [style.font-size]="flake.fontSize"
+       [style.color]="flake.color"
+       [style.animation-name]="flake.animationName"
+       (animationend)="onAnimationEnd(i)">
+    {{ flake.content }}
+  </div>
 </div>

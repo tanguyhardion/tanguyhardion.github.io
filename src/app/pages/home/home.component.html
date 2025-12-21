@@ -1,1 +1,14 @@
+<div class="shooting-stars">
+  <div
+    *ngFor="let star of stars; let i = index"
+    class="shooting-star-wrapper"
+    [ngStyle]="star.style"
+  >
+    <div
+      class="shooting-star"
+      [class.animate]="star.animating"
+      (animationend)="onAnimationEnd(i)"
+    ></div>
+  </div>
+</div>
 <ProfileInfo />

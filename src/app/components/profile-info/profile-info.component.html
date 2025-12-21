@@ -1,16 +1,3 @@
-<div class="shooting-stars">
-  <div
-    *ngFor="let star of stars; let i = index"
-    class="shooting-star-wrapper"
-    [ngStyle]="star.style"
-  >
-    <div
-      class="shooting-star"
-      [class.animate]="star.animating"
-      (animationend)="onAnimationEnd(i)"
-    ></div>
-  </div>
-</div>
 <div class="profile">
   <h1 class="name">Tanguy Hardion</h1>
   <div class="info" #info [innerHTML]="'profile.intro' | translate | marked"></div>
