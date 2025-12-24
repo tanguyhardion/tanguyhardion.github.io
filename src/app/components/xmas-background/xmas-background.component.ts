@@ -26,7 +26,21 @@ export class XmasBackgroundComponent implements OnInit {
   private nextId = 0;
 
   ngOnInit() {
-    this.snowflakes = Array.from({ length: 50 }, () => this.createSnowflake());
+    const snowflakeCount = this.getSnowflakeCount();
+    this.snowflakes = Array.from({ length: snowflakeCount }, () => this.createSnowflake());
+  }
+
+  private getSnowflakeCount(): number {
+    const width = window.innerWidth;
+    if (width < 480) {
+      return 15; // Mobile (small)
+    } else if (width < 768) {
+      return 25; // Mobile/Tablet (medium)
+    } else if (width < 1024) {
+      return 35; // Tablet (large)
+    } else {
+      return 50; // Desktop
+    }
   }
 
   createSnowflake(initial = true): Snowflake {
