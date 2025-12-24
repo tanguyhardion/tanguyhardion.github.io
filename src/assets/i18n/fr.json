@@ -197,6 +197,9 @@
       "watchmaking": "Horlogerie",
       "sports": "Sport",
       "music": "Musique"
+    },
+    "repos": {
+      "header": "Projets GitHub avec un site web"
     }
   }
 }

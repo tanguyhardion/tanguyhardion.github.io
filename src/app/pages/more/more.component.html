@@ -54,4 +54,37 @@
       </div>
     }
   </div>
+
+  <!-- GitHub Pages Repos -->
+  <h1>{{ 'more.repos.header' | translate }}</h1>
+  <div class="repos">
+    @for (repo of repos; track repo.name) {
+      <div class="repo" pAnimateOnScroll enterClass="animated fadeInUp">
+        <a [href]="repo.homepage || repo.html_url" target="_blank" class="repo-link">
+          <h3 class="repo-name">{{ repo.name }}</h3>
+          @if (repo.description) {
+            <p class="repo-description">{{ repo.description }}</p>
+          }
+          <div class="repo-meta">
+            @if (repo.language) {
+              <span class="repo-language">{{ repo.language }}</span>
+            }
+            @if (repo.stargazers_count > 0) {
+              <span class="repo-stars">
+                <span class="material-icons">star</span>
+                {{ repo.stargazers_count }}
+              </span>
+            }
+          </div>
+          @if (repo.topics && repo.topics.length > 0) {
+            <div class="repo-topics">
+              @for (topic of repo.topics; track topic) {
+                <span class="topic">{{ topic }}</span>
+              }
+            </div>
+          }
+        </a>
+      </div>
+    }
+  </div>
 </div>

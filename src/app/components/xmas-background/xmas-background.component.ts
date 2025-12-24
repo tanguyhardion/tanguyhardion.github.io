@@ -1,5 +1,5 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ViewEncapsulation, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 
 interface Snowflake {
   id: number;
@@ -21,13 +21,39 @@ interface Snowflake {
   styleUrls: ['./xmas-background.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class XmasBackgroundComponent implements OnInit {
+export class XmasBackgroundComponent implements OnInit, OnDestroy {
   snowflakes: Snowflake[] = [];
   private nextId = 0;
+  private visibilityHandler: () => void;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    this.visibilityHandler = this.handleVisibilityChange.bind(this);
+  }
 
   ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.initSnowflakes(false);
+      document.addEventListener('visibilitychange', this.visibilityHandler);
+    }
+  }
+
+  ngOnDestroy() {
+    if (isPlatformBrowser(this.platformId)) {
+      document.removeEventListener('visibilitychange', this.visibilityHandler);
+    }
+  }
+
+  private handleVisibilityChange() {
+    if (!document.hidden) {
+      this.initSnowflakes(true);
+    }
+  }
+
+  private initSnowflakes(distribute: boolean) {
     const snowflakeCount = this.getSnowflakeCount();
-    this.snowflakes = Array.from({ length: snowflakeCount }, () => this.createSnowflake());
+    this.snowflakes = Array.from({ length: snowflakeCount }, () => 
+      this.createSnowflake(distribute ? 'distributed' : 'initial')
+    );
   }
 
   private getSnowflakeCount(): number {
@@ -43,12 +69,22 @@ export class XmasBackgroundComponent implements OnInit {
     }
   }
 
-  createSnowflake(initial = true): Snowflake {
+  createSnowflake(mode: 'initial' | 'respawn' | 'distributed' = 'initial'): Snowflake {
+    const durationVal = Math.random() * 5 + 5;
+    const duration = durationVal + 's';
+    
+    let delay = '0s';
+    if (mode === 'initial') {
+      delay = (Math.random() * 20) + 's';
+    } else if (mode === 'distributed') {
+      delay = -(Math.random() * durationVal) + 's';
+    }
+
     return {
       id: this.nextId++,
       left: Math.random() * 100 + 'vw',
-      animationDuration: (Math.random() * 5 + 5) + 's',
-      animationDelay: initial ? (Math.random() * 20) + 's' : '0s',
+      animationDuration: duration,
+      animationDelay: delay,
       opacity: Math.random(),
       fontSize: (Math.random() * 25 + 10) + 'px',
       color: this.getRandomColor(),
@@ -68,7 +104,7 @@ export class XmasBackgroundComponent implements OnInit {
   }
 
   onAnimationEnd(index: number) {
-    this.snowflakes[index] = this.createSnowflake(false);
+    this.snowflakes[index] = this.createSnowflake('respawn');
   }
 
   trackByFn(index: number, item: Snowflake): number {

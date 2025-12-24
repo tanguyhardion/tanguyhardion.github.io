@@ -195,6 +195,9 @@
       "watchmaking": "Watchmaking",
       "sports": "Sports",
       "music": "Music"
+    },
+    "repos": {
+      "header": "GitHub projects with a website"
     }
   }
 }

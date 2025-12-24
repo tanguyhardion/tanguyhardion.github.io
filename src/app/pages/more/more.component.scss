@@ -24,6 +24,9 @@
   h1:nth-of-type(3) {
     animation-delay: 0.5s;
   }
+  h1:nth-of-type(4) {
+    animation-delay: 0.7s;
+  }
 
   .resume-container {
     display: flex;
@@ -190,6 +193,97 @@
       }
     }
   }
+
+  .repos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 24px;
+
+    .repo {
+      @extend .border-radius-lg;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-4px);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      }
+
+      .repo-link {
+        display: block;
+        padding: 24px;
+        text-decoration: none;
+        color: inherit;
+        height: 100%;
+
+        .repo-name {
+          font-size: 1.3rem;
+          font-weight: 600;
+          color: #fff;
+          margin-bottom: 12px;
+          word-break: break-word;
+        }
+
+        .repo-description {
+          font-size: 0.95rem;
+          color: rgba(255, 255, 255, 0.7);
+          margin-bottom: 16px;
+          line-height: 1.5;
+        }
+
+        .repo-meta {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          margin-bottom: 12px;
+          flex-wrap: wrap;
+
+          .repo-language {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 4px 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            font-weight: 500;
+          }
+
+          .repo-stars {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+
+            .material-icons {
+              font-size: 1rem;
+              color: #ffd700;
+            }
+          }
+        }
+
+        .repo-topics {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+
+          .topic {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.6);
+            padding: 4px 10px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 1100px) {
@@ -209,6 +303,10 @@
         font-size: 1.4rem;
       }
     }
+  }
+
+  .repos {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
 }
 
@@ -233,6 +331,11 @@
           font-size: 0.9rem;
         }
       }
+    }
+
+    .repos {
+      grid-template-columns: 1fr;
+      padding: 0 16px;
     }
   }
 }

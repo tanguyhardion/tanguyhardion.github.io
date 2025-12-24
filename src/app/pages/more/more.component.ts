@@ -4,6 +4,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 import { GithubFile } from '@model/types/github-file';
+import { GithubRepo } from '@model/types/github-repo';
 import { Interest } from '@model/types/interest';
 import { Language } from '@model/types/language';
 
@@ -85,11 +86,13 @@ export class MoreComponent implements OnInit {
       image: 'illustrations/piano.jpg'
     }
   ];
+  repos: GithubRepo[] = [];
 
   constructor(private translateService: TranslateService) {}
 
   ngOnInit(): void {
     this.updateFileCommitDates();
+    this.fetchRepos();
 
     this.translateService.onLangChange.subscribe(() => {
       this.updateFileCommitDates();
@@ -182,5 +185,21 @@ export class MoreComponent implements OnInit {
     const oneDay = 24 * 60 * 60 * 1000; // in milliseconds
     const now = Date.now();
     return now - timestamp > oneDay;
+  }
+
+  async fetchRepos(): Promise<void> {
+    const url = 'https://api.github.com/users/tanguyhardion/repos?per_page=1000';
+    
+    try {
+      const response = await fetch(url);
+      const repos: GithubRepo[] = await response.json();
+      
+      // Filter repos with GitHub Pages enabled
+      this.repos = repos
+        .filter(repo => repo.has_pages)
+        .sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
+    } catch (error) {
+      console.error('Error fetching repos:', error);
+    }
   }
 }
