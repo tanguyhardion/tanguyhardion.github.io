@@ -59,13 +59,13 @@ export class XmasBackgroundComponent implements OnInit, OnDestroy {
   private getSnowflakeCount(): number {
     const width = window.innerWidth;
     if (width < 480) {
-      return 15; // Mobile (small)
+      return 10; // Mobile (small)
     } else if (width < 768) {
-      return 25; // Mobile/Tablet (medium)
+      return 15; // Mobile/Tablet (medium)
     } else if (width < 1024) {
-      return 35; // Tablet (large)
+      return 25; // Tablet (large)
     } else {
-      return 50; // Desktop
+      return 35; // Desktop
     }
   }
 
