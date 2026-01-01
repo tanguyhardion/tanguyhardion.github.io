@@ -65,8 +65,8 @@ export class AppComponent implements OnInit {
     const month = today.getMonth(); // 0-11
     const day = today.getDate();
 
-    // December (11) or January (0) up to the 15th
-    if (month === 11 || (month === 0 && day <= 15)) {
+    // December (11) or January (0) up to the 6th
+    if (month === 11 || (month === 0 && day <= 6)) {
       this.isChristmasTime = true;
     }
   }
