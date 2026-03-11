@@ -16,7 +16,7 @@ export class ProfileInfoComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     setInterval(() => {
-      const result = dayjs().diff(dayjs(1046516400000), 'year', true);
+      const result = dayjs().diff(dayjs(1047423600), 'year', true);
       const age = result.toString().substring(0, 12);
       const ageEl = this.infoEl.nativeElement.querySelector('.age-placeholder');
       if (ageEl) {
