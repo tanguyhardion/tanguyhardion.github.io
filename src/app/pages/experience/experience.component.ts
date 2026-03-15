@@ -20,9 +20,9 @@ export class ExperienceComponent {
         location: 'Luxembourg',
         link: 'https://www.deloitte.lu/'
       },
-      positionKey: 'experience.deloitte.position.junior_ai_data_analyst',
+      positionKey: 'experience.deloitte.position.junior_consultant_ai_data',
       jobType: JobType.Permanent,
-      descriptionKey: 'experience.deloitte.description.junior_ai_data_analyst',
+      descriptionKey: 'experience.deloitte.description.junior_consultant_ai_data',
       relatedProjects: [],
       dates: {
         start: new Date('2025-10-01')
