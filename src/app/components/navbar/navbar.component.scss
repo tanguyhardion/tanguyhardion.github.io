@@ -258,7 +258,7 @@
               }
 
               &.linkedin {
-                filter: saturate(0) brightness(0.8);
+                filter: brightness(0) invert(0.8);
               }
 
               &.github {
@@ -275,7 +275,7 @@
               }
 
               .linkedin {
-                filter: saturate(1) brightness(1);
+                filter: brightness(0) invert(1);
               }
 
               .github {
