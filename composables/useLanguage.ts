@@ -1,4 +1,4 @@
-import { useState, onMounted } from '#imports';
+import { useState } from '#imports';
 import type { Language, TranslationStrings } from '~/types/portfolio';
 import { translations } from '~/data/portfolioData';
 
