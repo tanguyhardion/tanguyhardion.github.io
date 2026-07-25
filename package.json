@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-new",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/nitro-server": "^4.5.0",
+    "@poppinss/dumper": "^0.7.0",
+    "nuxt": "^4.5.0",
+    "vue": "^3.5.40",
+    "vue-router": "^5.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.102.0"
+  }
+}

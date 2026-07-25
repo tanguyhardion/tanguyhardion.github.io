@@ -1,0 +1,142 @@
+@use './variables' as *;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: $bg-amoled;
+  color: $text-main;
+  font-family: $font-sans;
+  font-size: 16px;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: $bg-amoled;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Glassmorphism Card Utilities */
+.glass-card {
+  background: $bg-card;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid $border-subtle;
+  border-radius: $radius-md;
+  padding: 1.75rem;
+  transition: transform $transition-smooth, border-color $transition-smooth, box-shadow $transition-smooth;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: $border-light;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Container & Layout */
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Page Section Wrappers */
+.page-wrapper {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  min-height: calc(100vh - 120px);
+}
+
+.page-header {
+  margin-bottom: 3.5rem;
+  
+  .page-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: $radius-full;
+    font-size: 0.825rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid $border-subtle;
+  }
+
+  .page-title {
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    background: linear-gradient(180deg, #FFFFFF 30%, #9CA3AF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .page-subtitle {
+    font-size: 1.125rem;
+    color: $text-muted;
+    max-width: 680px;
+    line-height: 1.6;
+  }
+}
+
+/* Badge & Tag Pills */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: $radius-sm;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.06);
+  color: $text-main;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  &.primary {
+    background: rgba(255, 59, 92, 0.15);
+    color: #FF6B8B;
+    border-color: rgba(255, 59, 92, 0.3);
+  }
+}
+
+/* Page Transitions */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(12px);
+}
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-12px);
+}

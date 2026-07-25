@@ -1,0 +1,32 @@
+// Core SCSS Variables & Color Tokens
+$bg-amoled: #000000;
+$bg-card: rgba(18, 18, 22, 0.7);
+$bg-card-hover: rgba(28, 28, 36, 0.85);
+
+$border-subtle: rgba(255, 255, 255, 0.08);
+$border-light: rgba(255, 255, 255, 0.16);
+
+$text-main: #F3F4F6;
+$text-muted: #9CA3AF;
+$text-dark: #6B7280;
+
+// Theme Colors
+$color-crimson: #FF3B5C;
+$color-gold: #FFD700;
+$color-orange: #FF7F50;
+$color-light-blue: #38BDF8;
+$color-purple: #A855F7;
+$color-neutral: #757678;
+
+// Fonts
+$font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, monospace;
+
+// Transitions & Radius
+$radius-sm: 8px;
+$radius-md: 16px;
+$radius-lg: 24px;
+$radius-full: 9999px;
+
+$transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
