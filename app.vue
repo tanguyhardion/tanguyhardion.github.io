@@ -1,6 +1,7 @@
 <template>
   <div class="app-root">
     <InteractiveBacklight />
+    <ShootingStars />
     <NavBar />
     <NuxtPage />
     <Footer />
