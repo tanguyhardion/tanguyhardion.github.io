@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Circular background -->
+  <circle cx="250" cy="250" r="230" fill="#f0ede6" />
+  
+  <!-- Text Elements (Grouped and visually centered) -->
+  <g font-family="'Times New Roman', Times, serif" fill="#363835" dominant-baseline="central">
+    <!-- "T" -->
+    <text x="165" y="235" font-size="340" text-anchor="middle">T</text>
+    
+    <!-- "H" -->
+    <text x="315" y="275" font-size="290" text-anchor="middle">H</text>
+  </g>
+</svg>

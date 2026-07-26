@@ -3,7 +3,7 @@
     <div class="container header-content">
       <!-- Logo / Name -->
       <NuxtLink to="/" class="brand-logo">
-        <img src="/images/favicon.png" alt="Tanguy Hardion Logo" class="logo-avatar-img" />
+        <img src="/images/favicon.svg" alt="Tanguy Hardion Logo" class="logo-avatar-img" />
         <span class="logo-name">Tanguy Hardion</span>
       </NuxtLink>
 
