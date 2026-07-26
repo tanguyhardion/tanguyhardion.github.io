@@ -1,5 +1,5 @@
 <template>
-  <div class="skill-category-card glass-card">
+  <div :id="id" class="skill-category-card glass-card">
     <div class="category-header">
       <div class="icon-avatar">
         <Icon :icon="category.icon" width="22" height="22" />
@@ -28,6 +28,7 @@ import type { SkillCategory } from '~/types/portfolio';
 import { useLanguage } from '~/composables/useLanguage';
 
 defineProps<{
+  id?: string;
   category: SkillCategory;
 }>();
 

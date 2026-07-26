@@ -1,5 +1,5 @@
 <template>
-  <div class="timeline-card glass-card" :class="accentColor">
+  <div :id="id" class="timeline-card glass-card" :class="accentColor">
     <div class="timeline-meta">
       <span class="period-pill">{{ formattedPeriod }}</span>
       <span v-if="contractType" class="contract-badge">{{ contractType }}</span>
@@ -43,6 +43,7 @@ import { useLanguage } from '~/composables/useLanguage';
 import { formatPeriod } from '~/utils/dateUtils';
 
 const props = defineProps<{
+  id?: string;
   title: string;
   subtitle: string;
   location: string;

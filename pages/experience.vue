@@ -1,5 +1,7 @@
 <template>
   <div class="page-wrapper experience-page">
+    <TableOfContents :items="tocItems" accent-color="orange" />
+
     <div class="container">
       <header class="page-header" v-reveal:fade-up>
         <span class="page-tag" style="color: #FF7F50; border-color: rgba(255, 127, 80, 0.25);">
@@ -13,6 +15,7 @@
         <TimelineItem
           v-for="(item, idx) in experienceData"
           :key="item.id"
+          :id="'exp-' + item.id"
           :title="item.role[currentLang]"
           :subtitle="item.company[currentLang]"
           :location="item.location[currentLang]"
@@ -31,12 +34,22 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import { Icon } from '@iconify/vue';
 import { useLanguage } from '~/composables/useLanguage';
 import { experienceData } from '~/data/portfolioData';
 import TimelineItem from '~/components/TimelineItem.vue';
+import TableOfContents, { type TocItem } from '~/components/TableOfContents.vue';
 
 const { currentLang, t } = useLanguage();
+
+const tocItems = computed<TocItem[]>(() =>
+  experienceData.map(item => ({
+    id: `exp-${item.id}`,
+    label: item.company[currentLang.value],
+    icon: 'ph:briefcase-bold'
+  }))
+);
 </script>
 
 <style lang="scss" scoped>

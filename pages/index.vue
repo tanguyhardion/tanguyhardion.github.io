@@ -1,7 +1,9 @@
 <template>
   <div class="page-wrapper home-page">
+    <TableOfContents :items="tocItems" accent-color="crimson" />
+
     <div class="container">
-      <div class="hero-grid">
+      <div id="overview" class="hero-grid">
         <!-- Left Hero Column -->
         <div class="hero-content" v-reveal:slide-right>
           <h1 class="hero-greeting">{{ t.home.greeting }}</h1>
@@ -29,7 +31,7 @@
       </div>
 
       <!-- Quick Stats Section -->
-      <div class="stats-grid">
+      <div id="metrics" class="stats-grid">
         <div
           v-for="(stat, idx) in t.home.quickStats"
           :key="stat.label"
@@ -45,10 +47,25 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useLanguage } from '~/composables/useLanguage';
 import SolarSystemHero from '~/components/SolarSystemHero.vue';
+import TableOfContents, { type TocItem } from '~/components/TableOfContents.vue';
 
-const { t } = useLanguage();
+const { currentLang, t } = useLanguage();
+
+const tocItems = computed<TocItem[]>(() => [
+  {
+    id: 'overview',
+    label: currentLang.value === 'fr' ? 'Présentation' : 'Overview',
+    icon: 'ph:sparkle-bold'
+  },
+  {
+    id: 'metrics',
+    label: currentLang.value === 'fr' ? 'Chiffres Clés' : 'Key Metrics',
+    icon: 'ph:chart-bar-bold'
+  }
+]);
 </script>
 
 <style lang="scss" scoped>

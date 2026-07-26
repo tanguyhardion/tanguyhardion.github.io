@@ -1,5 +1,7 @@
 <template>
   <div class="page-wrapper projects-page">
+    <TableOfContents :items="tocItems" accent-color="light-blue" />
+
     <div class="container">
       <header class="page-header" v-reveal:fade-up>
         <span class="page-tag" style="color: #38BDF8; border-color: rgba(56, 189, 248, 0.25);">
@@ -10,7 +12,7 @@
       </header>
 
       <!-- Context Filter Buttons -->
-      <div class="filter-bar" v-reveal:fade-up="100">
+      <div id="filter-bar" class="filter-bar" v-reveal:fade-up="100">
         <button
           class="filter-btn"
           :class="{ active: activeFilter === 'ALL' }"
@@ -46,6 +48,7 @@
         <ProjectCard
           v-for="(project, idx) in filteredProjects"
           :key="project.id"
+          :id="'proj-' + project.id"
           :project="project"
           v-reveal:fade-up="(idx % 2) * 120"
         />
@@ -61,8 +64,9 @@ import { useLanguage } from '~/composables/useLanguage';
 import { projectsData } from '~/data/portfolioData';
 import type { ProjectContext } from '~/types/portfolio';
 import ProjectCard from '~/components/ProjectCard.vue';
+import TableOfContents, { type TocItem } from '~/components/TableOfContents.vue';
 
-const { t } = useLanguage();
+const { currentLang, t } = useLanguage();
 const activeFilter = ref<ProjectContext | 'ALL'>('ALL');
 
 const filteredProjects = computed(() => {
@@ -71,6 +75,14 @@ const filteredProjects = computed(() => {
   }
   return projectsData.filter(p => p.context === activeFilter.value);
 });
+
+const tocItems = computed<TocItem[]>(() =>
+  filteredProjects.value.map(p => ({
+    id: `proj-${p.id}`,
+    label: p.title,
+    icon: 'ph:code-bold'
+  }))
+);
 </script>
 
 <style lang="scss" scoped>

@@ -1,5 +1,5 @@
 <template>
-  <div class="project-card glass-card">
+  <div :id="id" class="project-card glass-card">
     <div class="card-header">
       <span class="context-pill" :class="project.context.toLowerCase()">
         {{ project.contextLabel[currentLang] }}
@@ -63,6 +63,7 @@ import type { ProjectItem } from '~/types/portfolio';
 import { useLanguage } from '~/composables/useLanguage';
 
 defineProps<{
+  id?: string;
   project: ProjectItem;
 }>();
 

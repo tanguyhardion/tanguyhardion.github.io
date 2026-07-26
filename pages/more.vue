@@ -1,5 +1,7 @@
 <template>
   <div class="page-wrapper more-page">
+    <TableOfContents :items="tocItems" accent-color="neutral" />
+
     <div class="container">
       <header class="page-header" v-reveal:fade-up>
         <span class="page-tag" style="color: #757678; border-color: rgba(117, 118, 120, 0.3);">
@@ -10,7 +12,7 @@
       </header>
 
       <!-- Section 1: Resume Downloads with Live GitHub Commit Dates -->
-      <section class="more-section" v-reveal:fade-up>
+      <section id="resumes" class="more-section" v-reveal:fade-up>
         <div class="section-heading">
           <h2 class="section-title">{{ t.more.resumesTitle }}</h2>
           <p class="section-desc">{{ t.more.resumesSubtitle }}</p>
@@ -57,7 +59,7 @@
       </section>
 
       <!-- Section 2: Spoken Languages -->
-      <section class="more-section" v-reveal:fade-up>
+      <section id="languages" class="more-section" v-reveal:fade-up>
         <div class="section-heading">
           <h2 class="section-title">{{ t.more.languagesTitle }}</h2>
           <p class="section-desc">{{ t.more.languagesSubtitle }}</p>
@@ -83,7 +85,7 @@
       </section>
 
       <!-- Section 3: Personal Interests -->
-      <section class="more-section" v-reveal:fade-up>
+      <section id="interests" class="more-section" v-reveal:fade-up>
         <div class="section-heading">
           <h2 class="section-title">{{ t.more.interestsTitle }}</h2>
           <p class="section-desc">{{ t.more.interestsSubtitle }}</p>
@@ -107,14 +109,33 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, computed } from 'vue';
 import { Icon } from '@iconify/vue';
 import { useLanguage } from '~/composables/useLanguage';
 import { useResumeDate } from '~/composables/useResumeDate';
 import { resumeFormatsData, languagesData, personalInterestsData } from '~/data/portfolioData';
+import TableOfContents, { type TocItem } from '~/components/TableOfContents.vue';
 
 const { currentLang, t } = useLanguage();
 const { dates, fetchResumeDate } = useResumeDate();
+
+const tocItems = computed<TocItem[]>(() => [
+  {
+    id: 'resumes',
+    label: t.value.more.resumesTitle,
+    icon: 'ph:file-pdf-bold'
+  },
+  {
+    id: 'languages',
+    label: t.value.more.languagesTitle,
+    icon: 'ph:translate-bold'
+  },
+  {
+    id: 'interests',
+    label: t.value.more.interestsTitle,
+    icon: 'ph:heart-bold'
+  }
+]);
 
 onMounted(() => {
   resumeFormatsData.forEach(r => {
