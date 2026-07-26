@@ -9,6 +9,8 @@ import type {
   PersonalInterest
 } from '~/types/portfolio';
 
+import { calculateYearsOfExperience } from '~/utils/dateUtils';
+
 // Helper functions to calculate stats dynamically
 export const getTotalProjectsCount = (): string => `${projectsData.length}+`;
 
@@ -25,16 +27,11 @@ export const getYearsOfExperienceCount = (): string => {
     return !isInternship && !isSummerJob;
   };
 
-  const years = experienceData
+  const periods = experienceData
     .filter(isFullTime)
-    .map(exp => parseInt(exp.period.split('-')[0].trim(), 10))
-    .filter(y => !isNaN(y));
-  
-  if (years.length === 0) return '1+';
-  const startYear = Math.min(...years);
-  const currentYear = new Date().getFullYear();
-  const diff = currentYear - startYear;
-  return `${diff}+`;
+    .map(exp => exp.period);
+
+  return calculateYearsOfExperience(periods);
 };
 
 export const translations: Record<'en' | 'fr', TranslationStrings> = {

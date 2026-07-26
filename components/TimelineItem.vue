@@ -1,7 +1,7 @@
 <template>
   <div class="timeline-card glass-card" :class="accentColor">
     <div class="timeline-meta">
-      <span class="period-pill">{{ period }}</span>
+      <span class="period-pill">{{ formattedPeriod }}</span>
       <span v-if="contractType" class="contract-badge">{{ contractType }}</span>
       <span v-if="gpa" class="gpa-badge">{{ gpaLabel }}: {{ gpa }}</span>
     </div>
@@ -39,6 +39,8 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { Icon } from '@iconify/vue';
+import { useLanguage } from '~/composables/useLanguage';
+import { formatPeriod } from '~/utils/dateUtils';
 
 const props = defineProps<{
   title: string;
@@ -54,6 +56,10 @@ const props = defineProps<{
   techs?: string[];
   accentColor?: 'crimson' | 'gold' | 'orange' | 'light-blue' | 'purple' | 'neutral';
 }>();
+
+const { currentLang } = useLanguage();
+
+const formattedPeriod = computed(() => formatPeriod(props.period, currentLang.value));
 
 const mapsUrl = computed(() => {
   const query = encodeURIComponent(`${props.subtitle}, ${props.location}`);
