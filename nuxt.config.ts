@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
 
   app: {
-    baseURL: '/tanguyhardion.github.io/',
+    baseURL: '/',
     head: {
       title: 'Tanguy Hardion — AI & Software Engineer Portfolio',
       meta: [
@@ -17,8 +17,8 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#000000' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/tanguyhardion.github.io/images/favicon.ico' },
-        { rel: 'icon', type: 'image/png', href: '/tanguyhardion.github.io/images/favicon.png' },
+        { rel: 'icon', type: 'image/x-icon', href: '/images/favicon.ico' },
+        { rel: 'icon', type: 'image/png', href: '/images/favicon.png' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         {
