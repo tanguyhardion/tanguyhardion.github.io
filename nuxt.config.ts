@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
 
   app: {
-    baseURL: '/portfolio/',
+    baseURL: '/tanguyhardion.github.io/',
     head: {
       title: 'Tanguy Hardion — AI & Software Engineer Portfolio',
       meta: [
