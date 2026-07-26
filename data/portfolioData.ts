@@ -94,6 +94,7 @@ export const translations: Record<'en' | 'fr', TranslationStrings> = {
       resumesSubtitle: 'Get my latest resume in your preferred format. Dates fetched live from GitHub commits.',
       lastUpdated: 'Updated',
       download: 'Download PDF',
+      open: 'Open',
       languagesTitle: 'Spoken Languages',
       languagesSubtitle: 'CEFR proficiency levels & linguistic capabilities.',
       interestsTitle: 'Passions & Interests',
@@ -163,6 +164,7 @@ export const translations: Record<'en' | 'fr', TranslationStrings> = {
       resumesSubtitle: 'Téléchargez mon CV dans le format de votre choix. Dates mises à jour en direct via l\'API GitHub.',
       lastUpdated: 'Mis à jour le',
       download: 'Télécharger PDF',
+      open: 'Ouvrir',
       languagesTitle: 'Langues Parlées',
       languagesSubtitle: 'Niveaux CECRL et capacités linguistiques.',
       interestsTitle: 'Passions & Centred d\'Intérêt',
@@ -713,7 +715,10 @@ export const languagesData: LanguageSkill[] = [
   {
     name: { en: 'French', fr: 'Français' },
     flagIcon: 'emojione-v1:flag-for-france',
-    level: 'Native / Langue maternelle',
+    level: {
+      en: 'Native Speaker',
+      fr: 'Langue Maternelle'
+    },
     description: {
       en: 'Native fluency in speaking, writing, and professional communication.',
       fr: 'Langue maternelle, parfaite maîtrise orale et écrite.'
@@ -722,7 +727,10 @@ export const languagesData: LanguageSkill[] = [
   {
     name: { en: 'English', fr: 'Anglais' },
     flagIcon: 'emojione-v1:flag-for-united-kingdom',
-    level: 'Fluent (C1+, TOEFL 108/120)',
+    level: {
+      en: 'Fluent (C1+, TOEFL 108/120)',
+      fr: 'Courant (C1+, TOEFL 108/120)'
+    },
     description: {
       en: 'Fluent proficiency in technical writing and professional environments.',
       fr: 'Anglais courant (niveau C1+, TOEFL 108/120).'
@@ -731,7 +739,10 @@ export const languagesData: LanguageSkill[] = [
   {
     name: { en: 'Spanish', fr: 'Espagnol' },
     flagIcon: 'emojione-v1:flag-for-spain',
-    level: 'Intermediate (B1)',
+    level: {
+      en: 'Intermediate (B1)',
+      fr: 'Intermédiaire (B1)'
+    },
     description: {
       en: 'Intermediate conversational and reading skills.',
       fr: 'Niveau intermédiaire (B1).'

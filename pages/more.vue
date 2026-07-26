@@ -27,33 +27,47 @@
           >
             <div class="resume-header">
               <span class="format-badge">{{ resume.format }}</span>
-              <span class="file-size">{{ resume.fileSize }}</span>
+              <span class="update-date">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                {{ t.more.lastUpdated }}: {{ dates[resume.filePathInRepo] || 'July 2026' }}
+              </span>
             </div>
 
             <h3 class="resume-title">{{ resume.title[currentLang] }}</h3>
 
-            <div class="resume-date-meta">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                <line x1="16" y1="2" x2="16" y2="6"/>
-                <line x1="8" y1="2" x2="8" y2="6"/>
-                <line x1="3" y1="10" x2="21" y2="10"/>
-              </svg>
-              <span>{{ t.more.lastUpdated }}: <strong>{{ dates[resume.filePathInRepo] || 'July 2026' }}</strong></span>
-            </div>
+            <div class="resume-actions">
+              <a
+                :href="resume.downloadUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="action-btn open-btn"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                {{ t.more.open }}
+              </a>
 
-            <a
-              :href="resume.downloadUrl"
-              download
-              class="download-btn"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
-              </svg>
-              {{ t.more.download }}
-            </a>
+              <a
+                :href="resume.downloadUrl"
+                download
+                class="action-btn download-btn"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                {{ t.more.download }}
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -76,7 +90,7 @@
               <span class="flag-icon-wrap"><Icon :icon="langItem.flagIcon" class="flag-icon" /></span>
               <div>
                 <h3 class="lang-name">{{ langItem.name[currentLang] }}</h3>
-                <span class="lang-level">{{ langItem.level }}</span>
+                <span class="lang-level">{{ langItem.level[currentLang] }}</span>
               </div>
             </div>
             <p class="lang-desc">{{ langItem.description[currentLang] }}</p>
@@ -201,10 +215,13 @@ onMounted(() => {
       color: #FFF;
     }
 
-    .file-size {
+    .update-date {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
       font-size: 0.775rem;
-      color: $text-dark;
-      font-family: $font-mono;
+      color: $text-muted;
+      font-weight: 500;
     }
   }
 
@@ -212,40 +229,49 @@ onMounted(() => {
     font-size: 1.1rem;
     font-weight: 700;
     color: #FFF;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     flex-grow: 1;
   }
 
-  .resume-date-meta {
+  .resume-actions {
     display: flex;
+    gap: 0.75rem;
     align-items: center;
-    gap: 0.45rem;
-    font-size: 0.8rem;
-    color: $text-muted;
-    margin-bottom: 1.25rem;
 
-    strong {
-      color: #FFF;
+    .action-btn {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.6rem 0.85rem;
+      border-radius: $radius-sm;
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: all $transition-fast;
+      white-space: nowrap;
     }
-  }
 
-  .download-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1rem;
-    border-radius: $radius-sm;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid $border-subtle;
-    color: #FFF;
-    font-size: 0.875rem;
-    font-weight: 600;
-    transition: all $transition-fast;
+    .open-btn {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #FFF;
 
-    &:hover {
-      background: rgba(255, 255, 255, 0.16);
-      border-color: rgba(255, 255, 255, 0.3);
+      &:hover {
+        background: rgba(255, 255, 255, 0.22);
+        border-color: rgba(255, 255, 255, 0.4);
+      }
+    }
+
+    .download-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid $border-subtle;
+      color: #FFF;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.14);
+        border-color: rgba(255, 255, 255, 0.3);
+      }
     }
   }
 }

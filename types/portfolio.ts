@@ -57,6 +57,7 @@ export interface TranslationStrings {
     resumesSubtitle: string;
     lastUpdated: string;
     download: string;
+    open: string;
     languagesTitle: string;
     languagesSubtitle: string;
     interestsTitle: string;
@@ -126,7 +127,7 @@ export interface LanguageSkill {
   name: { en: string; fr: string };
   flag?: string;
   flagIcon: string;
-  level: string; // e.g. Native / C2 / B2
+  level: { en: string; fr: string };
   description: { en: string; fr: string };
 }
 
