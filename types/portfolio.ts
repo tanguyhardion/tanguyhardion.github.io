@@ -126,7 +126,8 @@ export interface SkillCategory {
 
 export interface LanguageSkill {
   name: { en: string; fr: string };
-  flag: string;
+  flag?: string;
+  flagIcon: string;
   level: string; // e.g. Native / C2 / B2
   description: { en: string; fr: string };
 }

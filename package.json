@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@iconify/vue": "^5.0.1",
     "@nuxt/nitro-server": "^0.0.0",
     "@poppinss/dumper": "^0.7.0",
     "nuxt": "^4.1.3",

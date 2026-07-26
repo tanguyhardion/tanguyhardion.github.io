@@ -2,9 +2,7 @@
   <div class="skill-category-card glass-card">
     <div class="category-header">
       <div class="icon-avatar">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-        </svg>
+        <Icon :icon="category.icon" width="22" height="22" />
       </div>
       <h3 class="category-name">{{ category.name[currentLang] }}</h3>
     </div>
@@ -22,6 +20,7 @@
 </template>
 
 <script setup lang="ts">
+import { Icon } from '@iconify/vue';
 import type { SkillCategory } from '~/types/portfolio';
 import { useLanguage } from '~/composables/useLanguage';
 

@@ -3,7 +3,7 @@
     <div class="container header-content">
       <!-- Logo / Name -->
       <NuxtLink to="/" class="brand-logo">
-        <span class="logo-avatar">TH</span>
+        <img src="/images/favicon.png" alt="Tanguy Hardion Logo" class="logo-avatar-img" />
         <span class="logo-name">Tanguy Hardion</span>
       </NuxtLink>
 
@@ -37,7 +37,7 @@
           @click="toggleLanguage"
           :title="currentLang === 'en' ? 'Passer en Français' : 'Switch to English'"
         >
-          <span class="flag-icon">{{ currentLang === 'en' ? '🇬🇧' : '🇫🇷' }}</span>
+          <Icon :icon="currentLang === 'en' ? 'emojione-v1:flag-for-united-kingdom' : 'emojione-v1:flag-for-france'" class="flag-icon" />
           <span class="lang-code">{{ currentLang.toUpperCase() }}</span>
         </button>
 
@@ -104,6 +104,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { Icon } from '@iconify/vue';
 import { useLanguage } from '~/composables/useLanguage';
 
 const { currentLang, toggleLanguage, t } = useLanguage();
@@ -140,6 +141,14 @@ const mobileOpen = ref(false);
   font-weight: 700;
   font-size: 1.05rem;
   letter-spacing: -0.01em;
+
+  .logo-avatar-img {
+    width: 34px;
+    height: 34px;
+    border-radius: $radius-full;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
 
   .logo-avatar {
     width: 34px;

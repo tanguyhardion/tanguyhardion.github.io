@@ -3,7 +3,7 @@
     <div class="container">
       <header class="page-header">
         <span class="page-tag" style="color: #A855F7; border-color: rgba(168, 85, 247, 0.25);">
-          ⚡ {{ t.nav.skills }}
+          <Icon icon="ph:lightning-bold" class="tag-icon" /> {{ t.nav.skills }}
         </span>
         <h1 class="page-title">{{ t.skills.title }}</h1>
         <p class="page-subtitle">{{ t.skills.subtitle }}</p>
@@ -21,6 +21,7 @@
 </template>
 
 <script setup lang="ts">
+import { Icon } from '@iconify/vue';
 import { useLanguage } from '~/composables/useLanguage';
 import { skillCategoriesData } from '~/data/portfolioData';
 import SkillGrid from '~/components/SkillGrid.vue';

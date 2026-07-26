@@ -3,7 +3,7 @@
     <div class="container">
       <header class="page-header">
         <span class="page-tag" style="color: #757678; border-color: rgba(117, 118, 120, 0.3);">
-          📁 {{ t.nav.more }}
+          <Icon icon="ph:folder-user-bold" class="tag-icon" /> {{ t.nav.more }}
         </span>
         <h1 class="page-title">{{ t.more.title }}</h1>
         <p class="page-subtitle">{{ t.more.subtitle }}</p>
@@ -65,11 +65,11 @@
         <div class="languages-grid">
           <div
             v-for="langItem in languagesData"
-            :key="langItem.flag"
+            :key="langItem.flagIcon"
             class="language-card glass-card"
           >
             <div class="lang-card-header">
-              <span class="flag-emoji">{{ langItem.flag }}</span>
+              <span class="flag-icon-wrap"><Icon :icon="langItem.flagIcon" class="flag-icon" /></span>
               <div>
                 <h3 class="lang-name">{{ langItem.name[currentLang] }}</h3>
                 <span class="lang-level">{{ langItem.level }}</span>
@@ -93,7 +93,7 @@
             :key="interest.icon"
             class="interest-card glass-card"
           >
-            <span class="interest-icon">{{ interest.icon }}</span>
+            <span class="interest-icon-wrap"><Icon :icon="interest.icon" class="interest-icon" /></span>
             <h3 class="interest-title">{{ interest.title[currentLang] }}</h3>
             <p class="interest-desc">{{ interest.description[currentLang] }}</p>
           </div>
@@ -105,6 +105,7 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
+import { Icon } from '@iconify/vue';
 import { useLanguage } from '~/composables/useLanguage';
 import { useResumeDate } from '~/composables/useResumeDate';
 import { resumeFormatsData, languagesData, personalInterestsData } from '~/data/portfolioData';
@@ -241,8 +242,11 @@ onMounted(() => {
     gap: 1rem;
     margin-bottom: 0.85rem;
 
-    .flag-emoji {
-      font-size: 2.2rem;
+    .flag-icon-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
     }
 
     .lang-name {
@@ -275,10 +279,13 @@ onMounted(() => {
     grid-template-columns: 1fr;
   }
 
-  .interest-icon {
+  .interest-icon-wrap {
     font-size: 2rem;
     margin-bottom: 0.75rem;
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-light-blue;
   }
 
   .interest-title {

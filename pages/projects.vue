@@ -3,7 +3,7 @@
     <div class="container">
       <header class="page-header">
         <span class="page-tag" style="color: #38BDF8; border-color: rgba(56, 189, 248, 0.25);">
-          🚀 {{ t.nav.projects }}
+          <Icon icon="ph:rocket-launch-bold" class="tag-icon" /> {{ t.nav.projects }}
         </span>
         <h1 class="page-title">{{ t.projects.title }}</h1>
         <p class="page-subtitle">{{ t.projects.subtitle }}</p>
@@ -55,6 +55,7 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
+import { Icon } from '@iconify/vue';
 import { useLanguage } from '~/composables/useLanguage';
 import { projectsData } from '~/data/portfolioData';
 import type { ProjectContext } from '~/types/portfolio';

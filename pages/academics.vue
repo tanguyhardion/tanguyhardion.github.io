@@ -3,7 +3,7 @@
     <div class="container">
       <header class="page-header">
         <span class="page-tag" style="color: #FFD700; border-color: rgba(255, 215, 0, 0.25);">
-          🎓 {{ t.nav.academics }}
+          <Icon icon="ph:student-bold" class="tag-icon" /> {{ t.nav.academics }}
         </span>
         <h1 class="page-title">{{ t.academics.title }}</h1>
         <p class="page-subtitle">{{ t.academics.subtitle }}</p>
@@ -30,6 +30,7 @@
 </template>
 
 <script setup lang="ts">
+import { Icon } from '@iconify/vue';
 import { useLanguage } from '~/composables/useLanguage';
 import { academicsData } from '~/data/portfolioData';
 import TimelineItem from '~/components/TimelineItem.vue';

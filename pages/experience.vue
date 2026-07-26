@@ -3,7 +3,7 @@
     <div class="container">
       <header class="page-header">
         <span class="page-tag" style="color: #FF7F50; border-color: rgba(255, 127, 80, 0.25);">
-          💼 {{ t.nav.experience }}
+          <Icon icon="ph:briefcase-bold" class="tag-icon" /> {{ t.nav.experience }}
         </span>
         <h1 class="page-title">{{ t.experience.title }}</h1>
         <p class="page-subtitle">{{ t.experience.subtitle }}</p>
@@ -30,6 +30,7 @@
 </template>
 
 <script setup lang="ts">
+import { Icon } from '@iconify/vue';
 import { useLanguage } from '~/composables/useLanguage';
 import { experienceData } from '~/data/portfolioData';
 import TimelineItem from '~/components/TimelineItem.vue';
