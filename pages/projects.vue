@@ -1,7 +1,7 @@
 <template>
   <div class="page-wrapper projects-page">
     <div class="container">
-      <header class="page-header">
+      <header class="page-header" v-reveal:fade-up>
         <span class="page-tag" style="color: #38BDF8; border-color: rgba(56, 189, 248, 0.25);">
           <Icon icon="ph:rocket-launch-bold" class="tag-icon" /> {{ t.nav.projects }}
         </span>
@@ -10,7 +10,7 @@
       </header>
 
       <!-- Context Filter Buttons -->
-      <div class="filter-bar">
+      <div class="filter-bar" v-reveal:fade-up="100">
         <button
           class="filter-btn"
           :class="{ active: activeFilter === 'ALL' }"
@@ -44,9 +44,10 @@
       <!-- Projects Grid -->
       <div class="projects-grid">
         <ProjectCard
-          v-for="project in filteredProjects"
+          v-for="(project, idx) in filteredProjects"
           :key="project.id"
           :project="project"
+          v-reveal:fade-up="(idx % 2) * 120"
         />
       </div>
     </div>

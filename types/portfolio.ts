@@ -118,9 +118,7 @@ export interface SkillCategory {
   icon: string;
   skills: {
     name: string;
-    level: number; // 1 to 100
     icon?: string;
-    highlight?: boolean;
   }[];
 }
 

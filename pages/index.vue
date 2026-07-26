@@ -3,7 +3,7 @@
     <div class="container">
       <div class="hero-grid">
         <!-- Left Hero Column -->
-        <div class="hero-content">
+        <div class="hero-content" v-reveal:slide-right>
           <h1 class="hero-greeting">{{ t.home.greeting }}</h1>
           <h2 class="hero-role">{{ t.home.role }}</h2>
           <p class="hero-summary">{{ t.home.summary }}</p>
@@ -23,14 +23,19 @@
         </div>
 
         <!-- Right Solar System Visual Column -->
-        <div class="hero-visual">
+        <div class="hero-visual" v-reveal:scale="150">
           <SolarSystemHero />
         </div>
       </div>
 
       <!-- Quick Stats Section -->
       <div class="stats-grid">
-        <div v-for="stat in t.home.quickStats" :key="stat.label" class="stat-card glass-card">
+        <div
+          v-for="(stat, idx) in t.home.quickStats"
+          :key="stat.label"
+          class="stat-card glass-card"
+          v-reveal:fade-up="idx * 100"
+        >
           <span class="stat-value">{{ stat.value }}</span>
           <span class="stat-label">{{ stat.label }}</span>
         </div>

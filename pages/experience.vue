@@ -1,7 +1,7 @@
 <template>
   <div class="page-wrapper experience-page">
     <div class="container">
-      <header class="page-header">
+      <header class="page-header" v-reveal:fade-up>
         <span class="page-tag" style="color: #FF7F50; border-color: rgba(255, 127, 80, 0.25);">
           <Icon icon="ph:briefcase-bold" class="tag-icon" /> {{ t.nav.experience }}
         </span>
@@ -11,7 +11,7 @@
 
       <div class="timeline-container">
         <TimelineItem
-          v-for="item in experienceData"
+          v-for="(item, idx) in experienceData"
           :key="item.id"
           :title="item.role[currentLang]"
           :subtitle="item.company[currentLang]"
@@ -23,6 +23,7 @@
           :bullets="item.achievements[currentLang]"
           :techs="item.technologies"
           accent-color="orange"
+          v-reveal:slide-right="idx * 100"
         />
       </div>
     </div>

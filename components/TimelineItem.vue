@@ -7,7 +7,12 @@
     </div>
 
     <h3 class="item-title">{{ title }}</h3>
-    <h4 class="item-subtitle">{{ subtitle }} • <span class="location">{{ location }}</span></h4>
+    <h4 class="item-subtitle">
+      <a :href="mapsUrl" target="_blank" rel="noopener noreferrer" class="place-link" :title="`View ${subtitle}, ${location} on Google Maps`">
+        <Icon icon="ph:map-pin-bold" class="map-icon" />
+        <span class="place-name">{{ subtitle }}</span> • <span class="location">{{ location }}</span>
+      </a>
+    </h4>
 
     <p v-if="description" class="item-description">{{ description }}</p>
 
@@ -32,7 +37,10 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+import { computed } from 'vue';
+import { Icon } from '@iconify/vue';
+
+const props = defineProps<{
   title: string;
   subtitle: string;
   location: string;
@@ -46,6 +54,11 @@ defineProps<{
   techs?: string[];
   accentColor?: 'crimson' | 'gold' | 'orange' | 'light-blue' | 'purple' | 'neutral';
 }>();
+
+const mapsUrl = computed(() => {
+  const query = encodeURIComponent(`${props.subtitle}, ${props.location}`);
+  return `https://www.google.com/maps/search/?api=1&query=${query}`;
+});
 </script>
 
 <style lang="scss" scoped>
@@ -57,11 +70,23 @@ defineProps<{
   &.gold {
     &:hover { border-color: rgba(255, 215, 0, 0.4); }
     .period-pill { background: rgba(255, 215, 0, 0.12); color: #FFD700; border-color: rgba(255, 215, 0, 0.25); }
+    .place-link:hover {
+      color: #FFD700;
+      text-decoration-color: #FFD700;
+      .map-icon { color: #FFD700; }
+      .location { color: #FFE24D; }
+    }
   }
 
   &.orange {
     &:hover { border-color: rgba(255, 127, 80, 0.4); }
     .period-pill { background: rgba(255, 127, 80, 0.12); color: #FF7F50; border-color: rgba(255, 127, 80, 0.25); }
+    .place-link:hover {
+      color: #FF7F50;
+      text-decoration-color: #FF7F50;
+      .map-icon { color: #FF7F50; }
+      .location { color: #FFA07A; }
+    }
   }
 }
 
@@ -104,8 +129,39 @@ defineProps<{
   color: $text-muted;
   margin-bottom: 1rem;
 
-  .location {
-    color: $text-dark;
+  .place-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+
+    .map-icon {
+      font-size: 1.1rem;
+      opacity: 0.7;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .place-name {
+      color: #F3F4F6;
+    }
+
+    .location {
+      color: $text-dark;
+      transition: color 0.2s ease;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1.5px;
+
+      .map-icon {
+        opacity: 1;
+        transform: translateY(-1px);
+      }
+    }
   }
 }
 

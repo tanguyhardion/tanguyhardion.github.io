@@ -1,7 +1,7 @@
 <template>
   <div class="page-wrapper academics-page">
     <div class="container">
-      <header class="page-header">
+      <header class="page-header" v-reveal:fade-up>
         <span class="page-tag" style="color: #FFD700; border-color: rgba(255, 215, 0, 0.25);">
           <Icon icon="ph:student-bold" class="tag-icon" /> {{ t.nav.academics }}
         </span>
@@ -11,7 +11,7 @@
 
       <div class="timeline-container">
         <TimelineItem
-          v-for="item in academicsData"
+          v-for="(item, idx) in academicsData"
           :key="item.id"
           :title="item.degree[currentLang]"
           :subtitle="item.institution[currentLang]"
@@ -23,6 +23,7 @@
           :section-title="t.academics.courseworkLabel"
           :bullets="item.courses[currentLang]"
           accent-color="gold"
+          v-reveal:slide-right="idx * 100"
         />
       </div>
     </div>

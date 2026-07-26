@@ -193,8 +193,7 @@ export const academicsData: AcademicItem[] = [
       en: 'Compiègne, France',
       fr: 'Compiègne, France'
     },
-    period: '2023 - 2024',
-    gpa: '3.67 / 4.0',
+    period: '09/2024 - 01/2025',
     fieldOfStudy: {
       en: 'Specialization in Artificial Intelligence and Data Science',
       fr: 'Spécialisation en Intelligence Artificielle et Data Science'
@@ -218,7 +217,7 @@ export const academicsData: AcademicItem[] = [
       en: 'Troyes, France',
       fr: 'Troyes, France'
     },
-    period: '2021 - 2024',
+    period: '09/2022 - 07/2025',
     gpa: '4.70 / 5.0',
     fieldOfStudy: {
       en: 'Computer Science and Information Systems, Data Science track',
@@ -244,7 +243,7 @@ export const academicsData: AcademicItem[] = [
       en: 'Dijon, France',
       fr: 'Dijon, France'
     },
-    period: '2019 - 2021',
+    period: '09/2020 - 07/2022',
     gpa: 'Top 10 / 100',
     fieldOfStudy: {
       en: 'Computer Science',
@@ -273,10 +272,10 @@ export const experienceData: ExperienceItem[] = [
       fr: 'Luxembourg'
     },
     contractType: {
-      en: 'Permanent (CDI)',
+      en: 'Full-Time',
       fr: 'CDI'
     },
-    period: '2024 - Present',
+    period: '10/2025 - Present',
     description: {
       en: 'Junior Consultant in AI & Data at Deloitte Luxembourg. Working on data engineering projects, data management, data analysis, data governance, Generative AI and Agentic AI solutions.',
       fr: "Consultant Junior IA & Data chez Deloitte Luxembourg. Travaille sur des projets d'ingénierie des données, d'analyse des données, de gouvernance des données, d'IA générative et de solutions d'IA agentique."
@@ -311,7 +310,7 @@ export const experienceData: ExperienceItem[] = [
       en: 'Internship',
       fr: 'Stage'
     },
-    period: '2024',
+    period: '02/2025 - 07/2025',
     description: {
       en: 'End of studies internship at Deloitte. Enabling database interaction in natural language by leveraging Agentic AI.',
       fr: "Stage de fin d'études chez Deloitte. Projet : permettre d'interagir avec une base de données en langage naturel grâce à l'IA agentique."
@@ -344,7 +343,7 @@ export const experienceData: ExperienceItem[] = [
       en: 'Fixed-term contract (CDD)',
       fr: 'CDD'
     },
-    period: '2023',
+    period: '07/2023 - 08/2023',
     description: {
       en: 'Summer job that followed my previous internship at CPage.',
       fr: "Job d'été qui a suivi mon précédent stage chez CPage."
@@ -378,7 +377,7 @@ export const experienceData: ExperienceItem[] = [
       en: 'Internship',
       fr: 'Stage'
     },
-    period: '2023',
+    period: '07/2023 - 12/2023',
     description: {
       en: 'Mid-engineering degree internship at CPage, a company that develops software for public health institutions.',
       fr: "Stage de milieu de cursus ingénieur chez CPage, une société développant des logiciels pour les établissements de santé publics."
@@ -414,7 +413,7 @@ export const experienceData: ExperienceItem[] = [
       en: 'Internship',
       fr: 'Stage'
     },
-    period: '2022',
+    period: '04/2022 - 06/2022',
     description: {
       en: 'End of associate degree internship in the department that manages the installation and support of the systems used by the company.',
       fr: "Stage de fin de DUT dans le département qui gère l'installation et le support des systèmes utilisés par l'entreprise."
@@ -608,9 +607,12 @@ export const skillCategoriesData: SkillCategory[] = [
     },
     icon: 'ph:brain-bold',
     skills: [
-      { name: 'Agentic AI Workflows & Orchestration', level: 92, highlight: true },
-      { name: 'LLM Fine-tuning & Prompt Engineering', level: 90, highlight: true },
-      { name: 'Text-to-SQL & RAG Systems', level: 88 }
+      { name: 'Agentic AI Workflows & Orchestration', icon: 'ph:robot-bold' },
+      { name: 'LangChain & LangGraph', icon: 'simple-icons:langchain' },
+      { name: 'OpenAI & Mistral AI', icon: 'simple-icons:openai' },
+      { name: 'Hugging Face', icon: 'simple-icons:huggingface' },
+      { name: 'RAG Systems & Text-to-SQL', icon: 'ph:database-bold' },
+      { name: 'Prompt Engineering', icon: 'ph:sparkle-bold' }
     ]
   },
   {
@@ -621,35 +623,91 @@ export const skillCategoriesData: SkillCategory[] = [
     },
     icon: 'ph:chart-line-up-bold',
     skills: [
-      { name: 'Python (PyTorch / TensorFlow)', level: 90, highlight: true },
-      { name: 'Computer Vision & CNNs', level: 85 },
-      { name: 'Scikit-Learn, Statistics & EDA', level: 88 }
+      { name: 'PyTorch & TensorFlow / Keras', icon: 'simple-icons:pytorch' },
+      { name: 'scikit-learn & SciPy', icon: 'simple-icons:scikitlearn' },
+      { name: 'NumPy & pandas', icon: 'simple-icons:pandas' },
+      { name: 'Matplotlib, Plotly & Chart.js', icon: 'ph:chart-bar-bold' }
     ]
   },
   {
     id: 'data-engineering',
     name: {
-      en: 'Data Engineering & Analytics',
-      fr: 'Data Engineering & Analytics'
+      en: 'Data Engineering, BI & Analytics',
+      fr: 'Data Engineering, BI & Analytics'
     },
     icon: 'ph:database-bold',
     skills: [
-      { name: 'ETL Pipelines & Data Management', level: 88, highlight: true },
-      { name: 'Databases & SQL Architecture', level: 90, highlight: true },
-      { name: 'Data Governance & BI Analytics', level: 85 }
+      { name: 'Extract, Transform, Load (ETL)', icon: 'ph:arrows-merge-bold' },
+      { name: 'Pentaho Kettle', icon: 'ph:stack-bold' },
+      { name: 'Power BI & Tableau', icon: 'simple-icons:tableau' },
+      { name: 'Microsoft Excel', icon: 'simple-icons:microsoftexcel' }
     ]
   },
   {
-    id: 'web-development',
+    id: 'programming-languages',
     name: {
-      en: 'Web Development',
-      fr: 'Développement Web'
+      en: 'Programming Languages',
+      fr: 'Langages de Programmation'
     },
     icon: 'ph:code-bold',
     skills: [
-      { name: 'Vue.js / Nuxt', level: 92, highlight: true },
-      { name: 'Front-end & SCSS Styling', level: 90 },
-      { name: 'Back-end APIs & Software Eng.', level: 88 }
+      { name: 'Python', icon: 'simple-icons:python' },
+      { name: 'TypeScript & JavaScript', icon: 'simple-icons:typescript' },
+      { name: 'Java', icon: 'simple-icons:openjdk' },
+      { name: 'C# & .NET', icon: 'simple-icons:dotnet' },
+      { name: 'C / C++', icon: 'simple-icons:cplusplus' },
+      { name: 'Go', icon: 'simple-icons:go' },
+      { name: 'R', icon: 'simple-icons:r' },
+      { name: 'Dart', icon: 'simple-icons:dart' }
+    ]
+  },
+  {
+    id: 'web-frameworks',
+    name: {
+      en: 'Web Frameworks & Frontend',
+      fr: 'Frameworks Web & Frontend'
+    },
+    icon: 'ph:browsers-bold',
+    skills: [
+      { name: 'Vue.js & Nuxt', icon: 'simple-icons:nuxtdotjs' },
+      { name: 'Angular & RxJS', icon: 'simple-icons:angular' },
+      { name: 'React & Next.js', icon: 'simple-icons:nextdotjs' },
+      { name: 'Svelte', icon: 'simple-icons:svelte' },
+      { name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss' },
+      { name: 'Flutter', icon: 'simple-icons:flutter' }
+    ]
+  },
+  {
+    id: 'backend-cloud',
+    name: {
+      en: 'Backend, Cloud & Databases',
+      fr: 'Backend, Cloud & Bases de Données'
+    },
+    icon: 'ph:cloud-bold',
+    skills: [
+      { name: 'NodeJS', icon: 'simple-icons:nodedotjs' },
+      { name: 'FastAPI & Flask', icon: 'simple-icons:fastapi' },
+      { name: 'Spring', icon: 'simple-icons:spring' },
+      { name: 'PostgreSQL, MySQL & SQLite', icon: 'simple-icons:postgresql' },
+      { name: 'MongoDB, Supabase & Firebase', icon: 'simple-icons:mongodb' },
+      { name: 'Oracle Database', icon: 'simple-icons:oracle' },
+      { name: 'Microsoft Azure & Vercel', icon: 'simple-icons:microsoftazure' }
+    ]
+  },
+  {
+    id: 'devops-tools',
+    name: {
+      en: 'DevOps, Tools & Design',
+      fr: 'DevOps, Outils & Design'
+    },
+    icon: 'ph:wrench-bold',
+    skills: [
+      { name: 'Git, GitHub, GitLab & Azure DevOps', icon: 'simple-icons:git' },
+      { name: 'CI/CD & Jenkins', icon: 'simple-icons:jenkins' },
+      { name: 'Postman', icon: 'simple-icons:postman' },
+      { name: 'Apache Maven', icon: 'simple-icons:apachemaven' },
+      { name: 'Figma, Canva & Balsamiq', icon: 'simple-icons:figma' },
+      { name: 'Trello & Notion', icon: 'simple-icons:notion' }
     ]
   }
 ];

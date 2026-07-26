@@ -1,7 +1,7 @@
 <template>
   <div class="page-wrapper skills-page">
     <div class="container">
-      <header class="page-header">
+      <header class="page-header" v-reveal:fade-up>
         <span class="page-tag" style="color: #A855F7; border-color: rgba(168, 85, 247, 0.25);">
           <Icon icon="ph:lightning-bold" class="tag-icon" /> {{ t.nav.skills }}
         </span>
@@ -11,9 +11,10 @@
 
       <div class="skills-grid">
         <SkillGrid
-          v-for="cat in skillCategoriesData"
+          v-for="(cat, idx) in skillCategoriesData"
           :key="cat.id"
           :category="cat"
+          v-reveal:scale="(idx % 2) * 120"
         />
       </div>
     </div>

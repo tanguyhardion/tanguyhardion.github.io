@@ -7,13 +7,16 @@
       <h3 class="category-name">{{ category.name[currentLang] }}</h3>
     </div>
 
-    <div class="skill-list">
-      <div v-for="skill in category.skills" :key="skill.name" class="skill-item">
-        <div class="skill-meta">
-          <span class="skill-name" :class="{ highlight: skill.highlight }">
-            {{ skill.name }}
-          </span>
+    <div class="skills-grid-container">
+      <div 
+        v-for="skill in category.skills" 
+        :key="skill.name" 
+        class="skill-chip"
+      >
+        <div class="skill-icon-wrapper">
+          <Icon :icon="skill.icon || 'ph:check-circle-bold'" width="16" height="16" />
         </div>
+        <span class="skill-name">{{ skill.name }}</span>
       </div>
     </div>
   </div>
@@ -59,6 +62,7 @@ const { currentLang } = useLanguage();
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .category-name {
@@ -67,27 +71,54 @@ const { currentLang } = useLanguage();
   color: #FFFFFF;
 }
 
-.skill-list {
+.skills-grid-container {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.65rem;
 }
 
-.skill-item {
-  .skill-meta {
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.85rem;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+
+  .skill-icon-wrapper {
     display: flex;
     align-items: center;
-    font-size: 0.95rem;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.25s ease, transform 0.25s ease;
+  }
+
+  .skill-name {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.88);
+    transition: color 0.25s ease;
+  }
+
+  &:hover {
+    background: rgba(168, 85, 247, 0.1);
+    border-color: rgba(168, 85, 247, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+
+    .skill-icon-wrapper {
+      color: #C084FC;
+      transform: scale(1.15);
+    }
 
     .skill-name {
-      color: $text-muted;
-      font-weight: 500;
-
-      &.highlight {
-        color: #FFFFFF;
-        font-weight: 600;
-      }
+      color: #FFFFFF;
     }
   }
 }
 </style>
+
+
