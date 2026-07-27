@@ -76,6 +76,8 @@ const { currentLang } = useLanguage();
 const isCollapsed = ref(false);
 const activeId = ref<string>('');
 
+const STORAGE_KEY = 'toc_mobile_collapsed';
+
 const computedTitle = computed(() => {
   if (props.title) return props.title;
   return currentLang.value === 'fr' ? 'Sur cette page' : 'On this page';
@@ -93,8 +95,32 @@ const resolvedAccentColor = computed(() => {
   return colorMap[props.accentColor] || props.accentColor || '#FF3B5C';
 });
 
+const checkIsMobile = () => {
+  if (!import.meta.client) return false;
+  return window.innerWidth <= 1200;
+};
+
+const applyCollapsedState = () => {
+  if (!import.meta.client) return;
+  if (checkIsMobile()) {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved !== null) {
+      isCollapsed.value = saved === 'true';
+    }
+  } else {
+    isCollapsed.value = false;
+  }
+};
+
 const toggleCollapse = () => {
   isCollapsed.value = !isCollapsed.value;
+  if (checkIsMobile() && import.meta.client) {
+    try {
+      localStorage.setItem(STORAGE_KEY, String(isCollapsed.value));
+    } catch {
+      // ignore storage errors
+    }
+  }
 };
 
 const scrollTo = (id: string) => {
@@ -108,6 +134,15 @@ const scrollTo = (id: string) => {
 };
 
 let observer: IntersectionObserver | null = null;
+let wasMobile = false;
+
+const handleResize = () => {
+  const mobileNow = checkIsMobile();
+  if (mobileNow !== wasMobile) {
+    wasMobile = mobileNow;
+    applyCollapsedState();
+  }
+};
 
 const setupObserver = () => {
   if (observer) {
@@ -139,6 +174,11 @@ const setupObserver = () => {
 };
 
 onMounted(() => {
+  if (import.meta.client) {
+    wasMobile = checkIsMobile();
+    applyCollapsedState();
+    window.addEventListener('resize', handleResize);
+  }
   setTimeout(() => {
     setupObserver();
     if (props.items.length > 0 && !activeId.value) {
@@ -152,6 +192,9 @@ watch(() => props.items, () => {
 }, { deep: true });
 
 onUnmounted(() => {
+  if (import.meta.client) {
+    window.removeEventListener('resize', handleResize);
+  }
   if (observer) {
     observer.disconnect();
   }
