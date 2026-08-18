@@ -102,7 +102,7 @@ export const translations: Record<'en' | 'fr', TranslationStrings> = {
     },
     footer: {
       rights: 'All rights reserved.',
-      builtWith: 'Built with Nuxt, SCSS & Vue. Hosted on GitHub Pages.'
+      builtWith: 'Built with Nuxt. Hosted on GitHub Pages.'
     }
   },
   fr: {
@@ -172,7 +172,7 @@ export const translations: Record<'en' | 'fr', TranslationStrings> = {
     },
     footer: {
       rights: 'Tous droits réservés.',
-      builtWith: 'Conçu avec Nuxt, SCSS & Vue. Hébergé sur GitHub Pages.'
+      builtWith: 'Conçu avec Nuxt. Hébergé sur GitHub Pages.'
     }
   }
 };
@@ -468,12 +468,12 @@ export const projectsData: ProjectItem[] = [
       fr: '30 heures'
     },
     shortDescription: {
-      en: 'Digital portfolio and interactive resume built with Nuxt 3 & modern web aesthetics.',
-      fr: 'CV numérique et portfolio interactif conçu avec Nuxt 3 et un design moderne.'
+      en: 'Digital portfolio and interactive resume built with Nuxt 4 & modern web aesthetics.',
+      fr: 'CV numérique et portfolio interactif conçu avec Nuxt 4 et un design moderne.'
     },
     fullDescription: {
-      en: 'You\'re looking at it! I like to think of it as a digital resume, more personal and interactive than a traditional one or a LinkedIn profile (although you can find me there too). It\'s also more fun to make!',
-      fr: 'Vous y êtes ! J\'aime le considérer comme un CV numérique, plus personal et interactif qu\'un CV traditionnel ou un profil LinkedIn (même si vous pouvez aussi m\'y trouver). C\'est aussi plus cool à faire.'
+      en: 'You\'re looking at it!',
+      fr: 'Vous y êtes !'
     },
     tags: ['Nuxt', 'Vue 3', 'TypeScript', 'SCSS'],
     repoUrl: 'https://github.com/tanguyhardion/tanguyhardion.github.io',
