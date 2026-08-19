@@ -174,10 +174,14 @@ const tocItems = computed<TocItem[]>(() => [
     padding: 1.5rem 1rem;
 
     .stat-value {
-      font-size: 2.2rem;
+      width: 100%;
+      font-size: clamp(1.25rem, 4vw, 2.2rem);
       font-weight: 800;
       color: #FFF;
       font-family: $font-mono;
+      line-height: 1.2;
+      overflow-wrap: anywhere;
+      word-break: break-word;
       background: linear-gradient(180deg, #FFFFFF, #FF3B5C);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
