@@ -6,13 +6,13 @@ export default defineNuxtConfig({
   app: {
     baseURL: '/',
     head: {
-      title: 'Tanguy Hardion — AI & Software Engineer Portfolio',
+      title: 'Tanguy Hardion',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
-          content: 'Personal portfolio of Tanguy Hardion. AI/ML, Data Engineering, Web Architecture & Software Development.'
+          content: 'Personal website of Tanguy Hardion. Gen AI / Agentic AI, Data Engineering/Architecture/Governance/Management, Business Analysis & Software Development.'
         },
         { name: 'theme-color', content: '#000000' }
       ],

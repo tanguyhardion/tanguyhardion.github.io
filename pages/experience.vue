@@ -24,6 +24,12 @@
           :description="item.description[currentLang]"
           :section-title="t.experience.keyAchievements"
           :bullets="item.achievements[currentLang]"
+          :groups="item.engagements?.map(e => ({
+            client: e.client[currentLang],
+            title: e.title[currentLang],
+            period: e.period?.[currentLang],
+            bullets: e.bullets[currentLang]
+          }))"
           :techs="item.technologies"
           accent-color="orange"
           v-reveal:slide-right="idx * 100"

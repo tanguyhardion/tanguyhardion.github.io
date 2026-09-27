@@ -29,6 +29,28 @@
       </ul>
     </div>
 
+    <!-- Achievements grouped by project -->
+    <div v-if="groups && groups.length > 0" class="bullet-section">
+      <h5 class="section-label">{{ sectionTitle }}</h5>
+      <div class="group-list">
+        <div v-for="(group, gIdx) in groups" :key="gIdx" class="group">
+          <div class="group-header">
+            <span class="group-title">{{ group.title }}</span>
+            <span class="group-client">{{ group.client }}</span>
+            <span v-if="group.period" class="group-period">{{ group.period }}</span>
+          </div>
+          <ul class="bullet-list">
+            <li v-for="(item, idx) in group.bullets" :key="idx">
+              <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>{{ item }}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <!-- Tech badges -->
     <div v-if="techs && techs.length > 0" class="tech-row">
       <span v-for="t in techs" :key="t" class="tech-tag">{{ t }}</span>
@@ -54,6 +76,7 @@ const props = defineProps<{
   description?: string;
   sectionTitle?: string;
   bullets?: string[];
+  groups?: { client: string; title: string; period?: string; bullets: string[] }[];
   techs?: string[];
   accentColor?: 'crimson' | 'gold' | 'orange' | 'light-blue' | 'purple' | 'neutral';
 }>();
@@ -88,6 +111,7 @@ const mapsUrl = computed(() => {
   &.orange {
     &:hover { border-color: rgba(255, 127, 80, 0.4); }
     .period-pill { background: rgba(255, 127, 80, 0.12); color: #FF7F50; border-color: rgba(255, 127, 80, 0.25); }
+    .bullet-list li .check-icon { color: #FF7F50; }
     .place-link:hover {
       color: #FF7F50;
       text-decoration-color: #FF7F50;
@@ -211,6 +235,42 @@ const mapsUrl = computed(() => {
         flex-shrink: 0;
       }
     }
+  }
+}
+
+.group-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .group {
+    padding-left: 0.9rem;
+    border-left: 2px solid rgba(255, 127, 80, 0.3);
+  }
+
+  .group-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.25rem 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .group-title {
+    font-size: 0.975rem;
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+
+  .group-client {
+    font-size: 0.875rem;
+    color: $text-muted;
+  }
+
+  .group-period {
+    font-size: 0.775rem;
+    color: $text-dark;
+    margin-left: auto;
   }
 }
 

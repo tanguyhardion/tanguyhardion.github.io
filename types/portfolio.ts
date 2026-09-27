@@ -92,8 +92,16 @@ export interface ExperienceItem {
   period: string;
   description: { en: string; fr: string };
   achievements: { en: string[]; fr: string[] };
+  engagements?: ExperienceEngagement[]; // Per-project breakdown (e.g., consulting missions)
   technologies: string[];
   linkedProjects?: string[];
+}
+
+export interface ExperienceEngagement {
+  client: { en: string; fr: string };
+  title: { en: string; fr: string };
+  period?: { en: string; fr: string };
+  bullets: { en: string[]; fr: string[] };
 }
 
 export type ProjectContext = 'School' | 'Work' | 'Personal';

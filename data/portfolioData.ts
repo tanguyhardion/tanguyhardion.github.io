@@ -117,8 +117,8 @@ export const translations: Record<'en' | 'fr', TranslationStrings> = {
     },
     home: {
       greeting: 'Bonjour, je suis Tanguy',
-      role: 'Consultant Junior en IA & Data chez Deloitte',
-      summary: "Consultant Junior en IA & Data chez Deloitte Luxembourg. Spécialisé en IA agentique, automatisation intelligente, stratégie de données, architecture de données, data engineering, gouvernance et gestion des données d'entreprise.",
+      role: 'Consultant Junior IA & Data chez Deloitte',
+      summary: "Consultant Junior IA & Data chez Deloitte Luxembourg. Spécialisé en IA agentique, automatisation intelligente, stratégie de données, architecture de données, data engineering, gouvernance et gestion des données d'entreprise.",
       ctaProjects: 'Découvrir mes projets',
       ctaContact: 'Me contacter',
       highlightsTitle: 'En Résumé',
@@ -194,12 +194,12 @@ export const academicsData: AcademicItem[] = [
     },
     period: '09/2024 - 01/2025',
     fieldOfStudy: {
-      en: 'Specialization in Artificial Intelligence and Data Science',
-      fr: 'Spécialisation en Intelligence Artificielle et Data Science'
+      en: 'Artificial Intelligence and Data Science',
+      fr: 'Intelligence Artificielle et Data Science'
     },
     courses: {
-      en: ['Advanced Machine Learning', 'Deep Learning', 'Advanced Statistics', 'Multi-Agent Systems'],
-      fr: ['Machine Learning Avancé', 'Deep Learning', 'Statistiques Avancées', 'Systèmes Multi-Agents']
+      en: ['Multi-Agent Systems', 'Machine Learning', 'Deep Learning', 'Stochastic Processes'],
+      fr: ['Systèmes Multi-Agents', 'Machine Learning', 'Deep Learning', 'Processus Stochastiques']
     }
   },
   {
@@ -216,17 +216,17 @@ export const academicsData: AcademicItem[] = [
       en: 'Troyes, France',
       fr: 'Troyes, France'
     },
-    period: '09/2022 - 07/2025',
-    gpa: '4.70 / 5.0',
+    period: '07/2022 - 07/2025',
+    gpa: '4.70 / 5.00',
     fieldOfStudy: {
-      en: 'Computer Science and Information Systems, Data Science track',
-      fr: "Informatique et systèmes d'information, spécialisation Data Science"
+      en: 'Computer Science',
+      fr: 'Informatique'
     },
     courses: {
-      en: ['Machine Learning', 'Introductory Deep Learning', 'Computer Vision', 'Big Data', 'Data Visualization', 'Data Analytics', 'Software Engineering'],
-      fr: ['Machine Learning', 'Deep Learning', 'Computer Vision', 'Big Data', 'Visualisation de Données', 'Analyse de Données', 'Génie Logiciel']
+      en: ['Databases', 'Programming', 'Software Engineering', 'Deep Learning', 'Project Management', 'AI (LLMs)'],
+      fr: ['Bases de données', 'Programmation', 'Génie Logiciel', 'Deep Learning', 'Gestion de Projet', 'IA (LLM)']
     },
-    linkedProjects: ['cpage-map', 'cnn-cifar100', 'llama2-finetuning', 'visualizer', 'census-income']
+    linkedProjects: ['cnn-cifar100', 'census-income']
   },
   {
     id: 'iut-dijon',
@@ -235,29 +235,29 @@ export const academicsData: AcademicItem[] = [
       fr: 'DUT'
     },
     institution: {
-      en: 'IUT Dijon',
-      fr: 'IUT Dijon'
+      en: 'IUT Dijon-Auxerre-Nevers',
+      fr: 'IUT Dijon-Auxerre-Nevers'
     },
     location: {
       en: 'Dijon, France',
       fr: 'Dijon, France'
     },
-    period: '09/2020 - 07/2022',
+    period: '09/2020 - 06/2022',
     gpa: 'Top 10 / 100',
     fieldOfStudy: {
       en: 'Computer Science',
       fr: 'Informatique'
     },
     courses: {
-      en: ['Algorithms', 'Probability & Statistics', 'Programming', 'Web Development', 'Databases', 'Computer Networks', 'Operating Systems'],
-      fr: ['Algorithmes', 'Probabilités et Statistiques', 'Programmation', 'Développement Web', 'Bases de données', 'Réseaux Informatiques', "Systèmes d'Exploitation"]
+      en: ['General IT Fundamentals', 'Mathematics', 'Software', 'Programming', 'Networking', 'Project Management', 'Communication'],
+      fr: ['Fondamentaux de l\'Informatique', 'Mathématiques', 'Logiciel', 'Programmation', 'Réseaux', 'Gestion de Projet', 'Communication']
     }
   }
 ];
 
 export const experienceData: ExperienceItem[] = [
   {
-    id: 'deloitte-junior-consultant',
+    id: 'deloitte-consultant',
     role: {
       en: 'Junior Consultant in AI & Data',
       fr: 'Consultant Junior IA & Data'
@@ -274,28 +274,124 @@ export const experienceData: ExperienceItem[] = [
       en: 'Full-Time',
       fr: 'CDI'
     },
-    period: '10/2025 - Present',
+    period: '09/2025 - Present',
     description: {
-      en: 'Junior Consultant in AI & Data at Deloitte Luxembourg. Working on data engineering projects, data management, data analysis, data governance, Generative AI and Agentic AI solutions.',
-      fr: "Consultant Junior IA & Data chez Deloitte Luxembourg. Travaille sur des projets d'ingénierie des données, d'analyse des données, de gouvernance des données, d'IA générative et de solutions d'IA agentique."
+      en: 'Junior Consultant in AI & Data at Deloitte Luxembourg, delivering data strategy, governance, architecture, AI and regulatory engagements for public institutions and financial services clients.',
+      fr: 'Consultant Junior IA & Data chez Deloitte Luxembourg, intervenant sur des missions de stratégie, gouvernance et architecture de données, d\'IA et de conformité réglementaire pour des institutions publiques et des acteurs des services financiers.'
     },
     achievements: {
-      en: [
-        'Delivering Data Engineering & Governance pipelines for enterprise data platforms.',
-        'Architecting Generative AI & Agentic AI frameworks for enterprise clients.'
-      ],
-      fr: [
-        'Livraison de pipelines Data Engineering & Gouvernance pour plateformes de données.',
-        'Architecture de solutions d\'IA Générative & IA Agentique pour grands comptes.'
-      ]
+      en: [],
+      fr: []
     },
-    technologies: ['Agentic AI', 'Generative AI', 'Python', 'Data Engineering', 'Data Governance', 'SQL']
+    engagements: [
+      {
+        client: { en: 'Global digital payments company', fr: 'Acteur mondial du paiement digital' },
+        title: { en: 'BCBS 239 Compliance', fr: 'Conformité BCBS 239' },
+        period: { en: 'Jun 2026 – Present', fr: 'Juin 2026 – Aujourd\'hui' },
+        bullets: {
+          en: [
+            'Supporting BCBS 239 regulatory compliance by modernizing end-to-end data lineage tracing, mapping critical data points (credit, FINREP and COREP indicators) from source to consumption to establish complete transparency, data quality, and governance across complex financial flows.',
+            'Combining AI, automated code analysis, and expert human judgment to strengthen risk data aggregation and reporting capabilities, alongside business glossary development and architecture documentation.'
+          ],
+          fr: [
+            'Accompagnement de la conformité réglementaire BCBS 239 par la modernisation du lignage de données de bout en bout, en cartographiant les données critiques (indicateurs de crédit, FINREP et COREP) de la source à la consommation afin d\'assurer transparence, qualité et gouvernance sur des flux financiers complexes.',
+            'Combinaison d\'IA, d\'analyse automatisée du code et d\'expertise humaine pour renforcer l\'agrégation des données de risque et les capacités de reporting, avec construction d\'un glossaire métier et documentation de l\'architecture.'
+          ]
+        }
+      },
+      {
+        client: { en: 'Public finance institution', fr: 'Institution financière publique' },
+        title: { en: 'Data & BI Transformation Readiness', fr: 'Préparation à la Transformation Data & BI' },
+        period: { en: 'Mar – Apr 2026', fr: 'Mars – Avr. 2026' },
+        bullets: {
+          en: [
+            'Worked embedded with the client daily to structure pre-transformation groundwork, assessing both the data landscape and the reporting landscape.',
+            'Delivered data domain definitions, a report inventory, a data dictionary, and BI report mockups to prepare the client for a data/BI transformation.'
+          ],
+          fr: [
+            'Intégré quotidiennement chez le client pour structurer les travaux préparatoires, en évaluant à la fois le paysage de données et le paysage de reporting.',
+            'Livraison de définitions de domaines de données, d\'un inventaire des rapports, d\'un dictionnaire de données et de maquettes de rapports BI pour préparer le client à une transformation data/BI.'
+          ]
+        }
+      },
+      {
+        client: { en: 'Public institution', fr: 'Institution publique' },
+        title: { en: 'AI Vision & Roadmap', fr: 'Vision & Feuille de Route IA' },
+        period: { en: 'Feb – Mar 2026', fr: 'Févr. – Mars 2026' },
+        bullets: {
+          en: [
+            'Conducted executive interviews to define AI vision and ambition, then identified and prioritized AI use cases and delivered an implementation roadmap.'
+          ],
+          fr: [
+            'Conduite d\'entretiens avec la direction pour définir la vision et l\'ambition IA, puis identification et priorisation des cas d\'usage IA et livraison d\'une feuille de route de mise en œuvre.'
+          ]
+        }
+      },
+      {
+        client: { en: 'International asset manager', fr: 'Gestionnaire d\'actifs international' },
+        title: { en: 'Data Architecture Assessment', fr: 'Évaluation d\'Architecture de Données' },
+        period: { en: 'Jan – Feb 2026', fr: 'Janv. – Févr. 2026' },
+        bullets: {
+          en: [
+            'Assessed the current data landscape (systems, data, flows, quality) via documentation review and workshops.',
+            'Mapped current-state architecture (applications, data flows, ownership) and defined the target data architecture, including tool/vendor benchmarking.'
+          ],
+          fr: [
+            'Évaluation du paysage de données (systèmes, données, flux, qualité) via revue documentaire et ateliers.',
+            'Cartographie de l\'architecture existante (applications, flux, propriété) et définition de l\'architecture de données cible, incluant un benchmark d\'outils/éditeurs.'
+          ]
+        }
+      },
+      {
+        client: { en: 'European insurance & wealth management group', fr: 'Groupe européen d\'assurance & gestion de patrimoine' },
+        title: { en: 'AI/RPA Use Case Prioritization', fr: 'Priorisation de cas d\'usage IA/RPA' },
+        period: { en: 'Jan – Feb 2026', fr: 'Janv. – Févr. 2026' },
+        bullets: {
+          en: [
+            'Collected and structured 40+ AI/RPA automation use cases from business stakeholders via workshops and questionnaires, refining and qualifying requirements.',
+            'Built a feasibility/impact scoring model (based on current tech stack, IT roadmap, and data complexity) and a resulting prioritization matrix, culminating in a delivered implementation roadmap.'
+          ],
+          fr: [
+            'Collecte et structuration de plus de 40 cas d\'usage d\'automatisation IA/RPA auprès des métiers via ateliers et questionnaires, avec affinage et qualification des besoins.',
+            'Conception d\'un modèle de scoring faisabilité/impact (selon la stack technique, la feuille de route IT et la complexité des données) et d\'une matrice de priorisation, aboutissant à la livraison d\'une feuille de route de mise en œuvre.'
+          ]
+        }
+      },
+      {
+        client: { en: 'Public institution', fr: 'Institution publique' },
+        title: { en: 'Data Strategy & Governance', fr: 'Stratégie & Gouvernance des Données' },
+        period: { en: 'Oct – Dec 2025', fr: 'Oct. – Déc. 2025' },
+        bullets: {
+          en: [
+            'Led stakeholder workshops to assess the current data landscape (data location, flow, ownership); produced a gap analysis and recommendations centered on data governance and data warehousing, and delivered a future-state roadmap.',
+            'Defined data governance model options (centralized / federated / decentralized) with associated roles, responsibilities, and target structure; defined governance principles and processes across four dimensions: data quality, data integration & interoperability, metadata management, and master data management.'
+          ],
+          fr: [
+            'Animation d\'ateliers avec les parties prenantes pour évaluer le paysage de données existant (localisation, flux, propriété) ; réalisation d\'une analyse d\'écarts et de recommandations centrées sur la gouvernance des données et l\'entreposage de données, et livraison d\'une feuille de route cible.',
+            'Définition d\'options de modèles de gouvernance des données (centralisé / fédéré / décentralisé) avec rôles, responsabilités et structure cible associés ; définition des principes et processus de gouvernance selon quatre dimensions : qualité des données, intégration & interopérabilité, gestion des métadonnées et gestion des données de référence (MDM).'
+          ]
+        }
+      },
+      {
+        client: { en: 'Deloitte', fr: 'Deloitte' },
+        title: { en: 'Internal Initiatives', fr: 'Initiatives Internes' },
+        bullets: {
+          en: [
+            'Contributed to internal firm initiatives including proposal development and innovation assignments alongside client delivery work.'
+          ],
+          fr: [
+            'Contribution à des initiatives internes (réponses à appels d\'offres, missions d\'innovation) en parallèle des missions client.'
+          ]
+        }
+      }
+    ],
+    technologies: ['Data Governance', 'Data Strategy', 'Data Architecture', 'Data Lineage', 'BCBS 239', 'AI Use Cases', 'Roadmapping']
   },
   {
-    id: 'deloitte-intern',
+    id: 'deloitte-analyst',
     role: {
-      en: 'Analyst in AI & Data (Intern)',
-      fr: 'Analyste en IA & Data (Stagiaire)'
+      en: 'AI & Data Analyst',
+      fr: 'Analyste IA & Data'
     },
     company: {
       en: 'Deloitte Luxembourg',
@@ -309,26 +405,40 @@ export const experienceData: ExperienceItem[] = [
       en: 'Internship',
       fr: 'Stage'
     },
-    period: '02/2025 - 07/2025',
+    period: '02/2025 - 08/2025',
     description: {
-      en: 'End of studies internship at Deloitte. Enabling database interaction in natural language by leveraging Agentic AI.',
-      fr: "Stage de fin d'études chez Deloitte. Projet : permettre d'interagir avec une base de données en langage naturel grâce à l'IA agentique."
+      en: 'End of studies internship at Deloitte, contributing to end-to-end data pipelines for a global asset management client and building AI agents on top of its data.',
+      fr: "Stage de fin d'études chez Deloitte : contribution aux pipelines de données de bout en bout d'un client international de gestion d'actifs et développement d'agents IA sur ses données."
     },
     achievements: {
       en: [
-        'Designed natural language to database (Text-to-SQL) interfaces using LLM agentic orchestrations.'
+        'Contributed to end-to-end data pipeline processes for a global investment/asset management client, from monthly data sourcing to client-facing dashboards delivering portfolio risk and performance insights to investors.',
+        'Managed the monthly data provider sourcing process (medallion architecture on a custom in-house SQL Server-based platform) and oversaw provider upload compliance.',
+        'Developed data quality controls on incoming data, and maintained/improved the SQL Server data model (tables, views, stored procedures).',
+        'Produced and improved client-facing reporting in Excel and Power BI, combining business knowledge of portfolio risk/performance concepts with technical execution to ensure end-to-end data correctness.',
+        'Built a pilot AI agent (Python, LangChain, LangGraph) that progressively explores a large database — schemas, then tables, then data — to answer natural-language questions from both technical users (raw queries/tables) and business users (simplified tables/graphs).',
+        'Delivered the agent pilot successfully, demonstrating clear feasibility and value: faster build/debug cycles for the internal team and greater transparency and autonomy for the client over their own processed data.',
+        'Built a proof-of-concept AI agent (Python, LangChain, prompt engineering) to quality-check incoming provider data, complementing existing programmatic/logical data quality checks.',
+        'Diagnosed and automated numerous manual, tedious business-as-usual processes throughout the engagement using Python scripts, integrated into the main application or delivered as standalone tools.'
       ],
       fr: [
-        'Conception d\'interfaces langage naturel vers base de données (Text-to-SQL) via orchestration d\'agents LLM.'
+        'Contribution aux processus de pipelines de données de bout en bout pour un client international de gestion d\'actifs, du sourcing mensuel des données jusqu\'aux tableaux de bord clients présentant les indicateurs de risque et de performance des portefeuilles aux investisseurs.',
+        'Pilotage du processus mensuel de sourcing auprès des fournisseurs de données (architecture médaillon sur une plateforme interne basée sur SQL Server) et suivi de la conformité des chargements.',
+        'Développement de contrôles qualité sur les données entrantes, et maintenance/amélioration du modèle de données SQL Server (tables, vues, procédures stockées).',
+        'Production et amélioration des reportings clients sous Excel et Power BI, alliant connaissance métier du risque/de la performance de portefeuille et exécution technique pour garantir la justesse des données de bout en bout.',
+        'Développement d\'un agent IA pilote (Python, LangChain, LangGraph) explorant progressivement une large base de données — schémas, puis tables, puis données — pour répondre en langage naturel aux utilisateurs techniques (requêtes/tables brutes) comme métiers (tableaux/graphiques simplifiés).',
+        'Livraison réussie du pilote, démontrant faisabilité et valeur : cycles de développement/débogage accélérés pour l\'équipe interne, et plus de transparence et d\'autonomie pour le client sur ses propres données.',
+        'Développement d\'un agent IA en preuve de concept (Python, LangChain, prompt engineering) pour contrôler la qualité des données fournisseurs, en complément des contrôles programmatiques existants.',
+        'Identification et automatisation de nombreux processus manuels et fastidieux via des scripts Python, intégrés à l\'application principale ou livrés comme outils autonomes.'
       ]
     },
-    technologies: ['Agentic AI', 'LLM', 'Text-to-SQL', 'Python', 'LangChain/LangGraph']
+    technologies: ['Python', 'LangChain', 'LangGraph', 'AI Agents', 'SQL Server', 'T-SQL', 'Power BI', 'Excel', 'Medallion Architecture', 'Data Quality']
   },
   {
-    id: 'cpage-junior-engineer',
+    id: 'cpage-engineer',
     role: {
-      en: 'Junior Software Engineer',
-      fr: 'Ingénieur Logiciel Junior'
+      en: 'Software Engineer',
+      fr: 'Ingénieur Logiciel'
     },
     company: {
       en: 'CPage',
@@ -342,21 +452,26 @@ export const experienceData: ExperienceItem[] = [
       en: 'Fixed-term contract (CDD)',
       fr: 'CDD'
     },
-    period: '07/2023 - 08/2023',
+    period: '07/2024 - 08/2024',
     description: {
-      en: 'Summer job that followed my previous internship at CPage.',
-      fr: "Job d'été qui a suivi mon précédent stage chez CPage."
+      en: 'Summer job at CPage, a healthcare/hospital software vendor, following my previous internship there.',
+      fr: "Job d'été chez CPage, éditeur de logiciels pour les établissements de santé, à la suite de mon précédent stage."
     },
     achievements: {
       en: [
-        'Expanded customer tracking features and visual data analysis tooling.'
+        'Built a client satisfaction tracking web application (Angular, Spring Boot, PostgreSQL, Leaflet) enabling staff to log client interaction outcomes (satisfaction level + free-text notes) after every client touchpoint.',
+        'Designed a live, always-on map of client satisfaction across France (metropolitan + overseas territories), selectable by time period, displayed company-wide so staff could check client sentiment before meetings and calls.',
+        'Integrated a lightweight, locally-run Hugging Face NLP model (keyword extraction + sentiment analysis) to automatically process free-text notes into word clouds, surfacing recurring themes without manual review.',
+        'Outcome: improved internal communication and client relationship tracking across teams; delivered a complete, demo-ready application by end of contract, laying the groundwork for a planned production rollout.'
       ],
       fr: [
-        'Développement de fonctionnalités de suivi client et d\'outils d\'analyse visuelle.'
+        'Développement d\'une application web de suivi de la satisfaction client (Angular, Spring Boot, PostgreSQL, Leaflet) permettant aux équipes de consigner le résultat de chaque interaction client (niveau de satisfaction + notes libres).',
+        'Conception d\'une carte en temps réel de la satisfaction client sur toute la France (métropole + outre-mer), filtrable par période, affichée dans toute l\'entreprise pour consulter le ressenti client avant réunions et appels.',
+        'Intégration d\'un modèle NLP Hugging Face léger exécuté localement (extraction de mots-clés + analyse de sentiment) pour transformer automatiquement les notes libres en nuages de mots et faire ressortir les thèmes récurrents.',
+        'Résultat : meilleure communication interne et meilleur suivi de la relation client entre équipes ; application complète et prête pour démonstration livrée en fin de contrat, préparant un déploiement en production.'
       ]
     },
-    technologies: ['JavaScript', 'Vue.js', 'Python', 'NLP'],
-    linkedProjects: ['cpage-map', 'visualizer']
+    technologies: ['Angular', 'Spring Boot', 'PostgreSQL', 'Leaflet', 'Hugging Face', 'NLP']
   },
   {
     id: 'cpage-intern',
@@ -383,30 +498,47 @@ export const experienceData: ExperienceItem[] = [
     },
     achievements: {
       en: [
-        'Developed CPage Map interactive dashboard with NLP HuggingFace integration.',
-        'Created proof of concept for Llama 2 7B fine-tuning for PDF text extraction.'
+        'Main mission: built an interactive dependency graph web application (Angular, Spring Boot, Oracle DB, Sigma.js, Graphology) visualizing software release dependencies as a directed graph, replacing a fully manual, error-prone process based on non-standardized PDF delivery notes.',
+        'Developed a Java regex-based parser to extract release version and dependency data from inconsistent PDF delivery notes, and drove alignment across development teams on a standardized delivery note format.',
+        'Built graph app features: fuzzy/typo-tolerant search (edit-distance algorithm), interactive zoom/pan with dependency highlighting, timestamped and undoable change history, color-coded node categorization, an interactive statistics dashboard, and multiple graph layout algorithms (ForceAtlas2, Dagre).',
+        'Delivered iteratively using Agile methodology, presenting and validating each feature with the team; used Balsamiq for mockups and Git for version control.',
+        'Outcome: gave installation technicians a reliable, self-service way to check release dependencies, speeding up and simplifying installations while reducing the risk of installing incorrect dependencies.',
+        'Secondary mission: worked alongside an architect on a proof-of-concept to restructure the release packaging pipeline, migrating toward Maven + RPM/Yum-based dependency resolution for Linux package installation.',
+        'Organized and led cross-team alignment meetings to define and get adopted a standardized XML schema for release/dependency metadata; authored the structural proposal that was ultimately adopted.',
+        'Built a custom Maven plugin that consumes the standardized XML metadata to auto-generate uniform PDF delivery notes and insert release/dependency data directly into the database, eliminating manual PDF parsing for releases using the new pipeline.',
+        'Self-initiated an AI innovation project: tested zero-shot prompting with ChatGPT for dependency extraction, found it unreliable, then designed and executed a supervised fine-tuning pipeline for an open-source LLM (Llama 2, 7B, via Hugging Face) on Google Colab, using a dataset auto-generated from the existing regex parser.',
+        'Result: the fine-tuned 7B model reliably outperformed general-purpose 175B-parameter models on the narrow extraction task, demonstrating the value of task-specific fine-tuning; presented the POC company-wide to promote practical AI adoption.',
+        'Built two standalone JavaScript/Node.js automation tools to speed up colleagues\' recurring manual file-processing tasks, packaged as cross-platform executables (Windows/Linux/macOS).'
       ],
       fr: [
-        'Développement du tableau de bord CPage Map avec intégration NLP HuggingFace.',
-        'Réalisation d\'un PoC de fine-tuning Llama 2 7B pour l\'extraction de texte sur fichiers PDF.'
+        'Mission principale : développement d\'une application web de graphe de dépendances interactif (Angular, Spring Boot, Oracle DB, Sigma.js, Graphology) représentant les dépendances entre versions logicielles sous forme de graphe orienté, en remplacement d\'un processus entièrement manuel et source d\'erreurs basé sur des bons de livraison PDF non standardisés.',
+        'Développement d\'un parseur Java à base de regex pour extraire versions et dépendances de bons de livraison PDF hétérogènes, et pilotage de l\'alignement des équipes de développement sur un format de bon de livraison standardisé.',
+        'Fonctionnalités du graphe : recherche floue tolérante aux fautes (distance d\'édition), zoom/déplacement interactifs avec mise en évidence des dépendances, historique des modifications horodaté et annulable, catégorisation des nœuds par couleur, tableau de bord statistique interactif et plusieurs algorithmes de disposition (ForceAtlas2, Dagre).',
+        'Livraison itérative en méthodologie Agile, avec présentation et validation de chaque fonctionnalité auprès de l\'équipe ; maquettes sous Balsamiq et versionnage avec Git.',
+        'Résultat : un outil fiable et en libre-service pour les techniciens d\'installation, accélérant et simplifiant les installations tout en réduisant le risque d\'installer de mauvaises dépendances.',
+        'Mission secondaire : travail aux côtés d\'un architecte sur une preuve de concept de refonte de la chaîne de packaging des versions, vers une résolution des dépendances basée sur Maven + RPM/Yum pour l\'installation de paquets Linux.',
+        'Organisation et animation de réunions d\'alignement inter-équipes pour définir et faire adopter un schéma XML standardisé de métadonnées de versions/dépendances ; rédaction de la proposition de structure finalement retenue.',
+        'Développement d\'un plugin Maven exploitant ces métadonnées XML pour générer automatiquement des bons de livraison PDF uniformes et insérer directement versions et dépendances en base, supprimant l\'analyse manuelle des PDF pour les versions utilisant la nouvelle chaîne.',
+        'Projet d\'innovation IA à mon initiative : test du prompting zero-shot avec ChatGPT pour l\'extraction des dépendances, jugé peu fiable, puis conception et exécution d\'un pipeline de fine-tuning supervisé d\'un LLM open source (Llama 2, 7B, via Hugging Face) sur Google Colab, avec un jeu de données généré automatiquement à partir du parseur regex existant.',
+        'Résultat : le modèle 7B fine-tuné surpassait de façon fiable des modèles généralistes de 175 Md de paramètres sur cette tâche d\'extraction ciblée ; POC présenté à toute l\'entreprise pour promouvoir l\'adoption concrète de l\'IA.',
+        'Développement de deux outils d\'automatisation JavaScript/Node.js pour accélérer des traitements de fichiers manuels et récurrents de collègues, packagés en exécutables multiplateformes (Windows/Linux/macOS).'
       ]
     },
-    technologies: ['Vue.js', 'Python', 'Llama 2', 'HuggingFace', 'ETL'],
-    linkedProjects: ['cpage-map', 'llama2-finetuning', 'visualizer']
+    technologies: ['Angular', 'Spring Boot', 'Java', 'Oracle DB', 'Sigma.js', 'Graphology', 'Maven', 'Llama 2', 'Hugging Face', 'Node.js']
   },
   {
     id: 'aprr-intern',
     role: {
-      en: 'Software Developer Intern',
-      fr: 'Stagiaire Développeur Logiciel'
+      en: 'Software Engineer Intern',
+      fr: 'Stagiaire Ingénieur Logiciel'
     },
     company: {
       en: 'APRR',
       fr: 'APRR'
     },
     location: {
-      en: 'Saint-Apollinaire, France',
-      fr: 'Saint-Apollinaire, France'
+      en: 'Dijon, France',
+      fr: 'Dijon, France'
     },
     contractType: {
       en: 'Internship',
@@ -414,18 +546,24 @@ export const experienceData: ExperienceItem[] = [
     },
     period: '04/2022 - 06/2022',
     description: {
-      en: 'End of associate degree internship in the department that manages the installation and support of the systems used by the company.',
-      fr: "Stage de fin de DUT dans le département qui gère l'installation et le support des systèmes utilisés par l'entreprise."
+      en: 'End of associate degree internship at APRR, a highway infrastructure operator, in the department that manages the installation and support of the systems used by the company.',
+      fr: "Stage de fin de DUT chez APRR, opérateur d'infrastructures autoroutières, dans le département qui gère l'installation et le support des systèmes utilisés par l'entreprise."
     },
     achievements: {
       en: [
-        'Maintained internal IT tooling and system administration scripts.'
+        'Improved a WPF desktop application (C#, XAML) connecting to highway systems for real-time monitoring and control: redesigned the UI/UX with mockups validated by the team before implementation, applying Material Design principles.',
+        'Cleaned up the existing codebase, added new features, and fixed bugs in the monitoring application, resulting in improved UX and faster day-to-day use for technicians.',
+        'Applied the same redesign, cleanup, feature, and bug-fix process to a second internal tool used to encrypt SQLite databases (C#, XAML, WPF, Material Design).',
+        'Outcome: faster and easier monitoring workflows for technicians, contributing to faster client support and intervention on highway systems.'
       ],
       fr: [
-        'Maintenance de l\'outillage informatique interne et des scripts de gestion de systèmes.'
+        'Amélioration d\'une application de bureau WPF (C#, XAML) connectée aux systèmes autoroutiers pour la supervision et le contrôle en temps réel : refonte de l\'UI/UX avec maquettes validées par l\'équipe avant implémentation, selon les principes du Material Design.',
+        'Nettoyage du code existant, ajout de fonctionnalités et correction de bugs dans l\'application de supervision, pour une meilleure UX et une utilisation quotidienne plus rapide par les techniciens.',
+        'Même démarche (refonte, nettoyage, fonctionnalités, corrections) appliquée à un second outil interne de chiffrement de bases SQLite (C#, XAML, WPF, Material Design).',
+        'Résultat : des processus de supervision plus rapides et plus simples pour les techniciens, contribuant à un support client et des interventions plus rapides sur les systèmes autoroutiers.'
       ]
     },
-    technologies: ['Shell', 'Python', 'System Administration']
+    technologies: ['C#', 'XAML', 'WPF', 'Material Design', 'SQLite']
   }
 ];
 
@@ -480,30 +618,6 @@ export const projectsData: ProjectItem[] = [
     featured: true
   },
   {
-    id: 'cpage-map',
-    title: 'CPage Map',
-    context: 'Work',
-    contextLabel: {
-      en: 'Work Project',
-      fr: 'Projet Pro'
-    },
-    teamSize: 1,
-    duration: {
-      en: '200 hours',
-      fr: '200 heures'
-    },
-    shortDescription: {
-      en: 'Interactive map application tracking customer satisfaction for public health institutions using ETL & HuggingFace NLP.',
-      fr: 'Application web cartographique de suivi de satisfaction des établissements de santé avec ETL et NLP HuggingFace.'
-    },
-    fullDescription: {
-      en: 'A web application displaying an interactive map of CPage\'s customers: public health institutions in France. It shows relevant data loaded with ETL processes and lets CPage collaborators log satisfaction levels after interactions (calls, emails, visits). Institutions are marked with a weather code indicating their satisfaction, offering a quick visual of which need more attention. It also provides data analysis tools, such as graphs and word clouds of the satisfaction logs using an NLP model from HuggingFace.',
-      fr: 'Une application web affichant une carte interactive des clients de CPage : établissements de santé publique en France. Elle montre des données pertinentes chargées avec des processus ETL et permet aux collaborateurs de CPage de consigner les niveaux de satisfaction après des interactions (appels, emails, visites). Les établissements sont marqués avec un code météo indiquant leur satisfaction, offrant une vue rapide de ceux qui nécessitent plus d\'attention. Elle fournit également des outils d\'analyse de données, comme des graphiques et des nuages de mots des journaux de satisfaction en utilisant un modèle NLP de HuggingFace.'
-    },
-    tags: ['Vue.js', 'ETL', 'HuggingFace', 'NLP', 'Data Analytics'],
-    featured: true
-  },
-  {
     id: 'cnn-cifar100',
     title: 'CNN on CIFAR-100',
     context: 'School',
@@ -525,52 +639,6 @@ export const projectsData: ProjectItem[] = [
       fr: 'Entraînement d\'un réseau de neurones convolutif (CNN) à partir de zéro pour classifier les images du jeu de données CIFAR-100. Prétraitement et ingénierie des données en normalisant les images et en les convertissant en ensembles de données TensorFlow. Expérimentation avec différentes architectures et hyperparamètres pour améliorer la précision du modèle. Évaluation finale des performances du modèle avec diverses métriques et visualisations. Ce projet fait partie d\'un cours sur le machine learning et deep learning en Python.'
     },
     tags: ['Deep Learning', 'CNN', 'TensorFlow', 'Python', 'Computer Vision']
-  },
-  {
-    id: 'llama2-finetuning',
-    title: 'Llama 2 Fine-Tuning',
-    context: 'Work',
-    contextLabel: {
-      en: 'Work Project',
-      fr: 'Projet Pro'
-    },
-    teamSize: 1,
-    duration: {
-      en: '70 hours',
-      fr: '70 heures'
-    },
-    shortDescription: {
-      en: 'Fine-tuning Llama 2 (7B) to extract structured text from PDF documents for enterprise software solutions.',
-      fr: 'Fine-tuning de Llama 2 7B pour extraire du texte structuré depuis des PDF pour des solutions logicielles.'
-    },
-    fullDescription: {
-      en: 'Fine-tuning of the 7B-parameter large language model (LLM) Llama 2. Prepared a dataset to train the model on extracting specific text from PDF files. Tuned the hyperparameters to make the model as accurate as possible. Experimented with different architectures and hyperparameters to improve the model\'s accuracy. Tested the model on various PDF files and evaluated its performance. This project, part of my internship at CPage, was a proof of concept to demonstrate the purpose of modern AI models in the company\'s software solutions.',
-      fr: 'Fine-tuning du modèle de langage (LLM) Llama 2 de 7 Md de paramètres. Préparation d\'un ensemble de données pour entraîner le modèle à extraire du texte spécifique à partir de fichiers PDF. Ajustement des hyperparamètres pour améliorer l\'exactitude du modèle. Tests sur divers fichiers PDF et évaluation des performances. Ce projet, réalisé dans le cadre de mon stage chez CPage, est une preuve de concept pour démontrer l\'utilité des modèles d\'IA modernes dans les solutions logicielles de l\'entreprise.'
-    },
-    tags: ['LLM', 'Llama 2', 'Fine-Tuning', 'Python', 'NLP']
-  },
-  {
-    id: 'visualizer',
-    title: 'Visualizer',
-    context: 'Work',
-    contextLabel: {
-      en: 'Work Project',
-      fr: 'Projet Pro'
-    },
-    teamSize: 1,
-    duration: {
-      en: '150 hours',
-      fr: '150 heures'
-    },
-    shortDescription: {
-      en: 'Dependency graph application mapping software solutions and version relationships for tracking compatibility.',
-      fr: 'Graphe de dépendances web cartographiant les solutions logicielles et le suivi de compatibilité des versions.'
-    },
-    fullDescription: {
-      en: 'A web application featuring a dependencies graph to map software solutions and their respective versions, for better compatibility tracking. Each node represents a software version, and each edge a dependency between two versions. Also includes features to add/remove nodes, view logs, and check stats.',
-      fr: 'Une application web avec un graphe de dépendances pour cartographier les solutions logicielles et leurs dépéndances entre elles, afin d\'améliorer le suivi des versions. Chaque nœud représente une version logicielle et chaque arête, une dépendance entre deux versions. Comprend également des fonctionnalités pour ajouter/supprimer des nœuds, afficher les journaux et vérifier les statistiques.'
-    },
-    tags: ['Web Application', 'Graph Visualization', 'JavaScript']
   },
   {
     id: 'census-income',
@@ -599,114 +667,149 @@ export const projectsData: ProjectItem[] = [
 
 export const skillCategoriesData: SkillCategory[] = [
   {
-    id: 'gen-agentic-ai',
-    name: {
-      en: 'Generative & Agentic AI',
-      fr: 'IA Générative & Agentique'
-    },
-    icon: 'ph:brain-bold',
-    skills: [
-      { name: 'Agentic AI Workflows & Orchestration', icon: 'ph:robot-bold' },
-      { name: 'LangChain & LangGraph', icon: 'simple-icons:langchain' },
-      { name: 'OpenAI & Mistral AI', icon: 'simple-icons:openai' },
-      { name: 'Hugging Face', icon: 'simple-icons:huggingface' },
-      { name: 'RAG Systems & Text-to-SQL', icon: 'ph:database-bold' },
-      { name: 'Prompt Engineering', icon: 'ph:sparkle-bold' }
-    ]
-  },
-  {
-    id: 'data-science-ml',
-    name: {
-      en: 'Data Science & Machine Learning',
-      fr: 'Data Science & Machine Learning'
-    },
-    icon: 'ph:chart-line-up-bold',
-    skills: [
-      { name: 'PyTorch & TensorFlow / Keras', icon: 'simple-icons:pytorch' },
-      { name: 'scikit-learn & SciPy', icon: 'simple-icons:scikitlearn' },
-      { name: 'NumPy & pandas', icon: 'simple-icons:pandas' },
-      { name: 'Matplotlib, Plotly & Chart.js', icon: 'ph:chart-bar-bold' }
-    ]
-  },
-  {
-    id: 'data-engineering',
-    name: {
-      en: 'Data Engineering, BI & Analytics',
-      fr: 'Data Engineering, BI & Analytics'
-    },
+    id: 'data-databases',
+    name: { en: 'Data & Databases', fr: 'Données & Bases de Données' },
     icon: 'ph:database-bold',
     skills: [
-      { name: 'Extract, Transform, Load (ETL)', icon: 'ph:arrows-merge-bold' },
-      { name: 'Pentaho Kettle', icon: 'ph:stack-bold' },
-      { name: 'Power BI & Tableau', icon: 'simple-icons:tableau' },
-      { name: 'Microsoft Excel', icon: 'simple-icons:microsoftexcel' }
+      { name: 'Oracle DB', icon: 'simple-icons:oracle' },
+      { name: 'PostgreSQL', icon: 'simple-icons:postgresql' },
+      { name: 'SQL Server', icon: 'ph:database-bold' },
+      { name: 'T-SQL' },
+      { name: 'SQL' },
+      { name: 'Data Modeling' },
+      { name: 'Medallion Architecture' },
+      { name: 'Data Quality' },
+      { name: 'Data Engineering' },
+      { name: 'Regex' },
+      { name: 'PDF Parsing' }
     ]
   },
   {
-    id: 'programming-languages',
-    name: {
-      en: 'Programming Languages',
-      fr: 'Langages de Programmation'
-    },
-    icon: 'ph:code-bold',
+    id: 'ai-ml',
+    name: { en: 'AI & Machine Learning', fr: 'IA & Machine Learning' },
+    icon: 'ph:brain-bold',
     skills: [
-      { name: 'Python', icon: 'simple-icons:python' },
-      { name: 'TypeScript & JavaScript', icon: 'simple-icons:typescript' },
-      { name: 'Java', icon: 'simple-icons:openjdk' },
-      { name: 'C# & .NET', icon: 'simple-icons:dotnet' },
-      { name: 'C / C++', icon: 'simple-icons:cplusplus' },
-      { name: 'Go', icon: 'simple-icons:go' },
-      { name: 'R', icon: 'simple-icons:r' },
-      { name: 'Dart', icon: 'simple-icons:dart' }
+      { name: 'NLP' },
+      { name: 'Hugging Face', icon: 'simple-icons:huggingface' },
+      { name: 'Llama 2', icon: 'simple-icons:meta' },
+      { name: 'LLM Fine-Tuning' },
+      { name: 'LangChain', icon: 'simple-icons:langchain' },
+      { name: 'LangGraph', icon: 'simple-icons:langchain' },
+      { name: 'AI Agents / Agentic Workflows', icon: 'ph:robot-bold' },
+      { name: 'Prompt Engineering', icon: 'ph:sparkle-bold' },
+      { name: 'LLMs' },
+      { name: 'Dataset Engineering' },
+      { name: 'Google Colab', icon: 'simple-icons:googlecolab' },
+      { name: 'Machine Learning' },
+      { name: 'Deep Learning' }
     ]
   },
   {
-    id: 'web-frameworks',
-    name: {
-      en: 'Web Frameworks & Frontend',
-      fr: 'Frameworks Web & Frontend'
-    },
-    icon: 'ph:browsers-bold',
+    id: 'dataviz-bi',
+    name: { en: 'Data Visualization & BI', fr: 'Data Visualisation & BI' },
+    icon: 'ph:chart-bar-bold',
     skills: [
-      { name: 'Vue.js & Nuxt', icon: 'simple-icons:nuxtdotjs' },
-      { name: 'Angular & RxJS', icon: 'simple-icons:angular' },
-      { name: 'React & Next.js', icon: 'simple-icons:nextdotjs' },
-      { name: 'Svelte', icon: 'simple-icons:svelte' },
-      { name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss' },
-      { name: 'Flutter', icon: 'simple-icons:flutter' }
+      { name: 'Sigma.js' },
+      { name: 'Graphology' },
+      { name: 'ForceAtlas2' },
+      { name: 'Dagre' },
+      { name: 'Graph Theory', icon: 'ph:graph-bold' },
+      { name: 'Data Visualization', icon: 'ph:chart-line-up-bold' },
+      { name: 'Leaflet', icon: 'simple-icons:leaflet' },
+      { name: 'Geo-visualization', icon: 'ph:map-trifold-bold' },
+      { name: 'Power BI', icon: 'ph:chart-bar-bold' },
+      { name: 'Excel (Advanced)', icon: 'simple-icons:microsoftexcel' }
     ]
   },
   {
-    id: 'backend-cloud',
-    name: {
-      en: 'Backend, Cloud & Databases',
-      fr: 'Backend, Cloud & Bases de Données'
-    },
-    icon: 'ph:cloud-bold',
+    id: 'data-strategy-governance',
+    name: { en: 'Data Strategy & Governance', fr: 'Stratégie & Gouvernance des Données' },
+    icon: 'ph:shield-check-bold',
     skills: [
-      { name: 'NodeJS', icon: 'simple-icons:nodedotjs' },
-      { name: 'FastAPI & Flask', icon: 'simple-icons:fastapi' },
-      { name: 'Spring', icon: 'simple-icons:spring' },
-      { name: 'PostgreSQL, MySQL & SQLite', icon: 'simple-icons:postgresql' },
-      { name: 'MongoDB, Supabase & Firebase', icon: 'simple-icons:mongodb' },
-      { name: 'Oracle Database', icon: 'simple-icons:oracle' },
-      { name: 'Microsoft Azure & Vercel', icon: 'simple-icons:microsoftazure' }
+      { name: 'Data Governance' },
+      { name: 'Data Strategy' },
+      { name: 'Data Architecture' },
+      { name: 'Data Warehousing (DWH)' },
+      { name: 'Master Data Management (MDM)' },
+      { name: 'Metadata Management' },
+      { name: 'Data Integration & Interoperability' },
+      { name: 'Data Lineage' },
+      { name: 'Business Glossary' },
+      { name: 'Data Dictionary' }
     ]
   },
   {
-    id: 'devops-tools',
-    name: {
-      en: 'DevOps, Tools & Design',
-      fr: 'DevOps, Outils & Design'
-    },
+    id: 'consulting-delivery',
+    name: { en: 'Consulting & Delivery', fr: 'Conseil & Delivery' },
+    icon: 'ph:handshake-bold',
+    skills: [
+      { name: 'Stakeholder Workshops' },
+      { name: 'Executive Interviews' },
+      { name: 'Requirements Gathering' },
+      { name: 'Roadmapping' },
+      { name: 'Prioritization Frameworks' },
+      { name: 'Feasibility & Impact Scoring Models' },
+      { name: 'BI Transformation' },
+      { name: 'Report Inventory' },
+      { name: 'Consulting / Client Management' },
+      { name: 'Current/Target State Mapping' },
+      { name: 'Tool Benchmarking' }
+    ]
+  },
+  {
+    id: 'compliance-regulatory',
+    name: { en: 'Compliance & Regulatory', fr: 'Conformité & Réglementaire' },
+    icon: 'ph:scales-bold',
+    skills: [
+      { name: 'BCBS 239' },
+      { name: 'Regulatory Compliance' },
+      { name: 'FINREP' },
+      { name: 'COREP' },
+      { name: 'Risk Data Aggregation' }
+    ]
+  },
+  {
+    id: 'engineering-practices',
+    name: { en: 'Engineering Practices', fr: 'Pratiques d\'Ingénierie' },
     icon: 'ph:wrench-bold',
     skills: [
-      { name: 'Git, GitHub, GitLab & Azure DevOps', icon: 'simple-icons:git' },
-      { name: 'CI/CD & Jenkins', icon: 'simple-icons:jenkins' },
-      { name: 'Postman', icon: 'simple-icons:postman' },
-      { name: 'Apache Maven', icon: 'simple-icons:apachemaven' },
-      { name: 'Figma, Canva & Balsamiq', icon: 'simple-icons:figma' },
-      { name: 'Trello & Notion', icon: 'simple-icons:notion' }
+      { name: 'Agile Methodology' },
+      { name: 'Git', icon: 'simple-icons:git' },
+      { name: 'Code Refactoring' },
+      { name: 'Process Standardization' },
+      { name: 'Process Automation' },
+      { name: 'Scripting' },
+      { name: 'Maven', icon: 'simple-icons:apachemaven' },
+      { name: 'RPM' },
+      { name: 'Yum' },
+      { name: 'Linux Packaging', icon: 'simple-icons:linux' },
+      { name: 'XML Schema Design' },
+      { name: 'Full-Stack Development' }
+    ]
+  },
+  {
+    id: 'design',
+    name: { en: 'Design', fr: 'Design' },
+    icon: 'ph:palette-bold',
+    skills: [
+      { name: 'UI/UX Design' },
+      { name: 'Mockups/Wireframing' },
+      { name: 'Material Design', icon: 'simple-icons:materialdesign' },
+      { name: 'Balsamiq' }
+    ]
+  },
+  {
+    id: 'domain-knowledge',
+    name: { en: 'Domain Knowledge', fr: 'Connaissances Métier' },
+    icon: 'ph:briefcase-bold',
+    skills: [
+      { name: 'Asset & Investment Management' },
+      { name: 'Portfolio Risk & Performance Reporting' },
+      { name: 'Healthcare Software' },
+      { name: 'Critical Infrastructure Systems' },
+      { name: 'Public Sector' },
+      { name: 'Insurance & Wealth Management' },
+      { name: 'Banking & Payments Regulatory' }
     ]
   }
 ];
@@ -758,9 +861,9 @@ export const resumeFormatsData: ResumeFormat[] = [
       fr: 'Format européen, en français'
     },
     languageCode: 'fr',
-    fileName: 'Tanguy_Hardion_CV_FR.pdf',
-    filePathInRepo: 'public/resumes/Tanguy_Hardion_CV_FR.pdf',
-    downloadUrl: '/resumes/Tanguy_Hardion_CV_FR.pdf',
+    fileName: 'Tanguy_Hardion_Resume_FR.pdf',
+    filePathInRepo: 'public/resumes/Tanguy_Hardion_Resume_FR.pdf',
+    downloadUrl: '/resumes/Tanguy_Hardion_Resume_FR.pdf',
     fileSize: '190 KB',
     format: 'PDF'
   },
@@ -784,9 +887,9 @@ export const resumeFormatsData: ResumeFormat[] = [
       fr: 'Format américain'
     },
     languageCode: 'us',
-    fileName: 'Tanguy_Hardion_Resume_US.pdf',
-    filePathInRepo: 'public/resumes/Tanguy_Hardion_Resume_US.pdf',
-    downloadUrl: '/resumes/Tanguy_Hardion_Resume_US.pdf',
+    fileName: 'Tanguy_Hardion_Resume_US_OnePage.pdf',
+    filePathInRepo: 'public/resumes/Tanguy_Hardion_Resume_US_OnePage.pdf',
+    downloadUrl: '/resumes/Tanguy_Hardion_Resume_US_OnePage.pdf',
     fileSize: '175 KB',
     format: 'PDF'
   }
