@@ -412,13 +412,13 @@
       "show_on_website": true
     }
   ],
-  "updatedAt": "2026-11-01T17:37:53.101212+00:00",
+  "updatedAt": "2026-11-01T17:54:53.284609+00:00",
   "experiences": [
     {
       "id": "deloitte-consultant",
       "title": {
-        "en": "Data & AI Consultant",
-        "fr": "Consultant Data & IA"
+        "en": "Junior Consultant in AI & Data",
+        "fr": "Consultant Junior IA & Data"
       },
       "bullets": [],
       "company": "Deloitte",
