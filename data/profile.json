@@ -1,0 +1,2114 @@
+{
+  "profile": {
+    "name": "Tanguy Hardion",
+    "github": "https://github.com/tanguyhardion",
+    "summary": {
+      "en": "Junior Consultant in AI & Data at Deloitte Luxembourg. Driving value through Agentic AI, intelligent automation, data strategy, data architecture, data engineering, data governance, and enterprise data management.",
+      "fr": "Consultant Junior IA & Data chez Deloitte Luxembourg. Spécialisé en IA agentique, automatisation intelligente, stratégie de données, architecture de données, data engineering, gouvernance et gestion des données d'entreprise."
+    },
+    "website": "https://tanguyhardion.github.io/",
+    "headline": {
+      "en": "Junior Consultant in AI & Data at Deloitte",
+      "fr": "Consultant Junior IA & Data chez Deloitte"
+    },
+    "linkedin": "https://linkedin.com/in/tanguy-hardion",
+    "location": {
+      "en": "Luxembourg",
+      "fr": "Luxembourg"
+    },
+    "public_email": "tanguy.hardion.pro@gmail.com",
+    "profile_picture": "https://tanguyhardion.github.io/images/profile.jpg"
+  },
+  "projects": [
+    {
+      "id": "ml-challenge",
+      "year": null,
+      "title": {
+        "en": "Machine Learning Challenge",
+        "fr": "Challenge Machine Learning"
+      },
+      "bullets": [],
+      "context": "school",
+      "demo_url": null,
+      "duration": {
+        "en": "80 hours",
+        "fr": "80 heures"
+      },
+      "featured": true,
+      "repo_url": null,
+      "is_static": false,
+      "team_size": 1,
+      "sort_order": 0,
+      "description": {
+        "en": "Analysis of two simulated datasets (classification and regression) and a real-world dataset. Goal: apply machine learning methods, evaluate model performance with error metrics and submit the best models to a leaderboard. The real-world dataset is sourced from platforms like Kaggle or UCI.",
+        "fr": "Analyse de deux jeux de données simulés (classification et régression) et d'un jeu de données réel. Objectif : développer des modèles de machine learning avec différents algorithmes, évaluer la performance du modèle avec des métriques d'erreur et soumettre les meilleurs modèles à un classement. Le jeu de données réel est extrait de plateformes comme Kaggle ou UCI."
+      },
+      "education_id": null,
+      "technologies": [
+        "Machine Learning",
+        "Python",
+        "Scikit-Learn",
+        "Kaggle"
+      ],
+      "experience_id": null,
+      "show_on_website": true,
+      "short_description": {
+        "en": "Analysis of two simulated datasets (classification & regression) and a real-world dataset from Kaggle/UCI.",
+        "fr": "Analyse de deux jeux de données simulés (classification & régression) et d'un jeu de données réel issu de Kaggle/UCI."
+      }
+    },
+    {
+      "id": "personal-website",
+      "year": null,
+      "title": {
+        "en": "Personal Website",
+        "fr": "Site Personnel"
+      },
+      "bullets": [],
+      "context": "personal",
+      "demo_url": null,
+      "duration": {
+        "en": "30 hours",
+        "fr": "30 heures"
+      },
+      "featured": true,
+      "repo_url": "https://github.com/tanguyhardion/tanguyhardion.github.io",
+      "is_static": false,
+      "team_size": 1,
+      "sort_order": 1,
+      "description": {
+        "en": "You're looking at it!",
+        "fr": "Vous y êtes !"
+      },
+      "education_id": null,
+      "technologies": [
+        "Nuxt",
+        "Vue 3",
+        "TypeScript",
+        "SCSS"
+      ],
+      "experience_id": null,
+      "show_on_website": true,
+      "short_description": {
+        "en": "Digital portfolio and interactive resume built with Nuxt 4 & modern web aesthetics.",
+        "fr": "CV numérique et portfolio interactif conçu avec Nuxt 4 et un design moderne."
+      }
+    },
+    {
+      "id": "cnn-cifar100",
+      "year": null,
+      "title": {
+        "en": "CNN on CIFAR-100",
+        "fr": "CNN sur CIFAR-100"
+      },
+      "bullets": [],
+      "context": "school",
+      "demo_url": null,
+      "duration": {
+        "en": "50 hours",
+        "fr": "50 heures"
+      },
+      "featured": false,
+      "repo_url": null,
+      "is_static": false,
+      "team_size": 1,
+      "sort_order": 2,
+      "description": {
+        "en": "Training of a convolutional neural network (CNN) from scratch to classify images of the CIFAR-100 dataset. Preprocessed and engineered the dataset by normalizing the images and converting them to TensorFlow datasets. Experimented with different architectures and hyperparameters to improve the model's accuracy. Finished by evaluating the model's performance using various metrics and visualizations. This project was part of a course on machine learning and deep learning using Python.",
+        "fr": "Entraînement d'un réseau de neurones convolutif (CNN) à partir de zéro pour classifier les images du jeu de données CIFAR-100. Prétraitement et ingénierie des données en normalisant les images et en les convertissant en ensembles de données TensorFlow. Expérimentation avec différentes architectures et hyperparamètres pour améliorer la précision du modèle. Évaluation finale des performances du modèle avec diverses métriques et visualisations. Ce projet fait partie d'un cours sur le machine learning et deep learning en Python."
+      },
+      "education_id": "utt",
+      "technologies": [
+        "Deep Learning",
+        "CNN",
+        "TensorFlow",
+        "Python",
+        "Computer Vision"
+      ],
+      "experience_id": null,
+      "show_on_website": true,
+      "short_description": {
+        "en": "Training a Convolutional Neural Network from scratch on the CIFAR-100 image classification dataset.",
+        "fr": "Entraînement d'un réseau de neurones convolutif (CNN) à partir de zéro pour classifier les images de CIFAR-100."
+      }
+    },
+    {
+      "id": "census-income",
+      "year": null,
+      "title": {
+        "en": "Census Income Analysis",
+        "fr": "Analyse Census Income"
+      },
+      "bullets": [],
+      "context": "school",
+      "demo_url": null,
+      "duration": {
+        "en": "80 hours",
+        "fr": "80 heures"
+      },
+      "featured": false,
+      "repo_url": null,
+      "is_static": false,
+      "team_size": 1,
+      "sort_order": 3,
+      "description": {
+        "en": "Conducted an analysis of the UCI Census Income dataset, including exploratory data analysis (EDA) to comprehend the data, created visualizations, and authored a report on the findings. Developed a Shiny app to present the results.",
+        "fr": "Réalisation d'une analyse du jeu de données UCI Census Income, incluant une analyse exploratoire des données (EDA) pour comprendre les données, création de visualisations et rédaction d'un rapport sur les résultats. Développement d'une application Shiny pour présenter les résultats."
+      },
+      "education_id": "utt",
+      "technologies": [
+        "R",
+        "Shiny",
+        "EDA",
+        "Data Analytics"
+      ],
+      "experience_id": null,
+      "show_on_website": true,
+      "short_description": {
+        "en": "Exploratory data analysis of UCI Census Income dataset with R Shiny interactive web presentation.",
+        "fr": "Analyse exploratoire de données sur le jeu UCI Census Income avec application R Shiny."
+      }
+    }
+  ],
+  "education": [
+    {
+      "id": "utc",
+      "gpa": null,
+      "degree": {
+        "en": "Academic Mobility Program",
+        "fr": "Programme de mobilité académique"
+      },
+      "honors": null,
+      "bullets": [],
+      "courses": {
+        "en": [
+          "Machine Learning",
+          "Deep Learning",
+          "Multi-Agent Systems",
+          "Statistics",
+          "Probabilities",
+          "Stochastic Processes"
+        ],
+        "fr": [
+          "Machine Learning",
+          "Deep Learning",
+          "Systèmes Multi-Agents",
+          "Statistiques",
+          "Probabilités",
+          "Processus Stochastiques"
+        ]
+      },
+      "end_date": "2025-01-01",
+      "location": {
+        "en": "Compiègne, France",
+        "fr": "Compiègne, France"
+      },
+      "logo_url": null,
+      "is_static": true,
+      "sort_order": 0,
+      "start_date": "2024-09-01",
+      "institution": "Université de Technologie de Compiègne (UTC)",
+      "field_of_study": {
+        "en": "Artificial Intelligence and Data Science",
+        "fr": "Intelligence Artificielle et Data Science"
+      },
+      "show_on_website": true
+    },
+    {
+      "id": "utt",
+      "gpa": "4.70/5.00",
+      "degree": {
+        "en": "Engineer's Degree",
+        "fr": "Diplôme d'Ingénieur"
+      },
+      "honors": null,
+      "bullets": [],
+      "courses": {
+        "en": [
+          "Databases",
+          "Programming",
+          "Software Engineering",
+          "Deep Learning",
+          "Project Management",
+          "AI (LLMs)"
+        ],
+        "fr": [
+          "Bases de données",
+          "Programmation",
+          "Génie Logiciel",
+          "Deep Learning",
+          "Gestion de Projet",
+          "IA (LLM)"
+        ]
+      },
+      "end_date": "2025-07-01",
+      "location": {
+        "en": "Troyes, France",
+        "fr": "Troyes, France"
+      },
+      "logo_url": null,
+      "is_static": true,
+      "sort_order": 1,
+      "start_date": "2022-07-01",
+      "institution": "Université de Technologie de Troyes (UTT)",
+      "field_of_study": {
+        "en": "Computer Science",
+        "fr": "Informatique"
+      },
+      "show_on_website": true
+    },
+    {
+      "id": "iut-dijon",
+      "gpa": null,
+      "degree": {
+        "en": "Associate's Degree (DUT)",
+        "fr": "DUT"
+      },
+      "honors": {
+        "en": "Ranked Top 10 out of 100 students",
+        "fr": "Classé dans le top 10 sur 100 étudiants"
+      },
+      "bullets": [],
+      "courses": {
+        "en": [
+          "General IT fundamentals",
+          "Mathematics",
+          "Software",
+          "Programming",
+          "Networking",
+          "Project Management",
+          "Communication"
+        ],
+        "fr": [
+          "Fondamentaux de l'Informatique",
+          "Mathématiques",
+          "Logiciel",
+          "Programmation",
+          "Réseaux",
+          "Gestion de Projet",
+          "Communication"
+        ]
+      },
+      "end_date": "2022-06-01",
+      "location": {
+        "en": "Dijon, France",
+        "fr": "Dijon, France"
+      },
+      "logo_url": null,
+      "is_static": true,
+      "sort_order": 2,
+      "start_date": "2020-09-01",
+      "institution": "IUT Dijon-Auxerre-Nevers",
+      "field_of_study": {
+        "en": "Computer Science",
+        "fr": "Informatique"
+      },
+      "show_on_website": true
+    }
+  ],
+  "interests": [
+    {
+      "id": "watchmaking",
+      "icon": "ph:watch-bold",
+      "title": {
+        "en": "Watchmaking",
+        "fr": "Horlogerie"
+      },
+      "sort_order": 0,
+      "description": {
+        "en": "Passionate about mechanical watch engineering, movements, and horological history.",
+        "fr": "Passionné par l'ingénierie horlogère mécanique, les mouvements et l'histoire horlogère."
+      },
+      "show_on_website": true
+    },
+    {
+      "id": "sports",
+      "icon": "ph:barbell-bold",
+      "title": {
+        "en": "Sports",
+        "fr": "Sport"
+      },
+      "sort_order": 1,
+      "description": {
+        "en": "Enthusiastic about strength training, fitness, and physical performance.",
+        "fr": "Pratique régulière de la musculation, du fitness et du développement des performances physiques."
+      },
+      "show_on_website": true
+    },
+    {
+      "id": "music",
+      "icon": "ph:music-notes-bold",
+      "title": {
+        "en": "Music",
+        "fr": "Musique"
+      },
+      "sort_order": 2,
+      "description": {
+        "en": "Music lover with an interest in genres, composition, and audio culture.",
+        "fr": "Passionné de musique, d'écoute et de découverte de genres variés."
+      },
+      "show_on_website": true
+    }
+  ],
+  "languages": [
+    {
+      "id": "en",
+      "cefr": "C1",
+      "name": {
+        "en": "English",
+        "fr": "Anglais"
+      },
+      "level": {
+        "en": "C1+ (TOEFL 108/120)",
+        "fr": "C1+ (TOEFL 108/120)"
+      },
+      "flag_icon": "emojione-v1:flag-for-united-kingdom",
+      "sort_order": 0,
+      "description": {
+        "en": "Fluent proficiency in technical writing and professional environments.",
+        "fr": "Anglais courant (niveau C1+, TOEFL 108/120)."
+      },
+      "show_on_resume": true,
+      "show_on_website": true
+    },
+    {
+      "id": "fr",
+      "cefr": "native",
+      "name": {
+        "en": "French",
+        "fr": "Français"
+      },
+      "level": {
+        "en": "Native",
+        "fr": "Langue maternelle"
+      },
+      "flag_icon": "emojione-v1:flag-for-france",
+      "sort_order": 1,
+      "description": {
+        "en": "Native fluency in speaking, writing, and professional communication.",
+        "fr": "Langue maternelle, parfaite maîtrise orale et écrite."
+      },
+      "show_on_resume": true,
+      "show_on_website": true
+    },
+    {
+      "id": "es",
+      "cefr": "B1",
+      "name": {
+        "en": "Spanish",
+        "fr": "Espagnol"
+      },
+      "level": {
+        "en": "Intermediate (B1)",
+        "fr": "Intermédiaire (B1)"
+      },
+      "flag_icon": "emojione-v1:flag-for-spain",
+      "sort_order": 2,
+      "description": {
+        "en": "Intermediate conversational and reading skills.",
+        "fr": "Niveau intermédiaire (B1)."
+      },
+      "show_on_resume": false,
+      "show_on_website": true
+    }
+  ],
+  "updatedAt": "2026-11-01T17:37:53.101212+00:00",
+  "experiences": [
+    {
+      "id": "deloitte-consultant",
+      "title": {
+        "en": "Data & AI Consultant",
+        "fr": "Consultant Data & IA"
+      },
+      "bullets": [],
+      "company": "Deloitte",
+      "end_date": null,
+      "location": {
+        "en": "Luxembourg",
+        "fr": "Luxembourg"
+      },
+      "is_static": false,
+      "sort_order": 0,
+      "start_date": "2025-09-01",
+      "description": {
+        "en": "Junior Consultant in AI & Data at Deloitte Luxembourg, serving a diverse portfolio of clients across banking, investment, insurance and the public sector on data strategy, governance, architecture, AI and regulatory engagements.",
+        "fr": "Consultant Junior IA & Data chez Deloitte Luxembourg, au service d'un portefeuille varié de clients (banque, investissement, assurance, secteur public) sur des missions de stratégie, gouvernance et architecture de données, d'IA et de conformité réglementaire."
+      },
+      "engagements": [
+        {
+          "id": "deloitte-bcbs239-payments",
+          "title": {
+            "en": "BCBS 239 Compliance",
+            "fr": "Conformité BCBS 239"
+          },
+          "client": {
+            "en": "Global digital payments company",
+            "fr": "Acteur mondial du paiement digital"
+          },
+          "bullets": [
+            {
+              "id": 1,
+              "kind": "achievement",
+              "text": {
+                "en": "Supporting BCBS 239 regulatory compliance by modernizing end-to-end data lineage tracing, mapping critical data points (credit, FINREP and COREP indicators) from source to consumption to establish complete transparency, data quality, and governance across complex financial flows.",
+                "fr": "Accompagnement de la conformité réglementaire BCBS 239 par la modernisation du lignage de données de bout en bout, en cartographiant les données critiques (indicateurs de crédit, FINREP et COREP) de la source à la consommation afin d'assurer transparence, qualité et gouvernance sur des flux financiers complexes."
+              },
+              "short": null,
+              "showOnWebsite": true
+            },
+            {
+              "id": 2,
+              "kind": "achievement",
+              "text": {
+                "en": "Combining AI, automated code analysis, and expert human judgment to strengthen risk data aggregation and reporting capabilities, alongside business glossary development and architecture documentation.",
+                "fr": "Combinaison d'IA, d'analyse automatisée du code et d'expertise humaine pour renforcer l'agrégation des données de risque et les capacités de reporting, avec construction d'un glossaire métier et documentation de l'architecture."
+              },
+              "short": null,
+              "showOnWebsite": true
+            }
+          ],
+          "end_date": null,
+          "location": null,
+          "is_ongoing": true,
+          "sort_order": 0,
+          "start_date": "2026-06-01",
+          "technologies": [],
+          "show_on_website": true
+        },
+        {
+          "id": "deloitte-bi-readiness-public-finance",
+          "title": {
+            "en": "Data & BI Transformation Readiness",
+            "fr": "Préparation à la Transformation Data & BI"
+          },
+          "client": {
+            "en": "Public finance institution",
+            "fr": "Institution financière publique"
+          },
+          "bullets": [
+            {
+              "id": 3,
+              "kind": "achievement",
+              "text": {
+                "en": "Worked embedded with the client daily to structure pre-transformation groundwork, assessing both the data landscape and the reporting landscape.",
+                "fr": "Intégré quotidiennement chez le client pour structurer les travaux préparatoires, en évaluant à la fois le paysage de données et le paysage de reporting."
+              },
+              "short": null,
+              "showOnWebsite": true
+            },
+            {
+              "id": 4,
+              "kind": "achievement",
+              "text": {
+                "en": "Delivered data domain definitions, a report inventory, a data dictionary, and BI report mockups to prepare the client for a data/BI transformation.",
+                "fr": "Livraison de définitions de domaines de données, d'un inventaire des rapports, d'un dictionnaire de données et de maquettes de rapports BI pour préparer le client à une transformation data/BI."
+              },
+              "short": null,
+              "showOnWebsite": true
+            },
+            {
+              "id": 5,
+              "kind": "achievement",
+              "text": {
+                "en": "Defined the target BI architecture, governance model and KPIs, and consolidated requirements for a new BI solution.",
+                "fr": "Définition de l'architecture BI cible, du modèle de gouvernance et des KPI, et consolidation des exigences pour une nouvelle solution BI."
+              },
+              "short": null,
+              "showOnWebsite": true
+            }
+          ],
+          "end_date": "2026-04-01",
+          "location": {
+            "en": "Luxembourg",
+            "fr": "Luxembourg"
+          },
+          "is_ongoing": false,
+          "sort_order": 1,
+          "start_date": "2026-03-01",
+          "technologies": [],
+          "show_on_website": true
+        },
+        {
+          "id": "deloitte-ai-vision-public",
+          "title": {
+            "en": "AI Vision & Roadmap",
+            "fr": "Vision & Feuille de Route IA"
+          },
+          "client": {
+            "en": "Public institution",
+            "fr": "Institution publique"
+          },
+          "bullets": [
+            {
+              "id": 6,
+              "kind": "achievement",
+              "text": {
+                "en": "Conducted executive interviews to define AI vision and ambition, then identified and prioritized AI use cases and delivered an implementation roadmap.",
+                "fr": "Conduite d'entretiens avec la direction pour définir la vision et l'ambition IA, puis identification et priorisation des cas d'usage IA et livraison d'une feuille de route de mise en œuvre."
+              },
+              "short": null,
+              "showOnWebsite": true
+            },
+            {
+              "id": 7,
+              "kind": "achievement",
+              "text": {
+                "en": "Led cross-functional workshops alongside executive interviews, identifying AI use cases together with their constraints and regulatory considerations.",
+                "fr": "Animation d'ateliers transverses en complément des entretiens avec la direction, pour identifier les cas d'usage IA ainsi que leurs contraintes et enjeux réglementaires."
+              },
+              "short": null,
+              "showOnWebsite": true
+            }
+          ],
+          "end_date": "2026-03-01",
+          "location": {
+            "en": "Luxembourg",
+            "fr": "Luxembourg"
+          },
+          "is_ongoing": false,
+          "sort_order": 2,
+          "start_date": "2026-02-01",
+          "technologies": [],
+          "show_on_website": true
+        },
+        {
+          "id": "deloitte-data-architecture-am",
+          "title": {
+            "en": "Data Architecture Assessment",
+            "fr": "Évaluation d'Architecture de Données"
+          },
+          "client": {
+            "en": "International asset manager",
+            "fr": "Gestionnaire d'actifs international"
+          },
+          "bullets": [
+            {
+              "id": 8,
+              "kind": "achievement",
+              "text": {
+                "en": "Assessed the current data landscape (systems, data, flows, quality) via documentation review and workshops.",
+                "fr": "Évaluation du paysage de données (systèmes, données, flux, qualité) via revue documentaire et ateliers."
+              },
+              "short": null,
+              "showOnWebsite": true
+            },
+            {
+              "id": 9,
+              "kind": "achievement",
+              "text": {
+                "en": "Assessed the current data landscape through interviews as well, and analyzed documentation, platforms and the vendor ecosystem.",
+                "fr": "Évaluation complétée par des entretiens, et analyse de la documentation, des plateformes et de l'écosystème d'éditeurs."
+              },
+              "short": null,
+              "showOnWebsite": true
+            },
+            {
+              "id": 10,
+              "kind": "achievement",
+              "text": {
+                "en": "Mapped current-state architecture (applications, data flows, ownership) and defined the target data architecture, including tool/vendor benchmarking.",
+                "fr": "Cartographie de l'architecture existante (applications, flux, propriété) et définition de l'architecture de données cible, incluant un benchmark d'outils/éditeurs."
+              },
+              "short": null,
+              "showOnWebsite": true
+            }
+          ],
+          "end_date": "2026-02-01",
+          "location": null,
+          "is_ongoing": false,
+          "sort_order": 3,
+          "start_date": "2026-01-01",
+          "technologies": [],
+          "show_on_website": true
+        },
+        {
+          "id": "deloitte-ai-rpa-insurance",
+          "title": {
+            "en": "AI/RPA Use Case Prioritization",
+            "fr": "Priorisation de cas d'usage IA/RPA"
+          },
+          "client": {
+            "en": "European insurance & wealth management group",
+            "fr": "Groupe européen d'assurance & gestion de patrimoine"
+          },
+          "bullets": [
+            {
+              "id": 11,
+              "kind": "achievement",
+              "text": {
+                "en": "Collected and structured 40+ AI/RPA automation use cases from business stakeholders via workshops and questionnaires, refining and qualifying requirements.",
+                "fr": "Collecte et structuration de plus de 40 cas d'usage d'automatisation IA/RPA auprès des métiers via ateliers et questionnaires, avec affinage et qualification des besoins."
+              },
+              "short": null,
+              "showOnWebsite": true
+            },
+            {
+              "id": 12,
+              "kind": "achievement",
+              "text": {
+                "en": "Built a feasibility/impact scoring model (based on current tech stack, IT roadmap, and data complexity) and a resulting prioritization matrix, culminating in a delivered implementation roadmap.",
+                "fr": "Conception d'un modèle de scoring faisabilité/impact (selon la stack technique, la feuille de route IT et la complexité des données) et d'une matrice de priorisation, aboutissant à la livraison d'une feuille de route de mise en œuvre."
+              },
+              "short": null,
+              "showOnWebsite": true
+            }
+          ],
+          "end_date": "2026-02-01",
+          "location": null,
+          "is_ongoing": false,
+          "sort_order": 4,
+          "start_date": "2026-01-01",
+          "technologies": [],
+          "show_on_website": true
+        },
+        {
+          "id": "deloitte-data-governance-public",
+          "title": {
+            "en": "Data Strategy & Governance",
+            "fr": "Stratégie & Gouvernance des Données"
+          },
+          "client": {
+            "en": "Public institution",
+            "fr": "Institution publique"
+          },
+          "bullets": [
+            {
+              "id": 13,
+              "kind": "achievement",
+              "text": {
+                "en": "Led stakeholder workshops to assess the current data landscape (data location, flow, ownership); produced a gap analysis and recommendations centered on data governance and data warehousing, and delivered a future-state roadmap.",
+                "fr": "Animation d'ateliers avec les parties prenantes pour évaluer le paysage de données existant (localisation, flux, propriété) ; réalisation d'une analyse d'écarts et de recommandations centrées sur la gouvernance des données et l'entreposage de données, et livraison d'une feuille de route cible."
+              },
+              "short": null,
+              "showOnWebsite": true
+            },
+            {
+              "id": 14,
+              "kind": "achievement",
+              "text": {
+                "en": "Defined data governance model options (centralized / federated / decentralized) with associated roles, responsibilities, and target structure; defined governance principles and processes across four dimensions: data quality, data integration & interoperability, metadata management, and master data management.",
+                "fr": "Définition d'options de modèles de gouvernance des données (centralisé / fédéré / décentralisé) avec rôles, responsabilités et structure cible associés ; définition des principes et processus de gouvernance selon quatre dimensions : qualité des données, intégration & interopérabilité, gestion des métadonnées et gestion des données de référence (MDM)."
+              },
+              "short": null,
+              "showOnWebsite": true
+            },
+            {
+              "id": 15,
+              "kind": "achievement",
+              "text": {
+                "en": "Led workshops to identify data and application pain points, defined target data management processes, and helped design the data governance framework and operating model.",
+                "fr": "Animation d'ateliers pour identifier les points de douleur data et applicatifs, définition des processus cibles de gestion des données, et contribution à la conception du cadre et du modèle opérationnel de gouvernance des données."
+              },
+              "short": null,
+              "showOnWebsite": true
+            },
+            {
+              "id": 16,
+              "kind": "achievement",
+              "text": {
+                "en": "Assessed and benchmarked data governance and data management tools.",
+                "fr": "Évaluation et benchmark d'outils de gouvernance et de gestion des données."
+              },
+              "short": null,
+              "showOnWebsite": true
+            }
+          ],
+          "end_date": "2025-12-01",
+          "location": {
+            "en": "Luxembourg",
+            "fr": "Luxembourg"
+          },
+          "is_ongoing": false,
+          "sort_order": 5,
+          "start_date": "2025-10-01",
+          "technologies": [],
+          "show_on_website": true
+        },
+        {
+          "id": "deloitte-dg-training-private-bank",
+          "title": {
+            "en": "Data Governance & Quality Training",
+            "fr": "Formation Gouvernance & Qualité des Données"
+          },
+          "client": {
+            "en": "Private bank",
+            "fr": "Banque privée"
+          },
+          "bullets": [
+            {
+              "id": 17,
+              "kind": "achievement",
+              "text": {
+                "en": "Supported the design of training materials on data governance and data quality.",
+                "fr": "Contribution à la conception de supports de formation sur la gouvernance et la qualité des données."
+              },
+              "short": null,
+              "showOnWebsite": true
+            },
+            {
+              "id": 18,
+              "kind": "achievement",
+              "text": {
+                "en": "Prepared structured learning content for business teams.",
+                "fr": "Préparation de contenus pédagogiques structurés à destination des équipes métier."
+              },
+              "short": null,
+              "showOnWebsite": true
+            }
+          ],
+          "end_date": null,
+          "location": {
+            "en": "Luxembourg",
+            "fr": "Luxembourg"
+          },
+          "is_ongoing": false,
+          "sort_order": 6,
+          "start_date": null,
+          "technologies": [],
+          "show_on_website": true
+        },
+        {
+          "id": "deloitte-ai-news-app",
+          "title": {
+            "en": "AI News Monitoring App (pilot)",
+            "fr": "Application de veille IA (pilote)"
+          },
+          "client": {
+            "en": "Internal firm initiative",
+            "fr": "Initiative interne"
+          },
+          "bullets": [
+            {
+              "id": 19,
+              "kind": "achievement",
+              "text": {
+                "en": "Designed and built the backend (Python, FastAPI, LangChain, LangGraph, MongoDB) of an internal app helping consultants track the latest AI, data and tech news for go-to-market, eminence and competitive intelligence.",
+                "fr": "Conception et développement du backend (Python, FastAPI, LangChain, LangGraph, MongoDB) d'une application interne aidant les consultants à suivre l'actualité IA, data et tech pour le go-to-market, l'eminence et la veille concurrentielle."
+              },
+              "short": null,
+              "showOnWebsite": true
+            },
+            {
+              "id": 20,
+              "kind": "achievement",
+              "text": {
+                "en": "A daily scheduled pipeline fetches content from predefined RSS sources and the web according to each user's profile needs; the app retrieves source metadata while an LLM reads each item's content, judges its relevance and scores it using a scoring system; scored items are ranked and displayed in the React front end.",
+                "fr": "Un pipeline quotidien planifié récupère le contenu de sources RSS prédéfinies et du web selon le profil de chaque utilisateur ; l'application récupère les métadonnées des sources tandis qu'un LLM lit chaque contenu, juge sa pertinence et lui attribue un score ; les éléments notés sont classés et affichés dans le front-end React."
+              },
+              "short": null,
+              "showOnWebsite": true
+            },
+            {
+              "id": 21,
+              "kind": "achievement",
+              "text": {
+                "en": "The LLM also generates a daily digest summarizing all retrieved sources; model-agnostic LLM layer through LangChain, consuming LLM APIs (e.g. Azure OpenAI).",
+                "fr": "Le LLM génère également un résumé quotidien de toutes les sources récupérées ; couche LLM agnostique du modèle via LangChain, consommant des API de LLM (ex. Azure OpenAI)."
+              },
+              "short": null,
+              "showOnWebsite": true
+            }
+          ],
+          "end_date": null,
+          "location": null,
+          "is_ongoing": false,
+          "sort_order": 7,
+          "start_date": null,
+          "technologies": [
+            "Python",
+            "FastAPI",
+            "LangChain",
+            "LangGraph",
+            "MongoDB",
+            "React",
+            "Azure OpenAI"
+          ],
+          "show_on_website": true
+        },
+        {
+          "id": "deloitte-internal-initiatives",
+          "title": {
+            "en": "Internal Initiatives",
+            "fr": "Initiatives Internes"
+          },
+          "client": {
+            "en": "Deloitte",
+            "fr": "Deloitte"
+          },
+          "bullets": [
+            {
+              "id": 22,
+              "kind": "achievement",
+              "text": {
+                "en": "Contributed to internal firm initiatives including proposal development and innovation assignments alongside client delivery work.",
+                "fr": "Contribution à des initiatives internes (réponses à appels d'offres, missions d'innovation) en parallèle des missions client."
+              },
+              "short": null,
+              "showOnWebsite": true
+            }
+          ],
+          "end_date": null,
+          "location": null,
+          "is_ongoing": false,
+          "sort_order": 8,
+          "start_date": null,
+          "technologies": [],
+          "show_on_website": true
+        }
+      ],
+      "technologies": [
+        "Data Governance",
+        "Data Strategy",
+        "Data Architecture",
+        "Data Lineage",
+        "BCBS 239",
+        "AI Use Cases",
+        "Roadmapping"
+      ],
+      "contract_label": {
+        "en": "Full-Time",
+        "fr": "CDI"
+      },
+      "company_display": {
+        "en": "Deloitte Luxembourg",
+        "fr": "Deloitte Luxembourg"
+      },
+      "employment_type": "full_time",
+      "show_on_website": true,
+      "company_descriptor": null
+    },
+    {
+      "id": "deloitte-analyst",
+      "title": {
+        "en": "Data & AI Analyst",
+        "fr": "Analyste Data & IA"
+      },
+      "bullets": [
+        {
+          "id": 23,
+          "kind": "achievement",
+          "text": {
+            "en": "Optimized existing databases and data architecture to better support analytics and reporting needs.",
+            "fr": "Optimisation des bases de données et de l'architecture de données existantes pour mieux répondre aux besoins d'analyse et de reporting."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 24,
+          "kind": "achievement",
+          "text": {
+            "en": "Owned end-to-end data pipeline processes for a global investment/asset management client, from monthly data sourcing to client-facing dashboards delivering portfolio risk and performance insights to investors.",
+            "fr": "Responsable des processus de pipelines de données de bout en bout pour un client international de gestion d'actifs, du sourcing mensuel des données jusqu'aux tableaux de bord clients présentant les indicateurs de risque et de performance des portefeuilles aux investisseurs."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 25,
+          "kind": "achievement",
+          "text": {
+            "en": "Managed the monthly data provider sourcing process (medallion architecture on a custom in-house SQL Server-based platform) and oversaw provider upload compliance.",
+            "fr": "Pilotage du processus mensuel de sourcing auprès des fournisseurs de données (architecture médaillon sur une plateforme interne basée sur SQL Server) et suivi de la conformité des chargements."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 26,
+          "kind": "achievement",
+          "text": {
+            "en": "Developed data quality controls on incoming data, and maintained/improved the SQL Server data model (tables, views, stored procedures).",
+            "fr": "Développement de contrôles qualité sur les données entrantes, et maintenance/amélioration du modèle de données SQL Server (tables, vues, procédures stockées)."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 27,
+          "kind": "achievement",
+          "text": {
+            "en": "Produced and improved client-facing reporting in Excel and Power BI, combining business knowledge of portfolio risk/performance concepts with technical execution to ensure end-to-end data correctness.",
+            "fr": "Production et amélioration des reportings clients sous Excel et Power BI, alliant connaissance métier du risque/de la performance de portefeuille et exécution technique pour garantir la justesse des données de bout en bout."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 28,
+          "kind": "achievement",
+          "text": {
+            "en": "Built a pilot AI agent (Python, LangChain, LangGraph) that progressively explores a large database — schemas, then tables, then data — to answer natural-language questions from both technical users (raw queries/tables) and business users (simplified tables/graphs).",
+            "fr": "Développement d'un agent IA pilote (Python, LangChain, LangGraph) explorant progressivement une large base de données — schémas, puis tables, puis données — pour répondre en langage naturel aux utilisateurs techniques (requêtes/tables brutes) comme métiers (tableaux/graphiques simplifiés)."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 29,
+          "kind": "outcome",
+          "text": {
+            "en": "Delivered the agent pilot successfully, demonstrating clear feasibility and value: faster build/debug cycles for the internal team and greater transparency and autonomy for the client over their own processed data.",
+            "fr": "Livraison réussie du pilote, démontrant faisabilité et valeur : cycles de développement/débogage accélérés pour l'équipe interne, et plus de transparence et d'autonomie pour le client sur ses propres données."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 30,
+          "kind": "achievement",
+          "text": {
+            "en": "Built a proof-of-concept AI agent (Python, LangChain, prompt engineering) to quality-check incoming provider data, complementing existing programmatic/logical data quality checks.",
+            "fr": "Développement d'un agent IA en preuve de concept (Python, LangChain, prompt engineering) pour contrôler la qualité des données fournisseurs, en complément des contrôles programmatiques existants."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 31,
+          "kind": "achievement",
+          "text": {
+            "en": "Diagnosed and automated numerous manual, tedious business-as-usual processes throughout the engagement using Python scripts, integrated into the main application or delivered as standalone tools.",
+            "fr": "Identification et automatisation de nombreux processus manuels et fastidieux via des scripts Python, intégrés à l'application principale ou livrés comme outils autonomes."
+          },
+          "short": null,
+          "showOnWebsite": true
+        }
+      ],
+      "company": "Deloitte",
+      "end_date": "2025-08-01",
+      "location": {
+        "en": "Luxembourg",
+        "fr": "Luxembourg"
+      },
+      "is_static": false,
+      "sort_order": 1,
+      "start_date": "2025-02-01",
+      "description": {
+        "en": "End of studies internship at Deloitte, contributing to end-to-end data pipelines for a global asset management client and building AI agents on top of its data.",
+        "fr": "Stage de fin d'études chez Deloitte : contribution aux pipelines de données de bout en bout d'un client international de gestion d'actifs et développement d'agents IA sur ses données."
+      },
+      "engagements": [],
+      "technologies": [
+        "Python",
+        "LangChain",
+        "LangGraph",
+        "AI Agents",
+        "SQL Server",
+        "T-SQL",
+        "Power BI",
+        "Excel",
+        "Medallion Architecture",
+        "Data Quality"
+      ],
+      "contract_label": {
+        "en": "Internship",
+        "fr": "Stage"
+      },
+      "company_display": {
+        "en": "Deloitte Luxembourg",
+        "fr": "Deloitte Luxembourg"
+      },
+      "employment_type": "internship",
+      "show_on_website": true,
+      "company_descriptor": null
+    },
+    {
+      "id": "cpage-engineer",
+      "title": {
+        "en": "Software Engineer",
+        "fr": "Ingénieur Logiciel"
+      },
+      "bullets": [
+        {
+          "id": 32,
+          "kind": "achievement",
+          "text": {
+            "en": "Built a client satisfaction tracking web application (Angular, Spring Boot, PostgreSQL, Leaflet) enabling staff to log client interaction outcomes (satisfaction level + free-text notes) after every client touchpoint.",
+            "fr": "Développement d'une application web de suivi de la satisfaction client (Angular, Spring Boot, PostgreSQL, Leaflet) permettant aux équipes de consigner le résultat de chaque interaction client (niveau de satisfaction + notes libres)."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 33,
+          "kind": "achievement",
+          "text": {
+            "en": "Designed a live, always-on map of client satisfaction across France (metropolitan + overseas territories), selectable by time period, displayed company-wide so staff could check client sentiment before meetings and calls.",
+            "fr": "Conception d'une carte en temps réel de la satisfaction client sur toute la France (métropole + outre-mer), filtrable par période, affichée dans toute l'entreprise pour consulter le ressenti client avant réunions et appels."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 34,
+          "kind": "achievement",
+          "text": {
+            "en": "Integrated a lightweight, locally-run Hugging Face NLP model (keyword extraction + sentiment analysis) to automatically process free-text notes into word clouds, surfacing recurring themes without manual review.",
+            "fr": "Intégration d'un modèle NLP Hugging Face léger exécuté localement (extraction de mots-clés + analyse de sentiment) pour transformer automatiquement les notes libres en nuages de mots et faire ressortir les thèmes récurrents."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 35,
+          "kind": "achievement",
+          "text": {
+            "en": "Ran regular interviews and surveys with colleagues throughout development to gather requirements and feedback, ensuring the app met their needs for improving client satisfaction.",
+            "fr": "Entretiens et sondages réguliers avec les collaborateurs tout au long du développement pour recueillir besoins et retours, afin que l'application réponde à leurs attentes en matière de satisfaction client."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 36,
+          "kind": "outcome",
+          "text": {
+            "en": "Outcome: improved internal communication and client relationship tracking across teams; delivered a complete, demo-ready application by end of contract, laying the groundwork for a planned production rollout.",
+            "fr": "Résultat : meilleure communication interne et meilleur suivi de la relation client entre équipes ; application complète et prête pour démonstration livrée en fin de contrat, préparant un déploiement en production."
+          },
+          "short": null,
+          "showOnWebsite": true
+        }
+      ],
+      "company": "CPage",
+      "end_date": "2024-08-01",
+      "location": {
+        "en": "Dijon, France",
+        "fr": "Dijon, France"
+      },
+      "is_static": false,
+      "sort_order": 2,
+      "start_date": "2024-07-01",
+      "description": {
+        "en": "Summer job at CPage, a healthcare/hospital software vendor, following my previous internship there.",
+        "fr": "Job d'été chez CPage, éditeur de logiciels pour les établissements de santé, à la suite de mon précédent stage."
+      },
+      "engagements": [],
+      "technologies": [
+        "Angular",
+        "Spring Boot",
+        "PostgreSQL",
+        "Leaflet",
+        "Hugging Face",
+        "NLP",
+        "Flask",
+        "ETL"
+      ],
+      "contract_label": {
+        "en": "Fixed-term contract (CDD)",
+        "fr": "CDD"
+      },
+      "company_display": null,
+      "employment_type": "summer_job",
+      "show_on_website": true,
+      "company_descriptor": {
+        "en": "healthcare/hospital software vendor",
+        "fr": "éditeur de logiciels pour les établissements de santé"
+      }
+    },
+    {
+      "id": "cpage-intern",
+      "title": {
+        "en": "Software Engineer Intern",
+        "fr": "Stagiaire Ingénieur Logiciel"
+      },
+      "bullets": [
+        {
+          "id": 37,
+          "kind": "achievement",
+          "text": {
+            "en": "Main mission: built an interactive dependency graph web application (Angular, Spring Boot, Oracle DB, Sigma.js, Graphology) visualizing software release dependencies as a directed graph, replacing a fully manual, error-prone process based on non-standardized PDF delivery notes.",
+            "fr": "Mission principale : développement d'une application web de graphe de dépendances interactif (Angular, Spring Boot, Oracle DB, Sigma.js, Graphology) représentant les dépendances entre versions logicielles sous forme de graphe orienté, en remplacement d'un processus entièrement manuel et source d'erreurs basé sur des bons de livraison PDF non standardisés."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 38,
+          "kind": "achievement",
+          "text": {
+            "en": "Developed a Java regex-based parser to extract release version and dependency data from inconsistent PDF delivery notes, and drove alignment across development teams on a standardized delivery note format.",
+            "fr": "Développement d'un parseur Java à base de regex pour extraire versions et dépendances de bons de livraison PDF hétérogènes, et pilotage de l'alignement des équipes de développement sur un format de bon de livraison standardisé."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 39,
+          "kind": "achievement",
+          "text": {
+            "en": "Built graph app features: fuzzy/typo-tolerant search (edit-distance algorithm), interactive zoom/pan with dependency highlighting, timestamped and undoable change history, color-coded node categorization, an interactive statistics dashboard, and multiple graph layout algorithms (ForceAtlas2, Dagre).",
+            "fr": "Fonctionnalités du graphe : recherche floue tolérante aux fautes (distance d'édition), zoom/déplacement interactifs avec mise en évidence des dépendances, historique des modifications horodaté et annulable, catégorisation des nœuds par couleur, tableau de bord statistique interactif et plusieurs algorithmes de disposition (ForceAtlas2, Dagre)."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 40,
+          "kind": "achievement",
+          "text": {
+            "en": "Delivered iteratively using Agile methodology, presenting and validating each feature with the team; used Balsamiq for mockups and Git for version control.",
+            "fr": "Livraison itérative en méthodologie Agile, avec présentation et validation de chaque fonctionnalité auprès de l'équipe ; maquettes sous Balsamiq et versionnage avec Git."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 41,
+          "kind": "outcome",
+          "text": {
+            "en": "Outcome: gave installation technicians a reliable, self-service way to check release dependencies, speeding up and simplifying installations while reducing the risk of installing incorrect dependencies.",
+            "fr": "Résultat : un outil fiable et en libre-service pour les techniciens d'installation, accélérant et simplifiant les installations tout en réduisant le risque d'installer de mauvaises dépendances."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 42,
+          "kind": "achievement",
+          "text": {
+            "en": "Secondary mission: worked alongside an architect on a proof-of-concept to restructure the release packaging pipeline, migrating toward Maven + RPM/Yum-based dependency resolution for Linux package installation.",
+            "fr": "Mission secondaire : travail aux côtés d'un architecte sur une preuve de concept de refonte de la chaîne de packaging des versions, vers une résolution des dépendances basée sur Maven + RPM/Yum pour l'installation de paquets Linux."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 43,
+          "kind": "achievement",
+          "text": {
+            "en": "Organized and led cross-team alignment meetings to define and get adopted a standardized XML schema for release/dependency metadata; authored the structural proposal that was ultimately adopted.",
+            "fr": "Organisation et animation de réunions d'alignement inter-équipes pour définir et faire adopter un schéma XML standardisé de métadonnées de versions/dépendances ; rédaction de la proposition de structure finalement retenue."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 44,
+          "kind": "achievement",
+          "text": {
+            "en": "Built a custom Maven plugin that consumes the standardized XML metadata to auto-generate uniform PDF delivery notes and insert release/dependency data directly into the database, eliminating manual PDF parsing for releases using the new pipeline.",
+            "fr": "Développement d'un plugin Maven exploitant ces métadonnées XML pour générer automatiquement des bons de livraison PDF uniformes et insérer directement versions et dépendances en base, supprimant l'analyse manuelle des PDF pour les versions utilisant la nouvelle chaîne."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 45,
+          "kind": "achievement",
+          "text": {
+            "en": "Self-initiated an AI innovation project: tested zero-shot prompting with ChatGPT for dependency extraction, found it unreliable, then designed and executed a supervised fine-tuning pipeline for an open-source LLM (Llama 2, 7B, via Hugging Face) on Google Colab, using a dataset auto-generated from the existing regex parser.",
+            "fr": "Projet d'innovation IA à mon initiative : test du prompting zero-shot avec ChatGPT pour l'extraction des dépendances, jugé peu fiable, puis conception et exécution d'un pipeline de fine-tuning supervisé d'un LLM open source (Llama 2, 7B, via Hugging Face) sur Google Colab, avec un jeu de données généré automatiquement à partir du parseur regex existant."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 46,
+          "kind": "achievement",
+          "text": {
+            "en": "Trained and quantized the Llama 2 model for the proof of concept (PyTorch, Hugging Face).",
+            "fr": "Entraînement et quantification du modèle Llama 2 pour la preuve de concept (PyTorch, Hugging Face)."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 47,
+          "kind": "outcome",
+          "text": {
+            "en": "Result: the fine-tuned 7B model reliably outperformed general-purpose 175B-parameter models on the narrow extraction task, demonstrating the value of task-specific fine-tuning; presented the POC company-wide to promote practical AI adoption.",
+            "fr": "Résultat : le modèle 7B fine-tuné surpassait de façon fiable des modèles généralistes de 175 Md de paramètres sur cette tâche d'extraction ciblée ; POC présenté à toute l'entreprise pour promouvoir l'adoption concrète de l'IA."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 48,
+          "kind": "achievement",
+          "text": {
+            "en": "Built two standalone JavaScript/Node.js automation tools to speed up colleagues' recurring manual file-processing tasks, packaged as cross-platform executables (Windows/Linux/macOS).",
+            "fr": "Développement de deux outils d'automatisation JavaScript/Node.js pour accélérer des traitements de fichiers manuels et récurrents de collègues, packagés en exécutables multiplateformes (Windows/Linux/macOS)."
+          },
+          "short": null,
+          "showOnWebsite": true
+        }
+      ],
+      "company": "CPage",
+      "end_date": "2023-12-01",
+      "location": {
+        "en": "Dijon, France",
+        "fr": "Dijon, France"
+      },
+      "is_static": false,
+      "sort_order": 3,
+      "start_date": "2023-07-01",
+      "description": {
+        "en": "Mid-engineering degree internship at CPage, a company that develops software for public health institutions.",
+        "fr": "Stage de milieu de cursus ingénieur chez CPage, une société développant des logiciels pour les établissements de santé publics."
+      },
+      "engagements": [],
+      "technologies": [
+        "Angular",
+        "Spring Boot",
+        "Java",
+        "Oracle DB",
+        "Sigma.js",
+        "Graphology",
+        "Maven",
+        "Llama 2",
+        "Hugging Face",
+        "Node.js",
+        "PyTorch"
+      ],
+      "contract_label": {
+        "en": "Internship",
+        "fr": "Stage"
+      },
+      "company_display": null,
+      "employment_type": "internship",
+      "show_on_website": true,
+      "company_descriptor": {
+        "en": "healthcare/hospital software vendor",
+        "fr": "éditeur de logiciels pour les établissements de santé"
+      }
+    },
+    {
+      "id": "aprr-intern",
+      "title": {
+        "en": "Software Engineer Intern",
+        "fr": "Stagiaire Ingénieur Logiciel"
+      },
+      "bullets": [
+        {
+          "id": 49,
+          "kind": "achievement",
+          "text": {
+            "en": "Improved a WPF desktop application (C#, XAML) connecting to highway systems for real-time monitoring and control: redesigned the UI/UX with mockups validated by the team before implementation, applying Material Design principles.",
+            "fr": "Amélioration d'une application de bureau WPF (C#, XAML) connectée aux systèmes autoroutiers pour la supervision et le contrôle en temps réel : refonte de l'UI/UX avec maquettes validées par l'équipe avant implémentation, selon les principes du Material Design."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 50,
+          "kind": "achievement",
+          "text": {
+            "en": "Cleaned up the existing codebase, added new features, and fixed bugs in the monitoring application, resulting in improved UX and faster day-to-day use for technicians.",
+            "fr": "Nettoyage du code existant, ajout de fonctionnalités et correction de bugs dans l'application de supervision, pour une meilleure UX et une utilisation quotidienne plus rapide par les techniciens."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 51,
+          "kind": "achievement",
+          "text": {
+            "en": "Applied the same redesign, cleanup, feature, and bug-fix process to a second internal tool used to encrypt SQLite databases (C#, XAML, WPF, Material Design).",
+            "fr": "Même démarche (refonte, nettoyage, fonctionnalités, corrections) appliquée à un second outil interne de chiffrement de bases SQLite (C#, XAML, WPF, Material Design)."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 52,
+          "kind": "achievement",
+          "text": {
+            "en": "Enhanced the monitoring application's performance; the SQLite encryption tool was built on SQLCipher.",
+            "fr": "Amélioration des performances de l'application de supervision ; l'outil de chiffrement SQLite repose sur SQLCipher."
+          },
+          "short": null,
+          "showOnWebsite": true
+        },
+        {
+          "id": 53,
+          "kind": "outcome",
+          "text": {
+            "en": "Outcome: faster and easier monitoring workflows for technicians, contributing to faster client support and intervention on highway systems.",
+            "fr": "Résultat : des processus de supervision plus rapides et plus simples pour les techniciens, contribuant à un support client et des interventions plus rapides sur les systèmes autoroutiers."
+          },
+          "short": null,
+          "showOnWebsite": true
+        }
+      ],
+      "company": "APRR",
+      "end_date": "2022-06-01",
+      "location": {
+        "en": "Dijon, France",
+        "fr": "Dijon, France"
+      },
+      "is_static": false,
+      "sort_order": 4,
+      "start_date": "2022-04-01",
+      "description": {
+        "en": "End of associate degree internship at APRR, a highway infrastructure operator, in the department that manages the installation and support of the systems used by the company.",
+        "fr": "Stage de fin de DUT chez APRR, opérateur d'infrastructures autoroutières, dans le département qui gère l'installation et le support des systèmes utilisés par l'entreprise."
+      },
+      "engagements": [],
+      "technologies": [
+        "C#",
+        "XAML",
+        "WPF",
+        "Material Design",
+        "SQLite",
+        "SQLCipher"
+      ],
+      "contract_label": {
+        "en": "Internship",
+        "fr": "Stage"
+      },
+      "company_display": null,
+      "employment_type": "internship",
+      "show_on_website": true,
+      "company_descriptor": {
+        "en": "highway infrastructure operator",
+        "fr": "opérateur d'infrastructures autoroutières"
+      }
+    }
+  ],
+  "certifications": [
+    {
+      "id": "inside-lvmh",
+      "name": {
+        "en": "INSIDE LVMH: Operations & Supply Chain, Retail & Customer Experience",
+        "fr": "INSIDE LVMH: Operations & Supply Chain, Retail & Customer Experience"
+      },
+      "score": null,
+      "issuer": "LVMH",
+      "issued_on": "2024-07-01",
+      "expires_on": null,
+      "sort_order": 0,
+      "credential_id": "9e6d18c8b1",
+      "credential_url": null,
+      "show_on_website": true
+    },
+    {
+      "id": "toefl",
+      "name": {
+        "en": "Test of English as a Foreign Language (TOEFL)",
+        "fr": "Test of English as a Foreign Language (TOEFL)"
+      },
+      "score": "108/120 - C1+ (Advanced)",
+      "issuer": "ETS (TOEFL)",
+      "issued_on": "2023-07-01",
+      "expires_on": "2025-07-01",
+      "sort_order": 1,
+      "credential_id": null,
+      "credential_url": null,
+      "show_on_website": true
+    },
+    {
+      "id": "linguaskill",
+      "name": {
+        "en": "Linguaskill",
+        "fr": "Linguaskill"
+      },
+      "score": "C1+ (Proficient)",
+      "issuer": "Cambridge University Press & Assessment",
+      "issued_on": "2023-01-01",
+      "expires_on": "2025-01-01",
+      "sort_order": 2,
+      "credential_id": null,
+      "credential_url": null,
+      "show_on_website": true
+    }
+  ],
+  "skillCategories": [
+    {
+      "id": "data-databases",
+      "icon": "ph:database-bold",
+      "name": {
+        "en": "Data & Databases",
+        "fr": "Données & Bases de Données"
+      },
+      "skills": [
+        {
+          "icon": "simple-icons:oracle",
+          "name": "Oracle DB",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:postgresql",
+          "name": "PostgreSQL",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "ph:database-bold",
+          "name": "SQL Server",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "T-SQL",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "SQL",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Data Modeling",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Medallion Architecture",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Data Quality",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Data Engineering",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Regex",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "PDF Parsing",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "ETL",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:mongodb",
+          "name": "MongoDB",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "NoSQL",
+          "showOnWebsite": true
+        }
+      ],
+      "is_static": false,
+      "sort_order": 0,
+      "show_on_website": true
+    },
+    {
+      "id": "ai-ml",
+      "icon": "ph:brain-bold",
+      "name": {
+        "en": "AI & Machine Learning",
+        "fr": "IA & Machine Learning"
+      },
+      "skills": [
+        {
+          "icon": null,
+          "name": "NLP",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:huggingface",
+          "name": "Hugging Face",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:meta",
+          "name": "Llama 2",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "LLM Fine-Tuning",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:langchain",
+          "name": "LangChain",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:langchain",
+          "name": "LangGraph",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "ph:robot-bold",
+          "name": "AI Agents / Agentic Workflows",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "ph:sparkle-bold",
+          "name": "Prompt Engineering",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "LLMs",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Dataset Engineering",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:googlecolab",
+          "name": "Google Colab",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Machine Learning",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Deep Learning",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Azure OpenAI",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "LLM APIs",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Generative AI",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Agentic AI",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:pytorch",
+          "name": "PyTorch",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:tensorflow",
+          "name": "TensorFlow",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:scikitlearn",
+          "name": "Scikit-Learn",
+          "showOnWebsite": true
+        }
+      ],
+      "is_static": false,
+      "sort_order": 1,
+      "show_on_website": true
+    },
+    {
+      "id": "dataviz-bi",
+      "icon": "ph:chart-bar-bold",
+      "name": {
+        "en": "Data Visualization & BI",
+        "fr": "Data Visualisation & BI"
+      },
+      "skills": [
+        {
+          "icon": null,
+          "name": "Sigma.js",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Graphology",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "ForceAtlas2",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Dagre",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "ph:graph-bold",
+          "name": "Graph Theory",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "ph:chart-line-up-bold",
+          "name": "Data Visualization",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:leaflet",
+          "name": "Leaflet",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "ph:map-trifold-bold",
+          "name": "Geo-visualization",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "ph:chart-bar-bold",
+          "name": "Power BI",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Business Intelligence (BI)",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:microsoftexcel",
+          "name": "Excel (Advanced)",
+          "showOnWebsite": true
+        }
+      ],
+      "is_static": false,
+      "sort_order": 2,
+      "show_on_website": true
+    },
+    {
+      "id": "data-strategy-governance",
+      "icon": "ph:shield-check-bold",
+      "name": {
+        "en": "Data Strategy & Governance",
+        "fr": "Stratégie & Gouvernance des Données"
+      },
+      "skills": [
+        {
+          "icon": null,
+          "name": "Data Governance",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Data Strategy",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Data Architecture",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Data Warehousing (DWH)",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Master Data Management (MDM)",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Metadata Management",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Data Integration & Interoperability",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Data Lineage",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Business Glossary",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Data Dictionary",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Data Management",
+          "showOnWebsite": true
+        }
+      ],
+      "is_static": false,
+      "sort_order": 3,
+      "show_on_website": true
+    },
+    {
+      "id": "consulting-delivery",
+      "icon": "ph:handshake-bold",
+      "name": {
+        "en": "Consulting & Delivery",
+        "fr": "Conseil & Delivery"
+      },
+      "skills": [
+        {
+          "icon": null,
+          "name": "Stakeholder Workshops",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Executive Interviews",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Requirements Gathering",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Roadmapping",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Prioritization Frameworks",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Feasibility & Impact Scoring Models",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "BI Transformation",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Report Inventory",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Consulting / Client Management",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Current/Target State Mapping",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Tool Benchmarking",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Business Analysis",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Strategic Planning",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Project Management",
+          "showOnWebsite": true
+        }
+      ],
+      "is_static": false,
+      "sort_order": 4,
+      "show_on_website": true
+    },
+    {
+      "id": "compliance-regulatory",
+      "icon": "ph:scales-bold",
+      "name": {
+        "en": "Compliance & Regulatory",
+        "fr": "Conformité & Réglementaire"
+      },
+      "skills": [
+        {
+          "icon": null,
+          "name": "BCBS 239",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Regulatory Compliance",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "FINREP",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "COREP",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Risk Data Aggregation",
+          "showOnWebsite": true
+        }
+      ],
+      "is_static": false,
+      "sort_order": 5,
+      "show_on_website": true
+    },
+    {
+      "id": "engineering-practices",
+      "icon": "ph:wrench-bold",
+      "name": {
+        "en": "Engineering Practices",
+        "fr": "Pratiques d'Ingénierie"
+      },
+      "skills": [
+        {
+          "icon": null,
+          "name": "Agile Methodology",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:git",
+          "name": "Git",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Code Refactoring",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Process Standardization",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Process Automation",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Scripting",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:apachemaven",
+          "name": "Maven",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "RPM",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Yum",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:linux",
+          "name": "Linux Packaging",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "XML Schema Design",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Full-Stack Development",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:fastapi",
+          "name": "FastAPI",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "REST APIs",
+          "showOnWebsite": true
+        }
+      ],
+      "is_static": false,
+      "sort_order": 6,
+      "show_on_website": true
+    },
+    {
+      "id": "programming",
+      "icon": "ph:code-bold",
+      "name": {
+        "en": "Programming & Frameworks",
+        "fr": "Programmation & Frameworks"
+      },
+      "skills": [
+        {
+          "icon": "simple-icons:python",
+          "name": "Python",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "ph:coffee-bold",
+          "name": "Java",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "C#",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:javascript",
+          "name": "JavaScript",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:typescript",
+          "name": "TypeScript",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:r",
+          "name": "R",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:angular",
+          "name": "Angular",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:springboot",
+          "name": "Spring Boot",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:nodedotjs",
+          "name": "Node.js",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:nuxtdotjs",
+          "name": "Vue 3 / Nuxt",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:flask",
+          "name": "Flask",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "WPF / XAML",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Shiny",
+          "showOnWebsite": true
+        }
+      ],
+      "is_static": false,
+      "sort_order": 7,
+      "show_on_website": true
+    },
+    {
+      "id": "design",
+      "icon": "ph:palette-bold",
+      "name": {
+        "en": "Design",
+        "fr": "Design"
+      },
+      "skills": [
+        {
+          "icon": null,
+          "name": "UI/UX Design",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Mockups/Wireframing",
+          "showOnWebsite": true
+        },
+        {
+          "icon": "simple-icons:materialdesign",
+          "name": "Material Design",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Balsamiq",
+          "showOnWebsite": true
+        }
+      ],
+      "is_static": false,
+      "sort_order": 8,
+      "show_on_website": true
+    },
+    {
+      "id": "domain-knowledge",
+      "icon": "ph:briefcase-bold",
+      "name": {
+        "en": "Domain Knowledge",
+        "fr": "Connaissances Métier"
+      },
+      "skills": [
+        {
+          "icon": null,
+          "name": "Asset & Investment Management",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Portfolio Risk & Performance Reporting",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Healthcare Software",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Critical Infrastructure Systems",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Public Sector",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Insurance & Wealth Management",
+          "showOnWebsite": true
+        },
+        {
+          "icon": null,
+          "name": "Banking & Payments Regulatory",
+          "showOnWebsite": true
+        }
+      ],
+      "is_static": false,
+      "sort_order": 9,
+      "show_on_website": true
+    }
+  ]
+}

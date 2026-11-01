@@ -89,6 +89,7 @@ export interface ExperienceItem {
   company: { en: string; fr: string };
   location: { en: string; fr: string };
   contractType: { en: string; fr: string }; // e.g., Full-time, Internship, Apprenticeship
+  employmentType?: string; // full_time | internship | summer_job | … (from Supabase)
   period: string;
   description: { en: string; fr: string };
   achievements: { en: string[]; fr: string[] };

@@ -7,7 +7,7 @@
       </div>
 
       <div class="footer-links">
-        <a href="mailto:tanguy.hardion.pro@gmail.com" class="footer-email">
+        <a :href="`mailto:${contact.email}`" class="footer-email">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
             <polyline points="22,6 12,13 2,6"/>
@@ -16,8 +16,8 @@
         </a>
 
         <div class="social-group">
-          <a href="https://github.com/tanguyhardion" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
-          <a href="https://linkedin.com/in/tanguyhardion" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
+          <a :href="contact.github" target="_blank" rel="noopener noreferrer" class="social-link">GitHub</a>
+          <a :href="contact.linkedin" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
         </div>
       </div>
     </div>
@@ -29,6 +29,7 @@
 
 <script setup lang="ts">
 import { useLanguage } from '~/composables/useLanguage';
+import { contact } from '~/data/portfolioData';
 const { t } = useLanguage();
 </script>
 
