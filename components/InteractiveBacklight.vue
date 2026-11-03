@@ -4,6 +4,10 @@
       class="mouse-glow"
       :style="glowStyle"
     ></div>
+    <div class="mobile-aurora">
+      <div class="aurora-blob blob-a" :style="auroraStyleA"></div>
+      <div class="aurora-blob blob-b" :style="auroraStyleB"></div>
+    </div>
     <div
       class="ambient-center-glow"
       :style="ambientStyle"
@@ -49,6 +53,21 @@ const glowStyle = computed(() => {
   };
 });
 
+// Touch devices have no cursor: a slowly drifting gradient in the page color replaces the mouse glow
+const auroraStyleA = computed(() => {
+  const rgb = activeTheme.value.glowRgb;
+  return {
+    background: `radial-gradient(circle, rgba(${rgb}, 0.26) 0%, rgba(${rgb}, 0.07) 45%, rgba(0, 0, 0, 0) 70%)`
+  };
+});
+
+const auroraStyleB = computed(() => {
+  const rgb = activeTheme.value.glowRgb;
+  return {
+    background: `radial-gradient(circle, rgba(${rgb}, 0.18) 0%, rgba(${rgb}, 0.05) 45%, rgba(0, 0, 0, 0) 70%)`
+  };
+});
+
 const ambientStyle = computed(() => {
   const rgb = activeTheme.value.glowRgb;
   return {
@@ -78,6 +97,64 @@ const ambientStyle = computed(() => {
   transition: transform 0.08s ease-out, background 0.6s ease;
   will-change: transform, background;
   filter: blur(40px);
+}
+
+.mobile-aurora {
+  display: none;
+  position: absolute;
+  inset: 0;
+}
+
+.aurora-blob {
+  position: absolute;
+  width: 120vw;
+  height: 120vw;
+  max-width: 700px;
+  max-height: 700px;
+  border-radius: 50%;
+  filter: blur(50px);
+  transition: background 0.6s ease;
+  will-change: transform;
+}
+
+.blob-a {
+  top: -10%;
+  left: -30%;
+  animation: aurora-drift-a 18s ease-in-out infinite alternate;
+}
+
+.blob-b {
+  bottom: -10%;
+  right: -30%;
+  animation: aurora-drift-b 22s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-drift-a {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(35vw, 25vh, 0) scale(1.15); }
+  100% { transform: translate3d(10vw, 50vh, 0) scale(0.9); }
+}
+
+@keyframes aurora-drift-b {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-30vw, -30vh, 0) scale(0.9); }
+  100% { transform: translate3d(-10vw, -55vh, 0) scale(1.1); }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .mouse-glow {
+    display: none;
+  }
+
+  .mobile-aurora {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-blob {
+    animation: none;
+  }
 }
 
 .ambient-center-glow {
